@@ -1,0 +1,30 @@
+.container
+  .header
+    .header-top
+      .header-top__logo
+        a(href='#'): +bgimage('/img/common/logo.png')
+      .header-top__find
+        form(action='#' method='POST')
+          .header-find
+            .header-find__input: input(type="text" placeholder="Поиск по сайту")
+            .header-find__btn: button(type="submit"): +icons('#ic_search')
+      .header-top__phone
+        a(href='#') +7(999)000-00-00
+      .header-top__menu
+        .btn-burger(data-menu="btn")
+          i
+          i
+          i
+    .header-nav(data-menu="container")
+      nav
+        ul
+          each item in app.mainMenu
+            li
+              a(href=item.href)= item.text
+              if item.sub
+                span.sub-arrow
+                ul
+                  each sub in item.sub
+                    li
+                      a(href=sub.href)= sub.text
+

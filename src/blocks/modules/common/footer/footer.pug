@@ -1,0 +1,38 @@
+include ../main-menu/main-menu.pug
+ 
+.container
+  .footer
+    .footer__top
+      .footer__logo: +bgimage('/img/common/logo-light.png')
+      .footer__contacts
+        .footer-contact
+          .footer-contact__title Телефон:
+          .footer-contact__links
+            a(href='tel:+7(495)085-15-22') +7(495)085-15-22
+            a(href='tel:+7(495)434-66-41') +7(495)434-66-41
+        .footer-contact
+          .footer-contact__title Почта:
+          .footer-contact__links
+            a(href='mailto:ruslang@rudn.ru') ruslang@rudn.ru
+            a(href='mailto:zayavka-ruslang@pfur.ru') zayavka-ruslang@pfur.ru
+      .footer__nav
+        ul
+          each item in app.mainMenu
+            li: a(href=item.href)= item.text
+    .footer__main
+      .footer__address
+        .footer__address-title Институт русского языка:
+        .footer__address-location Москва, ул. Миклухо-Маклая, д. 10, к. 3
+      .footer__address
+        .footer__address-title Российский государственный гуманитарный университет:
+        .footer__address-location Москва, Миусская пл., 6
+      .footer__social
+        ul
+          li: a(href='#'): +icons('#ic_tg')
+          li: a(href='#'): +icons('#ic_tg')
+          li: a(href='#'): +icons('#ic_tg')
+    .footer__bottom
+      .footer__policy: a(href='#') Политика конфиденциальности
+      .footer__copyright © 2022 Международная ассоциация русских школ
+     
+
