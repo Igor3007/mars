@@ -1,5 +1,8 @@
 extends layouts/index
 
+
+
+
 block variables
   include ../data/data.pug
   - const title = "Mars"
@@ -7,8 +10,27 @@ block variables
 
 block content
 
+  include ../blocks/modules/first-block/first-block
+  include ../blocks/modules/we-are-block/we-are-block
+  include ../blocks/modules/our-goal-block/our-goal-block
+  include ../blocks/modules/last-event-block/last-event-block
+  include ../blocks/modules/our-partners-block/our-partners-block
+  include ../blocks/modules/we-digits-block/we-digits-block
+  include ../blocks/modules/last-news-block/last-news-block
+  include ../blocks/modules/school-selection-block/school-selection-block
+  include ../blocks/modules/popular-block/popular-block
 
 
+  +first-block()
+  +we-are-block()
+  +our-goal-block()
+
+  +we-digits-block()
+  +last-event-block()
+  +our-partners-block()
+  +last-news-block()
+  +school-selection-block()
+  +popular-block()
 
 
 block scripts

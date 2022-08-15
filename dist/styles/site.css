@@ -1870,7 +1870,7 @@ html {
   font-weight: normal;
   font-size: 14px;
   line-height: 140%;
-  background: #fff;
+  background: #f5f5f5;
   color: #000;
   letter-spacing: normal;
 }
@@ -1956,7 +1956,7 @@ input[type="date"] {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -2255,11 +2255,10 @@ a.link-primary {
 
 .page-text__h1 h1 {
   font-weight: 700;
-  font-size: 32px;
-  line-height: 133%;
-  text-align: center;
-  text-transform: uppercase;
-  color: #525166;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
   text-align: left;
 }
 
@@ -2312,20 +2311,19 @@ a.link-primary {
 }
 
 .btn {
-  padding: 0.8em 2.5em 0.85em 2.5em;
-  background: #525166;
+  padding: 0.65em 2.5em 0.85em 2.5em;
+  background: #E8444D;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 130px;
-  height: 52px;
+  height: 64px;
   font-weight: 600;
-  text-transform: uppercase;
-  font-size: 13px;
+  font-size: 16px;
   white-space: nowrap;
   transition: 0.3s cubic-bezier(0.1, 0.82, 0.25, 1);
 }
@@ -3280,8 +3278,8 @@ input {
 
 @media screen and (min-width: 480px) {
   .container {
-    padding: 0 16px;
-    max-width: 360px;
+    padding: 0 20px;
+    max-width: 400px;
   }
 
   .af-popup__container {
@@ -3339,6 +3337,10 @@ input {
   table td {
     padding: 15px 20px;
     font-size: 16px;
+  }
+
+  .page-text__h1 h1 {
+    font-size: 56px;
   }
 
   .minify-link {
@@ -3427,19 +3429,17 @@ input {
   }
 }
 
+@media screen and (min-width: 1375px) {
+  .container {
+    padding: 0 30px;
+    max-width: 1385px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .container {
     padding: 0 0;
     max-width: 1380px;
-  }
-
-  main .container {
-    padding: 0 48px;
-    max-width: 1440px;
-  }
-
-  .page-text__h1 h1 {
-    font-size: 36px;
   }
 
   .form__item > .form__item {

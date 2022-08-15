@@ -1,0 +1,38 @@
+-
+    var lastNews = [
+        {
+            image: '/img/photo_news',
+            date: '11 февраля 2022',
+            title: 'Алимова Мария Владимировна награждается ведомственной наградой за заслуги в сфере образования',
+        },
+        {
+            image: '/img/photo',
+            date: '14 февраля 2022',
+            title: 'Друзья, поздравляем вас с Днём святого Валентина! Любите, будьте любимы и говорите о любви чаще!',
+        },
+        {
+            image: '/img/ev-2',
+            date: '10 февраля 2022',
+            title: 'Дементьева Мария Владимировна стала лауреатом международного профессионального конкурса педагогических работников «Учитель-международник»',
+        },
+        
+    ]
+
+mixin last-news-block
+    section.section-last-news-block(style="background-image: url(/img/last-news-pattern.svg)")
+        .container
+            .last-news-block
+                .last-news-block__title
+                    span  Новости ассоциации 
+                    a(href='#') все новости
+                .last-news-block__wrp
+                    .last-news-block__images
+                        each img in lastNews
+                            .last-news-block__img: +picture(img.image) 
+                    .last-news-block__list
+                        each item in lastNews
+                            .last-news-block__item
+                                .last-news-block__date= item.date
+                                .last-news-block__name: a(href='#')= item.title
+                                .last-news-block__link
+                                    a(href='#'): span.hover-arrow: +icons('#ic_hover-arrow', 35)

@@ -1,0 +1,146 @@
+.section-we-digits-block {
+    @include section-padding;
+
+    & .container {
+        @media screen and (min-width: $w1200) {
+            max-width: 1090px;
+        }
+    }
+}
+
+
+.we-digits-block {
+
+    &__list {
+        display: flex;
+        margin: -16px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding: 16px;
+        flex-grow: 1;
+        flex-basis: 100%;
+
+        @media screen and (min-width: $w760) {
+            flex-basis: 280px;
+        }
+
+        @media screen and (min-width: $w992) {
+            flex-basis: 322px;
+        }
+    }
+
+    &__title {
+        @include section-title;
+
+        @media screen and (min-width: $w1200) {
+            padding-bottom: 70px;
+        }
+    }
+}
+
+
+.digit-card {
+
+    padding: 35px 45px;
+    background: #FFFFFF;
+    border: 1px solid #EDF2F5;
+    border-radius: 2px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: transparent;
+        z-index: 1;
+        border-radius: 0 50% 50% 50%;
+        transition: 0.5s ease;
+    }
+
+    &:hover {
+        &::before {
+            width: 300%;
+            height: 300%;
+            right: 0;
+            bottom: 0;
+            border-radius: 0;
+            transition: 1s ease;
+        }
+
+        & .digit-card {
+
+            &__number,
+            &__desc {
+                color: #fff;
+
+            }
+        }
+    }
+
+    &__number {
+        font-size: 40px;
+        font-weight: 700;
+        padding-bottom: 20px;
+        transition: 0.5s ease;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        transition: 0.5s ease;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__angle {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &--blue {
+        &::before {
+            background-color: $blue;
+        }
+
+        & .digit-card {
+
+
+            &__angle {
+                & svg {
+                    fill: $blue;
+                }
+
+
+            }
+        }
+    }
+
+    &--green {
+        &::before {
+            background-color: $green;
+        }
+
+        & .digit-card {
+
+
+            &__angle {
+                & svg {
+                    fill: $green;
+                }
+
+
+            }
+        }
+    }
+}

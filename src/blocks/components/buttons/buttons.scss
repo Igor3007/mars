@@ -1,21 +1,21 @@
 .btn {
 
-    padding: 0.8em 2.5em 0.85em 2.5em;
-    background: $main;
+    padding: 0.65em 2.5em 0.85em 2.5em;
+    background: $red;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 130px;
-    height: 52px;
+    height: 64px;
     font-weight: 600;
 
-    text-transform: uppercase;
-    font-size: 13px;
+
+    font-size: 16px;
     white-space: nowrap;
     transition: .3s cubic-bezier(.1, .82, .25, 1);
 

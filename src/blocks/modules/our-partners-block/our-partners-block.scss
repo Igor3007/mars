@@ -1,0 +1,55 @@
+.section-our-partners-block {
+    @include section-padding;
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 195px;
+    }
+}
+
+.our-partners-block {
+
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $w1200) {
+        flex-direction: row;
+    }
+
+    &__title {
+        @include section-title;
+        font-size: 40px !important;
+
+        @media screen and (min-width: $w1200) {
+            min-width: 288px;
+        }
+    }
+
+    &__list {
+
+        width: 100%;
+
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            & li {
+
+                width: 50%;
+
+                @media screen and (min-width: $w760) {
+                    width: 25%;
+                }
+
+                & .bgimage {
+                    height: 124px;
+                    display: block;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    background-size: auto 70%;
+
+                }
+            }
+        }
+    }
+}

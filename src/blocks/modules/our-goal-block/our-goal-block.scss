@@ -1,0 +1,97 @@
+.section-our-goal-block {
+    background-position: center 35%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $w992) {
+        background-image: none !important;
+    }
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 50px;
+        padding-bottom: 140px;
+    }
+}
+
+.our-goal-block {
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 111%;
+        color: $blue;
+        padding-bottom: 25px;
+
+        @media screen and (min-width: $w760) {
+            font-size: 56px;
+        }
+    }
+
+    &__list {
+        @media screen and (min-width: $w760) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        padding: 7.5px 0;
+
+        &--title {
+            @media screen and (min-width: $w992) {
+                flex-grow: 2 !important;
+                flex-basis: 520px !important;
+            }
+
+            @media screen and (min-width: $w1200) {
+                flex-grow: 2 !important;
+                flex-basis: 570px !important;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @media screen and (min-width: $w760) {
+            flex-grow: 1;
+            flex-basis: 260px;
+            padding: 7.5px;
+        }
+
+        @media screen and (min-width: $w1200) {
+            flex-grow: 1;
+            flex-basis: 285px;
+            padding: 7.5px;
+        }
+
+
+    }
+}
+
+.card-goal {
+    padding: 35px;
+    background: #FFFFFF;
+    border: 1px solid $blue-for-card;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+
+    &__icon {
+
+        padding-bottom: 25px;
+
+        & .bgimage {
+            width: 90px;
+            height: 90px;
+            @include bgimage-contain;
+            display: block;
+        }
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 150%;
+    }
+}

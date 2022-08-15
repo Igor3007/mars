@@ -1,0 +1,35 @@
+-
+    var arr2 = [
+        {
+            number: '30 +',
+            desc: 'стран мира, в которых представлены члены ассоциации',
+            m: '--blue'
+        },
+        {
+            number: '500 +',
+            desc: 'педагогов и руководителей русских школ',
+            m: '--green'
+        },
+        {
+            number: '400 +',
+            desc: 'учебников и методических пособий в свободном доступе',
+            m: '--blue'
+        }, 
+    ]
+
+
+mixin we-digits-block
+    section.section-we-digits-block 
+        .container
+            .we-digits-block
+                .we-digits-block__title Ассоциация <br> в цифрах
+                .we-digits-block__list
+                    each item in arr2
+                        .we-digits-block__item: +digit-card(item)
+                
+mixin digit-card(data)
+    .digit-card(class='digit-card'+data.m)
+        .digit-card__angle
+            +icons('#ic_goal-angle', 17)
+        .digit-card__number= data.number
+        .digit-card__desc= data.desc

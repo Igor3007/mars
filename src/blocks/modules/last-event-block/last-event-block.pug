@@ -1,0 +1,50 @@
+-
+    var lastEvent = [
+        {
+            image: '/img/ev-1',
+            month: 'февраль',
+            title: 'Конференция по вопросам поступления детей соотечественников в российские вузы',
+            location: 'Агадир, Марокко',
+        },
+        {
+            image: '/img/ev-2',
+            month: 'июнь',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: 'Лондон, Великобритания',
+        },
+        {
+            image: '/img/ev-3',
+            month: 'июнь',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: '',
+        },
+        {
+            image: '/img/ev-4',
+            month: 'ноябрь',
+            title: 'Культурно-образовательный фестиваль для детских творческих коллективов русских школ, посвященный году культурного наследия народов России ',
+            location: 'Марбелья, Испания',
+        },
+    ]
+
+
+mixin last-event-block
+    section.section-last-event-block(style="background-image: url(/img/common/bggoal.svg)")
+        .container
+            .last-event-block 
+                .last-event-block__title Мероприятия <br> ассоциации <span> 2022 </span>
+                .last-event-block__list 
+                    each item in lastEvent
+                        .last-event-block__item: +card-last-event(item)
+
+mixin card-last-event(data)
+    .card-last-event
+        .card-last-event__image
+            +picture(data.image)
+        .card-last-event__month
+            span= data.month
+        .card-last-event__title: a(href='#')= data.title
+        .card-last-event__location  
+            +icons('#ic_pen-red', 29)
+            span Агадир, Марокко 
+        .card-last-event__link
+            a(href='#'): span.hover-arrow: +icons('#ic_hover-arrow-gray', 20)

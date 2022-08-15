@@ -66,4 +66,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     })
 
+    /* ========================================
+    hover news
+    ========================================*/
+
+    if (document.querySelectorAll('.last-news-block__item').length) {
+
+        let imageArr = document.querySelectorAll('.last-news-block__img')
+
+        document.querySelectorAll('.last-news-block__item').forEach((item, index) => {
+            item.addEventListener('mouseenter', e => {
+                e.preventDefault()
+                imageArr[index].classList.add('active')
+            })
+            item.addEventListener('mouseleave', e => {
+                e.preventDefault()
+                if (imageArr[index].classList.contains('active')) imageArr[index].classList.remove('active')
+            })
+        })
+    }
+
+
+
 });

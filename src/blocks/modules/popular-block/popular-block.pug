@@ -1,0 +1,33 @@
+-
+    var popular = [
+        {
+            title: 'Courses of Russian',
+            image: '/img/popular_1',
+            desc: 'The leading Russian university – RUDN University - invites everyone to join online and offline Russian language courses!',
+            m: '--blue'
+        },
+        {
+            title: 'Повышение квалификации',
+            image: '/img/popular_2',
+            desc: 'Программы для преподавателей, тесторов и всех, кто хочет быть более востребован в профессии.',
+            m: '--green'
+        },
+    ]
+
+mixin popular-block
+    section.section-popular-block
+        .container
+            .popular-block
+                .popular-block__list
+                    each item in popular
+                        .popular-block__item: +card-popular(item)
+
+mixin card-popular(data)
+    .card-popular(class='card-popular'+data.m)
+        .card-popular__angle
+            +icons('#ic_goal-angle', 17)
+        .card-popular__main
+            .card-popular__title: a(href="#")= data.title
+            .card-popular__desc= data.desc
+        .card-popular__image    
+            +picture(data.image)

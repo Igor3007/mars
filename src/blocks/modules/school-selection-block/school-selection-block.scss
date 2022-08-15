@@ -1,0 +1,63 @@
+.section-school-selection-block {
+
+
+    position: relative;
+    z-index: 2;
+    margin-top: -30px;
+
+    @media screen and (min-width: $w1200) {
+        margin-top: -60px;
+    }
+}
+
+.school-selection-block {
+    background-color: $blue-for-card;
+
+
+    &__wrp {
+
+        padding: 30px;
+
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            align-items: center;
+            max-width: 1030px;
+            margin: 0 auto;
+            padding: 85px 30px;
+        }
+    }
+
+
+    &__title {
+        @include section-title;
+
+        padding-bottom: 40px;
+        text-align: center;
+
+
+        @media screen and (max-width: $w760) {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        @media screen and (min-width: $w1200) {
+            text-align: left;
+        }
+
+    }
+
+    &__btn {
+
+        @media screen and (min-width: $w1200) {
+            margin-left: auto;
+        }
+
+        & .btn {
+            margin: 0 auto;
+
+            @media screen and (min-width: $w1200) {
+                min-width: 300px;
+            }
+        }
+    }
+}

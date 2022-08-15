@@ -4,7 +4,7 @@ html {
     font-weight: normal;
     font-size: 14px;
     line-height: 140%;
-    background: #fff;
+    background: #f5f5f5;
     color: #000;
     letter-spacing: normal;
 }
@@ -97,12 +97,12 @@ input[type="date"] {
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 20px;
     box-sizing: border-box;
 
     @media screen and (min-width: $w480) {
-        padding: 0 16px;
-        max-width: 360px;
+        padding: 0 20px;
+        max-width: 400px;
     }
 
     @media screen and (min-width: $w576) {
@@ -125,18 +125,18 @@ input[type="date"] {
         max-width: 1200px;
     }
 
+    @media screen and (min-width: 1375px) {
+        padding: 0 30px;
+        max-width: 1385px;
+    }
+
     @media screen and (min-width: $w1440) {
         padding: 0 0;
         max-width: 1380px;
     }
 }
 
-main .container {
-    @media screen and (min-width: $w1440) {
-        padding: 0 48px;
-        max-width: 1440px;
-    }
-}
+
 
 .pull-right {
     justify-content: flex-end !important;
@@ -382,14 +382,13 @@ main .container {
 
 @mixin section-title {
     font-weight: 700;
-    font-size: 32px;
-    line-height: 133%;
-    text-align: center;
-    text-transform: uppercase;
-    color: $main;
+    font-size: 40px;
+    line-height: 111%;
+    color: $blue;
+    padding-bottom: 25px;
 
-    @media screen and (min-width: $w1440) {
-        font-size: 36px;
+    @media screen and (min-width: $w760) {
+        font-size: 56px;
     }
 }
 

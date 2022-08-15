@@ -1,0 +1,24 @@
+mixin first-block
+    section.section-first-block
+        .container
+            .first-block 
+                .first-block__left
+                    .first-block__title: h1 Международная ассоциация русских школ
+                    .first-block__subtitle организованное профессиональное сообщество педагогических коллективов русских школ из разных стран Мира
+                    .first-block__image
+                        +picture('/img/fbbg')
+                .first-block__right
+                    .fb-event-card
+                        .fb-event-card__image: +picture('/img/photo')
+                        .fb-event-card__main
+                            .fb-event-card__details
+                                .fb-event-card__text Ближайшее мероприятие
+                                .fb-event-card__date февраль 2022
+                            .fb-event-card__title
+                                a(href='#') Конференция по вопросам поступления детей соотечественников в российские вузы
+                            .fb-event-card__bottom
+                                .fb-event-card__location
+                                    +icons('#ic_pen', 21)
+                                    span Марокко
+                                .fb-event-card__link
+                                    a(href='#'): span.hover-arrow: +icons('#ic_hover-arrow', 35)

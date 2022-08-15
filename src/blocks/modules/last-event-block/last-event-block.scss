@@ -1,0 +1,140 @@
+.section-last-event-block {
+    background-position: center 35%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $w992) {
+        background-image: none !important;
+    }
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 177px;
+        padding-bottom: 180px;
+    }
+}
+
+
+.last-event-block {
+    &__title {
+        @include section-title;
+
+        padding-bottom: 35px;
+
+        @media screen and (min-width: $w1200) {
+            padding-bottom: 70px;
+            max-width: 1030px;
+            margin: 0 auto;
+        }
+
+        & span {
+            color: $green;
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin: -15px;
+        overflow-x: auto;
+
+        @media screen and (min-width: $w760) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        padding: 15px;
+        flex-grow: 1;
+        flex-basis: 288px;
+        min-width: 288px;
+
+        @media screen and (min-width: $w992) {
+            width: 33.33%;
+            flex-basis: 33.33%;
+            flex-grow: 0;
+        }
+
+        @media screen and (min-width: $w1200) {
+            width: 25%;
+            flex-basis: 25%;
+            flex-grow: 0;
+        }
+    }
+}
+
+.card-last-event {
+    background-color: $blue-for-card;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+        & picture {
+            display: block;
+            padding-top: 54%;
+            position: relative;
+
+            & img {
+                @include layer(1);
+                background-color: #ddd;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__title {
+        padding-top: 30px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+
+        & a {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+
+    }
+
+    &__month {
+
+        margin-top: -15px;
+        position: relative;
+        z-index: 1;
+        padding-left: 15px;
+
+        & span {
+            background-color: $blue;
+            height: 31px;
+            display: inline-flex;
+            padding: 0.2em 1.5em 0.5em 1.5em;
+            color: #fff;
+            font-weight: 700;
+            align-items: center;
+            line-height: 31px;
+            border-radius: 2px;
+
+        }
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        margin-top: auto;
+
+        & span {
+            padding-left: 10px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+}

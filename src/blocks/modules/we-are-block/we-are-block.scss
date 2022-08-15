@@ -1,0 +1,210 @@
+.section-we-are-block {
+    @include section-padding;
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 130px;
+    }
+
+    & .container {
+        @media screen and (min-width: $w1200) {
+            max-width: 1305px;
+        }
+    }
+}
+
+.we-are-block {
+
+    @media screen and (min-width: $w760) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 80px;
+        color: $blue;
+
+        @media screen and (min-width: $w375) {
+            font-size: 75px;
+        }
+    }
+
+    &__subtitle {
+        line-height: 157%;
+        text-transform: uppercase;
+    }
+
+    &__intro,
+    &__first,
+    &__two,
+    &__three,
+    &__four,
+    &__five,
+    &__six {
+        padding: 30px;
+        background-color: $blue-for-card;
+        min-height: 228px;
+    }
+
+    &__img {
+        display: none;
+
+        @media screen and (min-width: $w1200) {
+            display: block;
+            flex-basis: 287px;
+            flex-grow: 1;
+
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__middle {
+
+        @media screen and (min-width: $w760) {
+            display: none;
+        }
+
+        @media screen and (min-width: $w1200) {
+            display: block;
+            flex-basis: 667px;
+            flex-grow: 2;
+        }
+
+
+        & picture {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            height: 228px;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 62% center;
+        }
+    }
+
+    &__number {
+        padding-bottom: 20px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: 600;
+    }
+
+    &__intro {
+        background-color: transparent;
+
+        @media screen and (min-width: $w760) {
+            width: 100%;
+
+        }
+
+        @media screen and (min-width: $w1200) {
+            flex-basis: 550px;
+            flex-grow: 2;
+            padding-left: 100px;
+            padding-top: 40px;
+        }
+    }
+
+
+
+    &__first {
+        background-color: $green;
+        color: #fff;
+
+
+        background-position: 104% 110%;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: $w1200) {
+            flex-basis: 287px;
+            flex-grow: 1;
+        }
+    }
+
+    &__two {
+        @media screen and (min-width: $w1200) {
+            flex-basis: 365px;
+            flex-grow: 1;
+
+        }
+    }
+
+    &__three {
+        background-color: $blue;
+        color: #fff;
+
+        @media screen and (min-width: $w1200) {
+            flex-basis: 287px;
+            flex-grow: 1;
+        }
+    }
+
+    &__four {
+        background-color: $blue;
+        color: #fff;
+
+        background-position: top left;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: $w1200) {
+            flex-basis: 287px;
+            flex-grow: 1;
+        }
+    }
+
+    &__five {
+        background-color: $green;
+        color: #fff;
+
+        background-position: top 100%;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: $w1200) {
+            display: block;
+            flex-basis: 558px;
+            flex-grow: 2;
+            background-position: top right;
+        }
+    }
+
+    &__six {
+        @media screen and (min-width: $w1200) {
+            display: block;
+            flex-basis: 395px;
+            flex-grow: 1;
+        }
+    }
+
+
+
+    &__first,
+    &__two,
+    &__three,
+    &__four,
+    &__five,
+    &__six {
+
+        @media screen and (min-width: $w760) {
+            width: 50%;
+        }
+
+        @media screen and (min-width: $w992) {
+            width: 33.33%;
+        }
+    }
+
+
+}

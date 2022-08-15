@@ -1,0 +1,155 @@
+.section-popular-block {
+    @include section-padding;
+}
+
+.popular-block {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    &__item {
+        padding: 15px;
+        flex-basis: 100%;
+
+        @media screen and (min-width: $w760) {
+            flex-basis: 50%;
+        }
+    }
+}
+
+.card-popular {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    background: #FFFFFF;
+    border: 1px solid #EDF2F5;
+    border-radius: 2px;
+
+    @media screen and (min-width: $w1200) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+
+    &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: transparent;
+        z-index: 1;
+        border-radius: 0 50% 50% 50%;
+        transition: 0.5s ease;
+    }
+
+    &:hover {
+        &::before {
+            width: 300%;
+            height: 300%;
+            right: 0;
+            bottom: 0;
+            border-radius: 0;
+            transition: 1s ease;
+        }
+
+        & .card-popular {
+
+            &__title a,
+            &__desc {
+                color: #fff;
+            }
+        }
+    }
+
+
+    &__main {
+        padding: 40px;
+        z-index: 1;
+    }
+
+    &__title {
+
+        padding-bottom: 25px;
+
+        & a {
+            font-size: 24px;
+            color: $blue;
+            font-weight: 600;
+        }
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    &__image {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+
+        @media screen and (min-width: $w1200) {
+
+            min-width: 40%;
+
+            & img {
+                width: 100%;
+                height: 278px;
+                object-fit: contain;
+                object-position: center bottom;
+            }
+        }
+    }
+
+    &__angle {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &--blue {
+        &::before {
+            background-color: $blue;
+        }
+
+        & .card-popular {
+
+
+            &__angle {
+                & svg {
+                    fill: $blue;
+                }
+
+
+            }
+        }
+    }
+
+    &--green {
+        &::before {
+            background-color: $green;
+        }
+
+        & .card-popular {
+
+
+            &__angle {
+                & svg {
+                    fill: $green;
+                }
+
+
+            }
+        }
+    }
+
+
+}

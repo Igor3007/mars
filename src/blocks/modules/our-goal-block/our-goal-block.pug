@@ -1,0 +1,43 @@
+-
+    var arr = [
+        {
+            icon: '/img/common/goal/1.svg',
+            desc: 'создание единого информационного пространства для специалистов русских школ',
+        },
+        {
+            icon: '/img/common/goal/2.svg',
+            desc: 'организация значимых международных мероприятий, направленных на изучение и поддержку русского языка',
+        },
+        {
+            icon: '/img/common/goal/3.svg',
+            desc: 'популяризация образования на русском языке и продвижение русских школ ',
+        },
+        {
+            icon: '/img/common/goal/4.svg',
+            desc: 'развитие профессиональных связей и гуманитарных контактов между специалистами русских школ',
+        },
+        {
+            icon: '/img/common/goal/5.svg',
+            desc: 'аккредитация образовательных программ и школл',
+        },
+        {
+            icon: '/img/common/goal/6.svg',
+            desc: 'распространение информации об обучении в русских школах',
+        },
+    ]
+
+mixin our-goal-block
+    section.section-our-goal-block(style="background-image: url(/img/common/bggoal.svg)")
+        .container
+            .our-goal-block 
+                
+                .our-goal-block__list
+                    .our-goal-block__item.our-goal-block__item--title
+                        .our-goal-block__title Наши <br> главные цели
+                    each item in arr
+                        .our-goal-block__item: +card-goal(item)
+
+mixin card-goal(data)
+    .card-goal
+        .card-goal__icon: +bgimage(data.icon)
+        .card-goal__desc= data.desc
