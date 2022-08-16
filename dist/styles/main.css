@@ -4721,6 +4721,10 @@ footer a {
   font-weight: 600;
 }
 
+.card-news__title a:hover {
+  text-decoration: underline;
+}
+
 .card-news__month {
   margin-top: -15px;
   position: relative;

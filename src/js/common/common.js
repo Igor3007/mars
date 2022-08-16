@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     document.querySelectorAll('.header-nav li').forEach(li => {
         li.addEventListener('click', e => {
-            e.preventDefault()
+            //e.preventDefault()
             li.classList.toggle('active')
         })
     })

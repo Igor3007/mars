@@ -136,9 +136,9 @@ mixin card-news(data)
             +picture(data.image)
         .card-news__month
             span= data.month
-        .card-news__title: a(href='#')= data.title
+        .card-news__title: a(href='news-details.html')= data.title
          
         .card-news__link
-            a(href='#')
+            a(href='news-details.html')
                 span.link-text= data.location
                 span.hover-arrow: +icons('#ic_hover-arrow-gray', 20)
