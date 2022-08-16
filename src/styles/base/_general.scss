@@ -153,7 +153,7 @@ input[type="date"] {
 .formated-text {
 
     & * {
-        line-height: 140%;
+        line-height: 150%;
     }
 
     & h1,
@@ -260,14 +260,13 @@ input[type="date"] {
     }
 
     & a {
-        color: $main;
+        color: $green;
         text-decoration: underline;
     }
 
     & div:not([class]),
     & p {
         margin: 20px 0;
-        color: #666;
         line-height: 150%;
 
         @media screen and (min-width: $w760) {
@@ -287,7 +286,7 @@ input[type="date"] {
 
             position: relative;
             padding-left: 20px;
-            font-size: 14px;
+
             padding-bottom: 15px;
 
             @media screen and (min-width: $w760) {
@@ -306,9 +305,9 @@ input[type="date"] {
                 display: block;
                 position: absolute;
                 left: 0;
-                top: 0.45em;
+                top: 0.50em;
                 border-radius: 50%;
-                background-color: $main;
+                background-color: $green;
             }
         }
     }
@@ -332,7 +331,7 @@ input[type="date"] {
             margin-bottom: 15px;
             color: #000;
             padding-left: 20px;
-            font-size: 14px;
+
 
             @media screen and (min-width: $w760) {
                 font-size: 16px;
@@ -361,7 +360,7 @@ input[type="date"] {
 }
 
 :root {
-    --fancybox-accent-color: #BF3232;
+    --fancybox-accent-color: #013C76;
     --carousel-button-width: 48px;
     --carousel-button-height: 48px;
     --carousel-button-svg-width: 27px;

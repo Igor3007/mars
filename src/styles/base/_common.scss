@@ -213,3 +213,9 @@
         padding-bottom: 60px;
     }
 }
+
+.fancybox__container {
+    & * {
+        outline: none !important;
+    }
+}

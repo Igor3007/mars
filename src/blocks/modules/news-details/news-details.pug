@@ -4,6 +4,11 @@ mixin news-details
             .news-details__image: +picture('/img/ev-1')
             .news-details__all
                 a(href='#') Открыть все фотографии
+                ul.news-all-photo
+                    li(data-src="/img/ev-1.jpg")
+                    li(data-src="/img/ev-2.jpg")
+                    li(data-src="/img/ev-3.jpg")
+                    li(data-src="/img/ev-4.jpg")
             .news-details__next
                 .next-event
                     .next-event__tag: span Ближайшее мероприятие
@@ -21,11 +26,16 @@ mixin news-details
                         a(href='#'): span.hover-arrow: +icons('#ic_hover-arrow', 35)
                     
         .news-details__article
+            .news-details__mobile
+                .news-details__image: +picture('/img/ev-1')
+                .news-details__date
+                    span 17 мая 2022
+
             .news-details__title: h1 Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»
             .news-details__prop
                 .news-details__date: span 17 мая 2022
-                .news-details__school Институт русского языка
-            .news-details__text
+                .news-details__school: a(href='#') Институт русского языка
+            .news-details__text.formated-text
                 p  12-13 мая 2022 года кафедра русского языка №3 Института русского языка РУДН совместно с кафедрой русского языка как иностранного в профессиональном обучении факультета доуниверситетского образования иностранных граждан Института дополнительного образования Белорусского государственного университета провела Вторую Международную конференцию «Языки мира и культура».
                 p  В Конференции приняли участие 31студент из 19 стран: Китай, Танзания, Азербайджан, Франция, Индия, Ливан, Вьетнам, Корея, Мадагаскар, Турция, Италия и другие.
                 p  В докладах студентов были освещены следующие вопросы:
@@ -42,6 +52,6 @@ mixin news-details
                 P Участники конференции продемонстрировали прекрасное знание русского языка, умение творчески мыслить, сопоставлять лингвистические аспекты родного и русского языков.
 
             .news-details__back
-                a(href='#')
-                    +icons('#ic_back-news')
-                    span Все новости
+                a(href='/news.html')
+                    +icons('#ic_back-news', 20)
+                    span Все новости 

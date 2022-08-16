@@ -119,5 +119,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
 
+    /* ==============================================
+    all photo news
+    ============================================== */
+
+    if (document.querySelector('.news-details__all')) {
+        document.querySelector('.news-details__all a').addEventListener('click', function (e) {
+
+            e.preventDefault()
+
+            let arrImage = e.target.closest('.news-details__all').querySelectorAll('[data-src]')
+            let arrFancybox = []
+
+            arrImage.forEach(item => {
+                arrFancybox.push({
+                    src: item.dataset.src,
+                    type: "image",
+                })
+            })
+
+            console.log(arrImage)
+
+            const fancybox = Fancybox.show(arrFancybox);
+        })
+    }
+
+
+
+
 
 });
