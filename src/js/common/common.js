@@ -86,6 +86,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     }
 
+    /* ==============================================
+    select
+    ============================================== */
+
+    // public methods
+    // select.afSelect.open()
+    // select.afSelect.close()
+    // select.afSelect.update()
+
+    const selectCustom = new customSelect({
+        selector: 'select'
+    })
+
+    selectCustom.init()
+
+
+    /* ==============================================
+    open filter in mobile
+    ============================================== */
+
+    if (document.querySelector('[data-filter-open="btn"]')) {
+
+        document.querySelector('[data-filter-open="btn"]').addEventListener('click', function (e) {
+            document.querySelector('[data-filter-open="container"]').classList.toggle('open')
+        })
+
+        document.querySelector('[data-filter-open="close"]').addEventListener('click', function (e) {
+            document.querySelector('[data-filter-open="container"]').classList.remove('open')
+        })
+
+    }
+
 
 
 });

@@ -1,14 +1,16 @@
 mixin pagination(data)
-  section.section-pagination
-    .container
+   
+    
       .pagination
 
         .pagination__page
           ul
+            li.prev: a(href="#2")
+                +icons('#ic_pagination-prev', 15) 
             li.active: a(href="#1") 1
             li: a(href="#2") 2
             li: a(href="#3") 3
             li: a(href="#4") ...
-            li: a(href="#10") 10
+            li: a(href="#7") 7
             li.next: a(href="#2")
-              +icons('#ic_arr-right-dark', 12) 
+              +icons('#ic_pagination-next', 15) 

@@ -13,15 +13,13 @@
 
     &__page {
 
-
-
         display: flex;
         align-items: center;
         margin-left: auto;
         margin-right: auto;
 
         @media screen and (min-width: $w992) {
-            margin-right: 0;
+            margin-left: 0;
         }
 
         & ul {
@@ -30,14 +28,18 @@
 
             & li {
 
-                margin-left: rem(10);
+                margin-left: rem(5);
+
+                @media screen and (min-width: $w992) {
+                    margin-left: rem(10);
+                }
 
                 &:first-child {
                     margin-left: 0;
                 }
 
                 &.active a {
-                    background-color: $red;
+                    background-color: $blue;
                     color: #fff;
 
                     & svg {
@@ -46,18 +48,21 @@
                 }
 
                 & a {
-                    width: rem(40);
-                    height: rem(40);
+                    width: rem(35);
+                    height: rem(35);
                     display: flex;
-                    border-radius: 10px;
+                    border-radius: 50%;
                     align-items: center;
                     justify-content: center;
                     color: $black;
-                    background-color: #f1f1f1;
+                    background-color: #D8E1EA;
+                    font-size: 14px;
+                    font-weight: 600;
 
                     @media screen and (min-width: $w992) {
-                        width: rem(55);
-                        height: rem(55);
+                        width: rem(58);
+                        height: rem(58);
+                        font-size: 18px;
                     }
 
                     & svg {
@@ -68,11 +73,37 @@
 
 
                     &:hover {
-                        background-color: $red;
+                        background-color: $blue;
                         color: #fff;
 
                         & svg {
                             fill: #fff;
+                        }
+                    }
+                }
+
+                &.prev,
+                &.next {
+                    & a {
+                        width: 45px;
+                        border-radius: 55px;
+
+                        & svg {
+                            width: 12px;
+
+                            @media screen and (min-width: $w992) {
+                                width: 15px;
+                            }
+                        }
+
+                        @media screen and (min-width: $w992) {
+                            width: 76px;
+                        }
+
+                        &:hover {
+                            & svg {
+                                filter: brightness(1) invert(1);
+                            }
                         }
                     }
                 }

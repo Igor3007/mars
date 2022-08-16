@@ -1,0 +1,144 @@
+include ../../components/pagination/pagination.pug
+
+-
+    var news = [
+        {
+            image: '/img/ev-1',
+            month: '17 мая 2022',
+            title: 'Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»ы',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-2',
+            month: '17 мая 2022',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: 'РГГУ',
+        },
+        {
+            image: '/img/ev-3',
+            month: '17 мая 2022',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-4',
+            month: '17 мая 2022',
+            title: 'Культурно-образовательный фестиваль для детских творческих коллективов русских школ, посвященный году культурного наследия народов России ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-1',
+            month: '17 мая 2022',
+            title: 'Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»ы',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-2',
+            month: '17 мая 2022',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-3',
+            month: '17 мая 2022',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-4',
+            month: '17 мая 2022',
+            title: 'Культурно-образовательный фестиваль для детских творческих коллективов русских школ, посвященный году культурного наследия народов России ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-1',
+            month: '17 мая 2022',
+            title: 'Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»ы',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-2',
+            month: '17 мая 2022',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: 'РГГУ',
+        },
+        {
+            image: '/img/ev-3',
+            month: '17 мая 2022',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-4',
+            month: '17 мая 2022',
+            title: 'Культурно-образовательный фестиваль для детских творческих коллективов русских школ, посвященный году культурного наследия народов России ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-1',
+            month: '17 мая 2022',
+            title: 'Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»ы',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-2',
+            month: '17 мая 2022',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/ev-3',
+            month: '17 мая 2022',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: ' Институт русского языка',
+        },
+         
+    ]
+
+
+mixin page-news
+    .page-news
+        .page-news__aside
+
+            .page-aside(data-filter-open="container")
+                .page-aside__close 
+                    span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
+                .page-aside__title Фильтр
+                .page-aside__filter
+                    form(action='#' method='POST')
+                        .page-aside__select
+                            select(name="year")
+                                option(value="1") Год выпуска новости
+                                option(value="1") 2020
+                                option(value="2") 2021
+                                option(value="3") 2022
+                        .page-aside__select
+                            select(name="name")
+                                option(value="1") Школа
+                                option(value="1") №1
+                                option(value="2") №2
+                                option(value="3") №3
+                        .page-aside__apply
+                            button.btn Применить
+            
+            .page-aside-open(data-filter-open="btn") Фильтры
+
+        .page-news__content
+            .page-news__list
+                each item in news
+                    .page-news__item: +card-news(item)
+            .page-news__pagination
+                +pagination()
+
+mixin card-news(data)
+    .card-news
+        .card-news__image
+            +picture(data.image)
+        .card-news__month
+            span= data.month
+        .card-news__title: a(href='#')= data.title
+         
+        .card-news__link
+            a(href='#')
+                span.link-text= data.location
+                span.hover-arrow: +icons('#ic_hover-arrow-gray', 20)

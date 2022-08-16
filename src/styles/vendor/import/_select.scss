@@ -35,6 +35,11 @@ select {
     color: $select-color;
     width: $select-width;
     min-width: rem(150);
+    background: #F6F9FB;
+
+    /* голубой для карточек */
+    border: 1px solid #EDF2F5;
+    border-radius: 2px;
 
     height: $select-height;
 
@@ -110,12 +115,12 @@ select {
     }
 
     &:hover {
-        background-color: darken($select-background, 2);
+        background-color: #EDF2F5;
     }
 
     &:active,
     &.active {
-        background-color: darken($select-background, 5);
+        background-color: #EDF2F5;
 
         &:after {
             transform: rotate(180deg);
@@ -132,7 +137,7 @@ select {
         z-index: 900;
         left: 0;
         right: 0;
-        background-color: rgba(69, 62, 79, 0.69);
+        background-color: rgba(42, 67, 81, 0.62);
     }
 }
 
@@ -189,7 +194,7 @@ select {
     & li {
         margin: 0;
         padding: 0.75rem rem(15);
-        border-top: 1px solid darken($select-background, 4);
+        border-top: 1px solid #EDF2F5;
         transition: all 0.15s ease-in;
         font-size: 14px;
         white-space: nowrap;
@@ -211,7 +216,7 @@ select {
         &.active,
         &:hover {
             color: #000;
-            background: $select-background;
+            background: #EDF2F5;
             //box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
         }
 

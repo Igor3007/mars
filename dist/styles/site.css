@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* media breakpoints */
 
 /*  */
@@ -1112,6 +1114,10 @@ select {
   color: #fff;
   width: 100%;
   min-width: 150px;
+  background: #F6F9FB;
+  /* голубой для карточек */
+  border: 1px solid #EDF2F5;
+  border-radius: 2px;
   height: auto;
 }
 
@@ -1166,12 +1172,12 @@ select {
 }
 
 .select-styled:hover {
-  background-color: #e9e6ee;
+  background-color: #EDF2F5;
 }
 
 .select-styled:active,
 .select-styled.active {
-  background-color: #e0dde8;
+  background-color: #EDF2F5;
 }
 
 .select-styled:active:after,
@@ -1208,7 +1214,7 @@ select {
 .select-options li {
   margin: 0;
   padding: 0.75rem 15px;
-  border-top: 1px solid #e3e0ea;
+  border-top: 1px solid #EDF2F5;
   transition: all 0.15s ease-in;
   font-size: 14px;
   white-space: nowrap;
@@ -1221,7 +1227,7 @@ select {
 .select-options li.active,
 .select-options li:hover {
   color: #000;
-  background: #eeecf2;
+  background: #EDF2F5;
 }
 
 .select-options li[rel="hide"] {
@@ -2310,6 +2316,23 @@ a.link-primary {
   background-color: #111111;
 }
 
+.page__breadcrumbs {
+  padding-top: 40px;
+}
+
+.page__title h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+  color: #013C76;
+}
+
+.page__content {
+  padding-bottom: 60px;
+}
+
 .btn {
   padding: 0.65em 2.5em 0.85em 2.5em;
   background: #E8444D;
@@ -3356,6 +3379,10 @@ input {
     display: none;
   }
 
+  .page__title h1 {
+    font-size: 56px;
+  }
+
   .form__note--col2 > span {
     padding-bottom: 0;
   }
@@ -3427,6 +3454,22 @@ input {
   .orders-block.orders-block--invites .table-card__td:nth-last-child(1) {
     padding-right: 20px;
   }
+
+  .page {
+    padding-top: 40px;
+  }
+
+  .page__breadcrumbs {
+    padding-left: 100px;
+  }
+
+  .page__title {
+    padding-left: 100px;
+  }
+
+  .page__content {
+    padding-top: 60px;
+  }
 }
 
 @media screen and (min-width: 1375px) {
@@ -3480,7 +3523,7 @@ input {
     z-index: 900;
     left: 0;
     right: 0;
-    background-color: rgba(69, 62, 79, 0.69);
+    background-color: rgba(42, 67, 81, 0.62);
   }
 
   .select-options {

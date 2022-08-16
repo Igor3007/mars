@@ -177,3 +177,39 @@
 .dark-mode {
     background-color: $main-dark;
 }
+
+.page {
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 40px;
+    }
+
+    &__breadcrumbs {
+
+        @media screen and (min-width: $w1200) {
+            padding-left: 100px;
+        }
+
+        padding-top: 40px;
+    }
+
+    &__title {
+
+        @media screen and (min-width: $w1200) {
+            padding-left: 100px;
+        }
+
+        & h1 {
+            @include section-title;
+            color: $blue;
+        }
+    }
+
+    &__content {
+        @media screen and (min-width: $w1200) {
+            padding-top: 60px;
+        }
+
+        padding-bottom: 60px;
+    }
+}

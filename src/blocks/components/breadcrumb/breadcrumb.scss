@@ -14,7 +14,7 @@
     & li {
 
         & a {
-            color: #7A808D;
+            color: #1F1F1F;
             font-size: 14px;
 
             &:hover {
@@ -24,9 +24,9 @@
         }
 
         &::after {
-            content: '-';
-            margin: 0 rem(10);
-            color: #7A808D;
+            content: '/';
+            margin: 0 rem(20);
+            color: #1F1F1F;
             display: inline-block;
             border-radius: 50%;
             position: relative;
