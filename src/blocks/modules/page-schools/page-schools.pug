@@ -134,6 +134,11 @@ mixin card-school(data)
     .card-school
         .card-school__image
             +picture(data.image)
+            .card-school__tags
+                ul
+                    li: a.color--blue(href='#') Great Britain
+                    li: a.color--green(href='#') London
+
         .card-school__main
             .card-school__title: a(href='#') Znaniye Russian School 
             .card-school__desc

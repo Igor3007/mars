@@ -1,4 +1,4 @@
-.page-schools {
+.page-gallery {
     display: flex;
     flex-direction: column;
 
@@ -47,7 +47,7 @@
     }
 }
 
-.card-school {
+.card-gallery {
 
 
 
@@ -66,20 +66,17 @@
 
     &__image {
 
-        margin-bottom: 20px;
-        position: relative;
+        padding-bottom: 20px;
 
         @media screen and (min-width: $w760) {
             width: 280px;
             min-width: 280px;
-            margin-bottom: 0;
-            align-self: flex-start;
+            padding-bottom: 0;
         }
 
         @media screen and (min-width: $w1200) {
             width: 360px;
             min-width: 360px;
-
 
         }
 
@@ -183,58 +180,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-    }
-
-    &__tags {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 3;
-        padding: 10px;
-
-        @media screen and (min-width: $w1200) {
-            padding: 20px;
-        }
-
-        & ul {
-            margin: -5px;
-            display: flex;
-
-            @media screen and (min-width: $w1200) {
-                margin: -10px;
-            }
-        }
-
-        & li {
-            padding: 5px;
-
-            @media screen and (min-width: $w1200) {
-                padding: 10px;
-            }
-
-            & a {
-                display: inline-flex;
-
-                background-color: #ccc;
-                height: 32px;
-                border-radius: 2px;
-                padding: 0 1.5em;
-                font-weight: 700;
-                line-height: 28px;
-
-
-                &.color--blue {
-                    background-color: $blue;
-                    color: #fff;
-                }
-
-                &.color--green {
-                    background-color: $green;
-                    color: #fff;
-                }
-            }
         }
     }
 }

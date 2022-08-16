@@ -1,0 +1,85 @@
+include ../../components/pagination/pagination.pug
+
+-
+    var news = [
+        {
+            image: '/img/gallery-img',
+            month: '17 мая 2022',
+            title: 'Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»ы',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/gallery-img',
+            month: '17 мая 2022',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: 'РГГУ',
+        },
+        {
+            image: '/img/gallery-img',
+            month: '17 мая 2022',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: ' Институт русского языка',
+        },
+       
+         
+    ]
+
+
+mixin page-gallery
+    .page-gallery
+        .page-gallery__aside
+
+            .page-aside(data-filter-open="container")
+                .page-aside__close 
+                    span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
+                .page-aside__title Фильтр
+                .page-aside__filter
+                    form(action='#' method='POST')
+                        .page-aside__select
+                            select(name="year")
+                                option(value="1") Год
+                                option(value="1") 2020
+                                option(value="2") 2021
+                                option(value="3") 2022
+                        .page-aside__select
+                            select(name="year")
+                                option(value="1") Страна
+                                option(value="1") Россия
+                                option(value="2") Украина
+                                option(value="3") США
+                        .page-aside__select
+                            select(name="name")
+                                option(value="1") Город
+                                option(value="1") Москва
+                                option(value="2") Казань
+                                option(value="3") Липецк
+                        .page-aside__apply
+                            button.btn Применить
+            
+            .page-aside-open(data-filter-open="btn") Фильтры
+
+        .page-gallery__content
+            .page-gallery__list
+                each item in news
+                    .page-gallery__item: +card-gallery(item)
+            .page-gallery__pagination
+                +pagination()
+
+mixin card-gallery(data)
+    .card-gallery
+        .card-gallery__image
+            +picture(data.image)
+        .card-gallery__main
+            .card-gallery__title: a(href='#') VIII Международная научно-практическая конференция «Би-, поли-, транслингвизм и лингвистическое образование»
+             
+            .card-gallery__action
+                .card-gallery__tags
+                    
+                    ul
+                        li: a(href='#') Июль 2022
+                        li: a(href='#') Россия
+                        li: a(href='#') Москва
+
+                .card-gallery__link
+                    a(href='#'): span.hover-arrow: +icons('#ic_hover-arrow-gray', 35)
+

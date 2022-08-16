@@ -5673,7 +5673,8 @@ footer a {
 }
 
 .card-school__image {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .card-school__image picture {
@@ -5754,6 +5755,166 @@ footer a {
 }
 
 .card-school__link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-school__tags {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: 10px;
+}
+
+.card-school__tags ul {
+  margin: -5px;
+  display: flex;
+}
+
+.card-school__tags li {
+  padding: 5px;
+}
+
+.card-school__tags li a {
+  display: inline-flex;
+  background-color: #ccc;
+  height: 32px;
+  border-radius: 2px;
+  padding: 0 1.5em;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.card-school__tags li a.color--blue {
+  background-color: #013C76;
+  color: #fff;
+}
+
+.card-school__tags li a.color--green {
+  background-color: #55B282;
+  color: #fff;
+}
+
+.page-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-gallery__aside {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.page-gallery__content {
+  flex-grow: 1;
+}
+
+.page-gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.page-gallery__item {
+  padding: 15px;
+}
+
+.page-gallery__pagination {
+  padding-top: 40px;
+}
+
+.card-gallery {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F5;
+  border-radius: 2px;
+  padding: 12px;
+}
+
+.card-gallery__image {
+  padding-bottom: 20px;
+}
+
+.card-gallery__image picture {
+  display: block;
+  padding-top: 95%;
+  position: relative;
+}
+
+.card-gallery__image picture img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-gallery__main {
+  padding: 0 15px;
+}
+
+.card-gallery__title {
+  padding-bottom: 20px;
+}
+
+.card-gallery__title a {
+  font-weight: 600;
+  font-size: 24px;
+  color: #013C76;
+  line-height: 150%;
+}
+
+.card-gallery__title a:hover {
+  text-decoration: underline;
+}
+
+.card-gallery__desc {
+  font-size: 16px;
+  padding-bottom: 40px;
+}
+
+.card-gallery__desc span {
+  letter-spacing: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 150%;
+}
+
+.card-gallery__action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.card-gallery__contact a {
+  color: #55B282;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.card-gallery__email {
+  padding-bottom: 5px;
+}
+
+.card-gallery__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  align-self: flex-end;
+}
+
+.card-gallery__link a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6282,6 +6443,17 @@ footer a {
   .card-school__image {
     width: 280px;
     min-width: 280px;
+    margin-bottom: 0;
+    align-self: flex-start;
+  }
+
+  .card-gallery {
+    display: flex;
+  }
+
+  .card-gallery__image {
+    width: 280px;
+    min-width: 280px;
     padding-bottom: 0;
   }
 }
@@ -6399,6 +6571,20 @@ footer a {
   }
 
   .page-schools__content {
+    padding-left: 40px;
+  }
+
+  .page-gallery {
+    flex-direction: row;
+  }
+
+  .page-gallery__aside {
+    padding-bottom: 0;
+    max-width: 288px;
+    min-width: 288px;
+  }
+
+  .page-gallery__content {
     padding-left: 40px;
   }
 
@@ -6917,6 +7103,46 @@ footer a {
   }
 
   .card-school__action {
+    margin-top: auto;
+    padding-bottom: 0;
+  }
+
+  .card-school__tags {
+    padding: 20px;
+  }
+
+  .card-school__tags ul {
+    margin: -10px;
+  }
+
+  .card-school__tags li {
+    padding: 10px;
+  }
+
+  .page-gallery__pagination {
+    padding-top: 100px;
+  }
+
+  .card-gallery {
+    padding: 30px;
+  }
+
+  .card-gallery__image {
+    width: 360px;
+    min-width: 360px;
+  }
+
+  .card-gallery__image picture {
+    padding-top: 75%;
+  }
+
+  .card-gallery__main {
+    padding: 0 0 0 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-gallery__action {
     margin-top: auto;
     padding-bottom: 0;
   }
