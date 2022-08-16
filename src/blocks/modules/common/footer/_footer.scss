@@ -1,7 +1,7 @@
 footer {
     background-color: $blue;
     color: #FFF;
-    padding: 50px 0;
+    padding: 37px 0 30px 0;
 
     & a {
         color: #FFF;
@@ -11,53 +11,115 @@ footer {
 .footer {
 
     &__top {
-        display: flex;
-        padding-bottom: 30px;
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            padding-bottom: 46px;
+        }
     }
 
     &__main {
-        display: flex;
-        padding-bottom: 60px;
+
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            padding-bottom: 40px;
+        }
+
 
     }
 
     &__bottom {
-        display: flex;
-        justify-content: space-between;
+
         margin-top: 30px;
         padding-top: 30px;
-
         border-top: 1px solid #eee;
+
+
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 18px;
+        }
+    }
+
+    &__policy {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 13px;
+
+        & a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: 13px;
+
+        & a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     &__address {
         margin-right: 60px;
-    }
+        margin-bottom: 30px;
 
-    &__nav {
-        margin-left: auto;
-    }
-
-    &__logo {
-
-        margin-right: 50px;
-
-        & .bgimage {
-            width: 177px;
-            height: 70px;
-            @include bgimage-contain;
+        @media screen and (min-width: $w760) {
+            width: 50%;
+            margin-right: 0;
         }
+
+        @media screen and (min-width: $w1200) {
+            width: auto;
+            margin-right: 60px;
+        }
+
+        &-title {
+            color: rgba(255, 255, 255, 0.6);
+            padding-bottom: 5px;
+
+
+        }
+
+        &-location {
+            font-weight: 600;
+
+            @media screen and (min-width: $w1200) {
+                font-size: 15px;
+            }
+        }
+
     }
 
     &__social {
         margin-left: auto;
 
+        @media screen and (min-width: $w760) {
+            width: 100%;
+        }
+
+        @media screen and (min-width: $w1200) {
+            width: auto;
+        }
+
         & ul {
             display: flex;
             margin: -5px;
 
+            @media screen and (min-width: $w1200) {
+                margin: -10px;
+            }
+
             & li {
                 margin: 5px;
+
+                @media screen and (min-width: $w1200) {
+                    margin: 10px;
+                }
 
                 & a {
                     background-color: white;
@@ -67,8 +129,117 @@ footer {
                     justify-content: center;
                     align-items: center;
                     border-radius: 50%;
+
+                    @media screen and (min-width: $w1200) {
+                        width: 60px;
+                        height: 60px;
+
+                        & svg {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+
+                    & svg {
+                        fill: $blue;
+                    }
                 }
             }
+        }
+    }
+
+    &__nav {
+        margin-left: auto;
+        display: none;
+
+        @media screen and (min-width: $w1376) {
+            margin-right: 90px;
+        }
+
+
+        @media screen and (min-width: $w1200) {
+            display: block;
+            max-width: 450px;
+            padding-top: 25px;
+
+
+            & ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin: -15px;
+
+                & li {
+                    flex-grow: 1;
+                    flex-basis: 50%;
+                    padding: 15px;
+
+                    & a {
+
+                        font-size: 16px;
+                        transition: .3s ease;
+                        display: inline-block;
+
+                        &:hover {
+                            transform: translateX(10px);
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    &__logo {
+
+        margin-right: 50px;
+
+        @media screen and (min-width: $w760) {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: $w1200) {
+            margin-right: 74px;
+        }
+
+
+
+        & .bgimage {
+            width: 177px;
+            height: 70px;
+            @include bgimage-contain;
+        }
+    }
+
+
+
+    &__contacts {
+        @media screen and (min-width: $w760) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width: $w1200) {
+            flex-direction: column;
+            margin-right: 100px;
+            padding-top: 25px;
+        }
+    }
+
+    &__main {
+        @media screen and (min-width: $w760) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    & a {
+
+        transition: .3s ease;
+
+        &:hover {
+            transform: translateX(10px);
         }
     }
 }
@@ -76,19 +247,49 @@ footer {
 .footer-contact {
     margin-bottom: 30px;
 
+    @media screen and (min-width: $w760) {
+        width: 50%;
+    }
+
+    @media screen and (min-width: $w1200) {
+        width: auto;
+        display: flex;
+        margin-bottom: 60px;
+    }
+
     &__links {
 
         margin: -10px;
 
+        @media screen and (min-width: $w1200) {
+            margin: -15px;
+        }
+
         & a {
             display: block;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             margin: 10px;
+
+            @media screen and (min-width: $w1376) {
+                font-size: 24px;
+            }
+
+            @media screen and (min-width: $w1200) {
+                font-size: 20px;
+                margin: 15px;
+                margin-bottom: 35px;
+            }
         }
     }
 
     &__title {
         padding-bottom: 15px;
+
+        @media screen and (min-width: $w1200) {
+            min-width: 100px;
+        }
     }
+
+
 }
