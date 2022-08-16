@@ -85,7 +85,7 @@
 
         & picture {
             display: block;
-            padding-top: 95%;
+            padding-top: 70%;
             position: relative;
 
             @media screen and (min-width: $w1200) {
@@ -117,7 +117,7 @@
 
         & a {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 20px;
             color: $blue;
             line-height: 150%;
 
@@ -180,6 +180,54 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+    }
+
+    &__tags {
+
+
+        padding-top: 25px;
+
+
+        & ul {
+            margin: -5px;
+            display: flex;
+            flex-wrap: wrap;
+
+            @media screen and (min-width: $w1200) {
+                margin: -10px;
+            }
+        }
+
+        & li {
+            padding: 5px;
+
+            @media screen and (min-width: $w1200) {
+                padding: 10px;
+            }
+
+            & a {
+                display: inline-flex;
+
+                background-color: $blue-for-card;
+                height: 42px;
+                border-radius: 2px;
+                padding: 0 1.5em;
+
+                line-height: 38px;
+                white-space: nowrap;
+
+
+                &.color--blue {
+                    background-color: $blue;
+                    color: #fff;
+                }
+
+                &.color--green {
+                    background-color: $green;
+                    color: #fff;
+                }
+            }
         }
     }
 }

@@ -143,6 +143,32 @@ document.addEventListener("DOMContentLoaded", function (event) {
             const fancybox = Fancybox.show(arrFancybox);
         })
     }
+    /* ==============================================
+    fancybox
+    ============================================== */
+
+    if (document.querySelector('[data-fancybox]')) {
+
+        let arrImage = document.querySelectorAll('[data-fancybox]')
+        let arrFancybox = []
+
+        arrImage.forEach((item, index) => {
+            arrFancybox.push({
+                src: item.dataset.src,
+                type: "image",
+            })
+
+            item.addEventListener('click', function () {
+                Fancybox.show(arrFancybox, {
+                    startIndex: index
+                });
+            })
+        })
+
+        console.log(arrImage)
+
+
+    }
 
 
 

@@ -18,9 +18,9 @@ gulp.task("webp", () => {
     return gulp.src(paths.webp.src)
         .pipe(webp({
             lossless: true,
-            quality: 100,
-            alphaQuality: 100,
-            method: 6
+            quality: 80,
+            alphaQuality: 80,
+
         }))
         .pipe(gulp.dest(paths.webp.dist))
         .pipe(debug({

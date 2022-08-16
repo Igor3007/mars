@@ -1,0 +1,30 @@
+extends ../layouts/index
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Mars"
+
+
+block content
+
+  include ../../blocks/components/breadcrumb/breadcrumb.pug
+  include ../../blocks/modules/gallery-details/gallery-details.pug
+
+  .container
+    .page 
+     .page__breadcrumbs
+      +breadcrumb([
+        'Главная',
+        'Галерея',
+        'VIII Международная научно-практическая конф...'
+      ])
+     .page__title
+        h1 Галерея
+     .page__content
+        +gallery-details()
+
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 
+ 

@@ -3146,6 +3146,7 @@ a.link-primary {
   color: #013C76;
   padding-bottom: 25px;
   color: #013C76;
+  padding-bottom: 35px;
 }
 
 .page__content {
@@ -4313,6 +4314,7 @@ input {
 
   .page__breadcrumbs {
     padding-left: 100px;
+    padding-bottom: 30px;
   }
 
   .page__title {
