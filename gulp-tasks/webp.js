@@ -1,6 +1,8 @@
 "use strict";
 
-import { paths } from "../gulpfile.babel";
+import {
+    paths
+} from "../gulpfile.babel";
 import gulp from "gulp";
 import gulpif from "gulp-if";
 import imageminWebp from "imagemin-webp";
@@ -14,11 +16,12 @@ const argv = yargs.argv,
 
 gulp.task("webp", () => {
     return gulp.src(paths.webp.src)
-        .pipe(webp(gulpif(production, imageminWebp({
+        .pipe(webp({
             lossless: true,
             quality: 100,
-            alphaQuality: 100
-        }))))
+            alphaQuality: 100,
+            method: 6
+        }))
         .pipe(gulp.dest(paths.webp.dist))
         .pipe(debug({
             "title": "Images"

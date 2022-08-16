@@ -1,0 +1,148 @@
+include ../../components/pagination/pagination.pug
+
+-
+    var news = [
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»ы',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: 'РГГУ',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Культурно-образовательный фестиваль для детских творческих коллективов русских школ, посвященный году культурного наследия народов России ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»ы',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Культурно-образовательный фестиваль для детских творческих коллективов русских школ, посвященный году культурного наследия народов России ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»ы',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: 'РГГУ',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Культурно-образовательный фестиваль для детских творческих коллективов русских школ, посвященный году культурного наследия народов России ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Отчет о проведении НТМ Международная студенческая конференция «Языки мира и культура»ы',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Всебританский форум русских школ. Диалоговая площадка «Опыт русских школ из разных регионов мира» ',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/school-img',
+            month: '17 мая 2022',
+            title: 'Всемирный конгресс преподавателей и руководителей русских школ ',
+            location: ' Институт русского языка',
+        },
+         
+    ]
+
+
+mixin page-schools
+    .page-schools
+        .page-schools__aside
+
+            .page-aside(data-filter-open="container")
+                .page-aside__close 
+                    span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
+                .page-aside__title Фильтр
+                .page-aside__filter
+                    form(action='#' method='POST')
+                        .page-aside__select
+                            select(name="year")
+                                option(value="1") Страна
+                                option(value="1") Россия
+                                option(value="2") Украина
+                                option(value="3") США
+                        .page-aside__select
+                            select(name="name")
+                                option(value="1") Город
+                                option(value="1") Москва
+                                option(value="2") Казань
+                                option(value="3") Липецк
+                        .page-aside__apply
+                            button.btn Применить
+            
+            .page-aside-open(data-filter-open="btn") Фильтры
+
+        .page-schools__content
+            .page-schools__list
+                each item in news
+                    .page-schools__item: +card-school(item)
+            .page-schools__pagination
+                +pagination()
+
+mixin card-school(data)
+    .card-school
+        .card-school__image
+            +picture(data.image)
+        .card-school__main
+            .card-school__title: a(href='#') Znaniye Russian School 
+            .card-school__desc
+                span Translated from Russian as ‘knowledge,' Znaniye was established in 2003, driven by the desire to deliver a unique and dynamic education to students in London.
+            .card-school__action
+                .card-school__contact
+                    .card-school__email: a(href='mailto:school@znaniye.com') school@znaniye.com
+                    .card-school__phone: a(href='tel:+44 7769 313090') +44 7769 313090
+
+                .card-school__link
+                    a(href='#'): span.hover-arrow: +icons('#ic_hover-arrow-gray', 35)
+
