@@ -1,0 +1,29 @@
+extends ../layouts/index
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Mars"
+
+
+block content
+
+  include ../../blocks/components/breadcrumb/breadcrumb.pug
+  include ../../blocks/modules/page-traning/page-traning.pug
+  section.page-bg(style="background-image: url(/img/common/bggoal.svg)")
+    .container
+      .page 
+      .page__breadcrumbs
+        +breadcrumb([
+          'Главная',
+          'Повышение квалификации'
+        ])
+      .page__title
+          h1 Повышение квалификации
+      .page__content
+          +page-traning()
+
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 
+ 
