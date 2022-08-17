@@ -99,7 +99,7 @@ include ../../components/pagination/pagination.pug
 mixin page-news
     .page-news
         .page-news__aside
-
+            .page-aside__wrp
             .page-aside(data-filter-open="container")
                 .page-aside__close 
                     span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
@@ -121,7 +121,7 @@ mixin page-news
                         .page-aside__apply
                             button.btn Применить
             
-            .page-aside-open(data-filter-open="btn") Фильтры
+        .page-aside-open(data-filter-open="btn") Фильтры
 
         .page-news__content
             .page-news__list

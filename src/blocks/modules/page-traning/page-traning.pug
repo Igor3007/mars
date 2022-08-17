@@ -7,36 +7,37 @@ mixin page-traning
         .page-traning__aside
 
             .page-aside(data-filter-open="container")
-                .page-aside__close 
-                    span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
-                 
-                .page-aside__filter
-                    form(action='#' method='POST')
-                        .page-aside__select
-                            select(name="year")
-                                option(value="0") Организация
-                                option(value="1") Организация 1
-                                option(value="2") Организация 2
-                                option(value="3") Организация 3
-                        .page-aside__label Вид обучения
-                        .page-aside__fields
-                            .page-aside__input: +checkbox('Общеобразовательные предметы')
-                            .page-aside__input: +checkbox('Повышение квалификации')
-                        .page-aside__label Для кого
-                        .page-aside__fields
-                            .page-aside__input: +checkbox('For foreigners')
-                            .page-aside__input: +checkbox('Студентам')
-                            .page-aside__input: +checkbox('Бизнесу')
-                            .page-aside__input: +checkbox('Преподавателям')
-                            .page-aside__input: +checkbox('Тесторам')
-                        .page-aside__label Для кого
-                        .page-aside__fields
-                            .page-aside__input: +checkbox('Дистанционное обучение')
-                            .page-aside__input: +checkbox('Очное')
-                            
-                            
-                        .page-aside__apply
-                            button.btn Применить
+                .page-aside__wrp
+                    .page-aside__close 
+                        span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
+                    
+                    .page-aside__filter
+                        form(action='#' method='POST')
+                            .page-aside__select
+                                select(name="year")
+                                    option(value="0") Организация
+                                    option(value="1") Организация 1
+                                    option(value="2") Организация 2
+                                    option(value="3") Организация 3
+                            .page-aside__label Вид обучения
+                            .page-aside__fields
+                                .page-aside__input: +checkbox('Общеобразовательные предметы')
+                                .page-aside__input: +checkbox('Повышение квалификации')
+                            .page-aside__label Для кого
+                            .page-aside__fields
+                                .page-aside__input: +checkbox('For foreigners')
+                                .page-aside__input: +checkbox('Студентам')
+                                .page-aside__input: +checkbox('Бизнесу')
+                                .page-aside__input: +checkbox('Преподавателям')
+                                .page-aside__input: +checkbox('Тесторам')
+                            .page-aside__label Для кого
+                            .page-aside__fields
+                                .page-aside__input: +checkbox('Дистанционное обучение')
+                                .page-aside__input: +checkbox('Очное')
+                                
+                                
+                            .page-aside__apply
+                                button.btn Применить
             
             .page-aside-open(data-filter-open="btn") Фильтры
 
