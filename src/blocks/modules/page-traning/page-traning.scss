@@ -184,6 +184,7 @@
 .page-bg {
     background-size: 300% auto;
     background-position: center 20%;
+    background-repeat: no-repeat;
 
 
     @media screen and (max-width: $w480) {
