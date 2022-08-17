@@ -1,0 +1,153 @@
+include ../../components/pagination/pagination.pug
+
+-
+    var news = [
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: 'РГГУ',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: 'РГГУ',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+        {
+            image: '/img/image-libray',
+            month: '17 мая 2022',
+            title: 'Анна Австрийская. Кардинал Мазарини. Детство Людовика XIV',
+            location: ' Институт русского языка',
+        },
+         
+    ]
+
+
+mixin page-media
+    .page-media
+        .page-media__aside
+
+            .page-aside(data-filter-open="container")
+                .page-aside__wrp
+                    .page-aside__close 
+                        span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
+                    .page-aside__title Медиатека
+                    .page-aside__filter
+                        form(action='#' method='POST')
+                            .page-aside__nav
+                                ul
+                                    li: a.active(href='#') Библиотека
+                                    li: a(href='#') Видеоматериалы
+                                    li: a(href='#') Интерактивные уроки
+                             
+                .page-aside__wrp
+                    .page-aside__title Тип книги
+                    .page-aside__filter
+                        form(action='#' method='POST')
+                            .page-aside__fields
+                                .page-aside__input: +checkbox('Монографии')
+                                .page-aside__input: +checkbox('Новые издания ФПК РЯ')
+                                .page-aside__input: +checkbox('Русский язык как иностранный')
+                                .page-aside__input: +checkbox('Русский язык как неродной')
+                                .page-aside__input: +checkbox('Историческая литература')
+                                .page-aside__input: +checkbox('Русский язык как родной')
+                            .page-aside__apply
+                                button.btn Применить
+            
+            .page-aside-open(data-filter-open="btn") Фильтры
+
+        .page-media__content
+            .page-media__list
+                each item in news
+                    .page-media__item: +card-book(item)
+            .page-media__pagination
+                +pagination()
+
+mixin card-book(data)
+    .card-book
+        .card-book__image
+            +picture(data.image)
+           
+
+        .card-book__main
+            .card-book__autor Кондратий Петрович Биркин
+            .card-book__title: a(href='media-details.html') Znaniye Russian School 
+            .card-book__desc
+                span Вдовствующей королеве Анне Австрийской, назначенной Людовиком XIII правительницей Франции, в год кончины короля исполнилось сорок два года. Трудно было узнать прежнюю красавицу в разжирелой матроне, с одутловатым румяным лицом, крючковатым носом, отвислой нижней губой и двойным подбородком. В нравственном отношении Анна Австрийская точно так же изменилась, как и в физическом. 
+            .card-book__link
+                    a(href='media-details.html'): span.hover-arrow: +icons('#ic_hover-arrow-gray', 35)
+                
+

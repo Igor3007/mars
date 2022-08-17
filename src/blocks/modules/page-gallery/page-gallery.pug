@@ -30,31 +30,32 @@ mixin page-gallery
         .page-gallery__aside
 
             .page-aside(data-filter-open="container")
-                .page-aside__close 
-                    span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
-                .page-aside__title Фильтр
-                .page-aside__filter
-                    form(action='#' method='POST')
-                        .page-aside__select
-                            select(name="year")
-                                option(value="1") Год
-                                option(value="1") 2020
-                                option(value="2") 2021
-                                option(value="3") 2022
-                        .page-aside__select
-                            select(name="year")
-                                option(value="1") Страна
-                                option(value="1") Россия
-                                option(value="2") Украина
-                                option(value="3") США
-                        .page-aside__select
-                            select(name="name")
-                                option(value="1") Город
-                                option(value="1") Москва
-                                option(value="2") Казань
-                                option(value="3") Липецк
-                        .page-aside__apply
-                            button.btn Применить
+                .page-aside__wrp
+                    .page-aside__close 
+                        span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
+                    .page-aside__title Фильтр
+                    .page-aside__filter
+                        form(action='#' method='POST')
+                            .page-aside__select
+                                select(name="year")
+                                    option(value="1") Год
+                                    option(value="1") 2020
+                                    option(value="2") 2021
+                                    option(value="3") 2022
+                            .page-aside__select
+                                select(name="year")
+                                    option(value="1") Страна
+                                    option(value="1") Россия
+                                    option(value="2") Украина
+                                    option(value="3") США
+                            .page-aside__select
+                                select(name="name")
+                                    option(value="1") Город
+                                    option(value="1") Москва
+                                    option(value="2") Казань
+                                    option(value="3") Липецк
+                            .page-aside__apply
+                                button.btn Применить
             
             .page-aside-open(data-filter-open="btn") Фильтры
 
