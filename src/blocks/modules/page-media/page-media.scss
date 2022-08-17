@@ -175,6 +175,7 @@
             @media screen and (min-width: $w1440) {
                 max-width: 660px;
                 @include line-clamp(7);
+                display: block;
             }
         }
     }
