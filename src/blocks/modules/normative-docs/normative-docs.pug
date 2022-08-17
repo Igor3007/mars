@@ -1,0 +1,54 @@
+include ../../components/pagination/pagination.pug
+
+mixin normative-docs
+    .normative-docs
+        .normative-docs__filter
+            form(action='#' method='POST')
+                .top-filter
+                    .top-filter__wrp
+
+                        .top-filter__item.top-filter__item--type
+                            .top-filter__label Тип документа
+                            .top-filter__select: +select(false, ['Все', 'Приказ'])
+                        .top-filter__item.top-filter__item--number
+                            .top-filter__label Номер приказа
+                            .top-filter__input: input(type="text" placeholder="")
+                        .top-filter__item.top-filter__item--date
+                            .top-filter__label Дата
+                            .top-filter__group
+                                .top-filter__input: input(type="text" placeholder="От")
+                                .top-filter__input: input(type="text" placeholder="До")
+                        .top-filter__keywords
+                            span Поиск по ключевым словам
+                            +icons('#ic_find-blue', 16)
+                .top-filter__find
+                    button.btn Поиск
+
+        .normative-docs__list
+            each item in [1,1,1,1,1,1]
+                .normative-docs__item 
+                    .card-normative-docs
+                        .card-normative-docs__head
+                            .card-normative-docs__type: span Приказ 
+                            .card-normative-docs__date 2 июня 2022 года
+                            .card-normative-docs__number Номер приказа: 838-р
+                            
+                        .card-normative-docs__title: a(href='#') Приказ «О стоимости обучения по программам подготовки научно-педагогических кадров в аспирантуре, программам ординатуры для граждан РФ и стран-участников СНГ, поступающих (заключающих договоры на обучение) в РУДН»
+                        .card-normative-docs__file
+                            .card-normative-docs__dl
+                                a(href='#')
+                                    +icons('#ic_dl', 24)
+                                    span Скачать файл
+                            .card-normative-docs__format pdf, 457 КБ
+
+                        .card-normative-docs__tags
+                            ul 
+                                li: a(href='#') Стоимость обучения
+                                li: a(href='#') Поступление
+                                li: a(href='#') Аспирантура
+                                li: a(href='#') Ординатура
+                                li: a(href='#') СНГ
+                                li: a(href='#') Граждане РФ
+
+        .normative-docs__pagination
+            +pagination()

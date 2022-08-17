@@ -1,0 +1,30 @@
+extends ../layouts/index
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Mars"
+
+
+block content
+
+  include ../../blocks/components/breadcrumb/breadcrumb.pug
+  include ../../blocks/modules/normative-docs/normative-docs.pug
+
+  .container
+    .page 
+     .page__breadcrumbs
+      +breadcrumb([
+        'Главная',
+        'Об организации',
+        'Нормативные документы'
+      ])
+     .page__title
+        h1 Нормативные документы
+     .page__content
+        +normative-docs()
+
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 
+ 

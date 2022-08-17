@@ -1630,7 +1630,7 @@ select {
 
 .datepicker-cell.selected,
 .datepicker-cell.selected:hover {
-  background-color: #525166;
+  background-color: #E8444D;
   color: #fff;
   font-weight: 600;
 }
