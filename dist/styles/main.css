@@ -5589,6 +5589,10 @@ footer a {
   flex-direction: column;
 }
 
+.card-news:hover .hover-arrow svg {
+  transform: rotate(90deg);
+}
+
 .card-news__image picture {
   display: block;
   padding-top: 54%;
