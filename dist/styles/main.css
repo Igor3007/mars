@@ -5930,6 +5930,7 @@ footer a {
 
 .page-gallery__item {
   padding: 15px;
+  width: 100%;
 }
 
 .page-gallery__pagination {
@@ -8341,6 +8342,7 @@ footer a {
     padding: 0 0 0 40px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
   }
 
   .card-gallery__action {
