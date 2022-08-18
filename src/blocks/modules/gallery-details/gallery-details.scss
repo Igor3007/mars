@@ -29,8 +29,21 @@
         margin-bottom: 5px;
         width: 100%;
 
+        & picture {
+            display: block;
+            overflow: hidden;
+
+            &:hover {
+                & img {
+                    transform: scale(1.05);
+                    cursor: pointer;
+                }
+            }
+        }
+
         & img {
             width: 100%;
+            transition: 0.3s ease;
         }
 
         @media screen and (min-width: $w992) {
@@ -116,6 +129,12 @@
             font-size: 20px;
             font-weight: 600;
             line-height: 150%;
+
+            & h1 {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 150%;
+            }
         }
     }
 }

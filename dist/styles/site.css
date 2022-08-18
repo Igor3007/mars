@@ -3139,7 +3139,7 @@ a.link-primary {
   padding-top: 40px;
 }
 
-.page__title h1 {
+.page__title {
   font-weight: 700;
   font-size: 40px;
   line-height: 111%;
@@ -3147,6 +3147,15 @@ a.link-primary {
   padding-bottom: 25px;
   color: #013C76;
   padding-bottom: 35px;
+}
+
+.page__title h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+  color: #013C76;
 }
 
 .page__content {
@@ -4203,6 +4212,10 @@ input {
   }
 
   .page__title h1 {
+    font-size: 56px;
+  }
+
+  .page__title {
     font-size: 56px;
   }
 
