@@ -5944,6 +5944,10 @@ footer a {
   padding: 20px;
 }
 
+.card-gallery:hover .hover-arrow svg {
+  transform: rotate(90deg);
+}
+
 .card-gallery__image {
   padding-bottom: 20px;
 }
