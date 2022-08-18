@@ -3512,6 +3512,70 @@ a.link-primary {
   color: #525166;
 }
 
+.toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #525166;
+}
+
+.toggle div {
+  display: flex;
+  align-items: center;
+}
+
+.toggle div .toggle-slide {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  background: transparent;
+  border-radius: 50px 50px;
+  position: relative;
+  box-shadow: 0 0 0 1px #55B282;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.toggle div .toggle-slide::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #55B282;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle input:checked ~ div .toggle-slide {
+  background: #fff;
+}
+
+.toggle input:checked ~ div .toggle-slide::before {
+  left: calc(100% - 22px);
+  background: #55B282;
+}
+
+.toggle .toggle-active {
+  display: none;
+}
+
+.toggle input:checked ~ div .toggle-active {
+  display: block;
+  color: #222B32;
+}
+
+.toggle input:checked ~ div .toggle-deactive {
+  display: none;
+}
+
 .breadcrumb {
   background-color: transparent;
   padding: 0 0 20px 0;
@@ -6888,6 +6952,133 @@ footer a {
   line-height: 150%;
 }
 
+.page-project {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-project__aside {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.page-project__content {
+  flex-grow: 1;
+}
+
+.page-project__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.page-project__item {
+  padding: 15px;
+  width: 100%;
+}
+
+.page-project__pagination {
+  padding-top: 40px;
+}
+
+.page-aside__input .toggle {
+  padding: 15px 18px;
+  background: #F6F9FB;
+  margin-top: 25px;
+  /* голубой для карточек */
+  border: 1px solid #EDF2F5;
+  border-radius: 2px;
+}
+
+.card-project {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F5;
+  border-radius: 2px;
+  padding: 20px;
+  width: 100%;
+}
+
+.card-project:hover .hover-arrow svg {
+  transform: rotate(90deg);
+}
+
+.card-project__when {
+  display: flex;
+  align-items: center;
+  background: #F6F9FB;
+  border: 1px solid #EDF2F5;
+  border-radius: 2px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.card-project__date {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -3px;
+}
+
+.card-project__date-day {
+  font-size: 56px;
+  font-weight: 600;
+  color: #55B282;
+  line-height: 56px;
+}
+
+.card-project__date-my {
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.card-project__date-month {
+  padding-bottom: 5px;
+}
+
+.card-project__location {
+  margin-left: auto;
+  padding-right: 5px;
+}
+
+.card-project__location span {
+  display: block;
+  font-size: 14px;
+  color: #1F1F1F;
+}
+
+.card-project__location span:first-child {
+  padding-bottom: 7px;
+}
+
+.card-project__title {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #E6EBEF;
+  margin-bottom: 30px;
+}
+
+.card-project__title a {
+  font-weight: 600;
+  font-size: 20px;
+  color: #013C76;
+  line-height: 150%;
+}
+
+.card-project__title a:hover {
+  text-decoration: underline;
+}
+
+.card-project__desc {
+  line-height: 150%;
+  font-size: 16px;
+}
+
+.card-project__link {
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .search-result {
   max-width: 1030px;
   margin: 0 auto;
@@ -7592,6 +7783,20 @@ footer a {
     position: relative;
     top: 2px;
     margin: 0 30px;
+  }
+
+  .page-project {
+    flex-direction: row;
+  }
+
+  .page-project__aside {
+    padding-bottom: 0;
+    max-width: 288px;
+    min-width: 288px;
+  }
+
+  .page-project__content {
+    padding-left: 30px;
   }
 }
 
@@ -8359,6 +8564,56 @@ footer a {
 
   .card-worker__post {
     font-size: 16px;
+  }
+
+  .page-project__pagination {
+    padding-top: 100px;
+  }
+
+  .card-project {
+    padding: 30px;
+    display: flex;
+  }
+
+  .card-project__when {
+    flex-direction: column;
+    min-width: 163px;
+    margin-bottom: 0;
+    padding: 20px 15px 25px 15px;
+  }
+
+  .card-project__date {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-project__date-day {
+    padding-bottom: 15px;
+  }
+
+  .card-project__date-my {
+    padding-left: 0;
+  }
+
+  .card-project__location {
+    margin-top: auto;
+    margin-left: 0;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .card-project__main {
+    padding-left: 30px;
+    width: 100%;
+  }
+
+  .card-project__title a {
+    max-width: 480px;
+    display: inline-block;
+  }
+
+  .card-project__desc {
+    max-width: 550px;
   }
 
   .search-result__header {

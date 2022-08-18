@@ -1,0 +1,48 @@
+include ../../components/pagination/pagination.pug
+
+mixin page-project
+    
+    .page-project
+        .page-project__aside
+            .page-aside(data-filter-open="container")
+                .page-aside__wrp
+                    .page-aside__close 
+                        span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
+                    .page-aside__title Формат
+                    .page-aside__filter
+                        form(action='#' method='POST')
+                            .page-aside__fields
+                                .page-aside__input: +checkbox('Онлайн')
+                                .page-aside__input: +checkbox('Офлайн')
+                                .page-aside__input: +checkbox('Офлайн и онлайн')
+
+                            .page-aside__input: +toggle('Показать завершенные')
+                             
+                            .page-aside__apply
+                                button.btn Применить
+                
+            .page-aside-open(data-filter-open="btn") Фильтры
+
+        .page-project__content
+            .page-project__list
+                each item in [1,1,1,1,1]
+                    .page-project__item: +card-project(item) 
+            .page-project__pagination
+                +pagination()
+
+mixin card-project(data) 
+    .card-project
+        .card-project__when
+            .card-project__date
+                .card-project__date-day 10
+                .card-project__date-my
+                    .card-project__date-month июня
+                    .card-project__date-year 2022
+            .card-project__location
+                span г. Марокко
+                span Очно и онлайн
+        .card-project__main
+            .card-project__title: a(href='#') Международная олимпиада для иностранных студентов "Русский язык в профессии"
+            .card-project__desc Международная олимпиада для иностранных студентов «Русский язык в профессии» проводится с 10.06.2022г. по 04.11.2022г. на базе Федерального государственного автономного образовательного учреждения высшего образования «Российский университет дружбы народов». К участию в мероприятии приглашаются иностранные учащиеся, проходящие подготовку по программам бакалавриата,...
+            .card-project__link
+                a(href='project-details.html'): span.hover-arrow: +icons('#ic_hover-arrow-gray', 35)

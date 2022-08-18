@@ -229,74 +229,74 @@
 
 
 
-// .toggle {
-//     display: flex;
-//     align-items: center;
-//     cursor: pointer;
-//     font-size: 14px;
-//     color: $main;
+.toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: $main;
 
 
 
-//     & div {
-//         display: flex;
-//         align-items: center;
+    & div {
+        display: flex;
+        align-items: center;
 
-//         & .toggle-slide {
-//             width: 40px;
-//             height: 20px;
-//             display: inline-block;
-//             background: $green;
-//             border-radius: 50px 50px;
-//             position: relative;
-//             box-shadow: 0 0 0 1px $green;
-//             margin-right: rem(10);
-//             transition: 0.3s ease;
+        & .toggle-slide {
+            width: 40px;
+            height: 24px;
+            display: inline-block;
+            background: transparent;
+            border-radius: 50px 50px;
+            position: relative;
+            box-shadow: 0 0 0 1px $green;
+            margin-right: rem(10);
+            transition: 0.3s ease;
 
-//             &::before {
-//                 content: '';
-//                 width: 16px;
-//                 height: 16px;
-//                 background: #fff;
-//                 border-radius: 50%;
-//                 position: absolute;
-//                 left: 2px;
-//                 top: 2px;
-//                 display: block;
-//                 transition: 0.3s ease;
+            &::before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: $green;
+                border-radius: 50%;
+                position: absolute;
+                left: 2px;
+                top: 2px;
+                display: block;
+                transition: 0.3s ease;
 
-//             }
-//         }
-//     }
+            }
+        }
+    }
 
-//     & input {
-//         display: none;
+    & input {
+        display: none;
 
-//         &:checked~div .toggle-slide {
-//             background: #fff;
-
-
-//             &::before {
-//                 left: calc(100% - 18px);
-//                 background: $green;
-//             }
-//         }
-
-//     }
-
-//     & .toggle-active {
-//         display: none;
-//     }
-
-//     & input:checked~div .toggle-active {
-//         display: block;
-//         color: $black;
-
-//     }
-
-//     & input:checked~div .toggle-deactive {
-//         display: none;
+        &:checked~div .toggle-slide {
+            background: #fff;
 
 
-//     }
-// }
+            &::before {
+                left: calc(100% - 22px);
+                background: $green;
+            }
+        }
+
+    }
+
+    & .toggle-active {
+        display: none;
+    }
+
+    & input:checked~div .toggle-active {
+        display: block;
+        color: $black;
+
+    }
+
+    & input:checked~div .toggle-deactive {
+        display: none;
+
+
+    }
+}

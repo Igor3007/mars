@@ -1,0 +1,212 @@
+.page-project {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $w992) {
+        flex-direction: row;
+    }
+
+    &__aside {
+        width: 100%;
+
+        padding-bottom: 40px;
+
+        @media screen and (min-width: $w992) {
+            padding-bottom: 0;
+            max-width: 288px;
+            min-width: 288px;
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+
+        @media screen and (min-width: $w992) {
+            padding-left: 30px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    &__item {
+        padding: 15px;
+        width: 100%;
+
+    }
+
+    &__pagination {
+        padding-top: 40px;
+
+        @media screen and (min-width: $w1200) {
+            padding-top: 100px;
+        }
+    }
+}
+
+.page-aside {
+    &__input {
+        & .toggle {
+            padding: 15px 18px;
+            background: #F6F9FB;
+            margin-top: 25px;
+
+            /* голубой для карточек */
+            border: 1px solid #EDF2F5;
+            border-radius: 2px;
+        }
+    }
+}
+
+.card-project {
+
+    background: #FFFFFF;
+    border: 1px solid #EDF2F5;
+    border-radius: 2px;
+    padding: 20px;
+    width: 100%;
+
+    @media screen and (min-width: $w1200) {
+        padding: 30px;
+        display: flex;
+    }
+
+    &:hover {
+        & .hover-arrow {
+            & svg {
+                transform: rotate(90deg);
+            }
+
+        }
+    }
+
+    &__when {
+        display: flex;
+        align-items: center;
+        background: #F6F9FB;
+        border: 1px solid #EDF2F5;
+        border-radius: 2px;
+        padding: 15px;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $w1200) {
+            flex-direction: column;
+            min-width: 163px;
+            margin-bottom: 0;
+            padding: 20px 15px 25px 15px;
+        }
+    }
+
+    &__date {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -3px;
+
+        @media screen and (min-width: $w1200) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-day {
+            font-size: 56px;
+            font-weight: 600;
+            color: $green;
+            line-height: 56px;
+
+            @media screen and (min-width: $w1200) {
+                padding-bottom: 15px;
+            }
+        }
+
+        &-my {
+            font-size: 20px;
+            font-weight: 600;
+            padding-left: 10px;
+
+            @media screen and (min-width: $w1200) {
+                padding-left: 0;
+            }
+        }
+
+        &-month {
+            padding-bottom: 5px;
+        }
+    }
+
+    &__location {
+
+        margin-left: auto;
+        padding-right: 5px;
+
+        @media screen and (min-width: $w1200) {
+            margin-top: auto;
+            margin-left: 0;
+            text-align: center;
+            padding-right: 0;
+        }
+
+        & span {
+            display: block;
+            font-size: 14px;
+            color: #1F1F1F;
+
+
+            &:first-child {
+                padding-bottom: 7px;
+            }
+        }
+    }
+
+    &__main {
+        @media screen and (min-width: $w1200) {
+            padding-left: 30px;
+            width: 100%;
+        }
+    }
+
+    &__title {
+
+        padding-bottom: 30px;
+        border-bottom: 1px solid #E6EBEF;
+        margin-bottom: 30px;
+
+
+
+        & a {
+            font-weight: 600;
+            font-size: 20px;
+            color: $blue;
+            line-height: 150%;
+
+            @media screen and (min-width: $w1200) {
+                max-width: 480px;
+                display: inline-block;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__desc {
+        line-height: 150%;
+        font-size: 16px;
+
+        @media screen and (min-width: $w1200) {
+            max-width: 550px;
+
+        }
+
+    }
+
+    &__link {
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
