@@ -1,0 +1,28 @@
+extends ../layouts/index
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Mars"
+
+
+block content
+
+  include ../../blocks/components/breadcrumb/breadcrumb.pug
+  include ../../blocks/modules/search-result/search-result.pug
+
+  .container
+    .page 
+     .page__breadcrumbs
+      +breadcrumb([
+        'Главная',
+        'Результаты поиска'
+      ])
+      
+     .page__content
+        +search-result()
+
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 
+ 

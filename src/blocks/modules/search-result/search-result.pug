@@ -1,0 +1,21 @@
+mixin search-result
+    .search-result 
+        .search-result__header
+            H1 Школы в Испании
+        .search-result__input
+            .header-find
+                .header-find__input: input(type="text" placeholder="Поиск по сайту")
+                .header-find__btn: button(type="submit"): +icons('#ic_search')
+
+        .search-result__count Результатов: 5
+
+        .search-result__list
+            each item in [1,1,1,1,1,1]
+                .search-result__item
+                    .card-search-result
+                        .card-search-result__type Наши школы
+                        .card-search-result__title
+                            a(href='#') Русская школа № 1 в Марбелье
+                        .card-search-result__desc
+                            p Русская школа № 1 в Марбелье — уникальное учебное заведение, в котором учащиеся получают качественное образование и развивают творческий потенциал.
+                            p Школа интегрирована в европейскую систему образования. Синтез российских программ обучения...
