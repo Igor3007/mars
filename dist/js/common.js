@@ -200,18 +200,72 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     }
+
+
     /* ==============================================
     signup modal
     ============================================== */
 
-    document.querySelectorAll('[data-modal="signup"]').forEach(item => {
-        item.addEventListener('click', function (e) {
-            Fancybox.show([{
-                src: document.querySelector('#modal-signup').innerHTML,
-                type: "html",
-            }]);
+    if (document.querySelectorAll('[data-modal="signup"]').length) {
+
+        document.querySelectorAll('[data-modal="signup"]').forEach(item => {
+            item.addEventListener('click', function (e) {
+                Fancybox.show([{
+                    src: document.querySelector('#modal-signup').innerHTML,
+                    type: "html",
+                }]);
+            })
         })
-    })
+
+    }
+
+
+    /* ==============================================
+    swiper
+    ============================================== */
+
+    if (document.querySelectorAll('[data-swiper="speaker"]').length) {
+
+        const swiper = new Swiper('[data-swiper="speaker"]', {
+
+            slidesPerView: 1,
+            spaceBetween: 10,
+
+            navigation: {
+                nextEl: '[data-swiper-next="speaker"]',
+                prevEl: '[data-swiper-prev="speaker"]',
+            },
+
+
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 20
+                },
+
+                576: {
+                    slidesPerView: 2.1,
+                    spaceBetween: 20,
+                },
+
+                767: {
+                    slidesPerView: 3.1,
+                    spaceBetween: 20,
+                },
+
+                992: {
+                    slidesPerView: 4.1,
+                    spaceBetween: 30,
+                }
+            }
+
+
+
+
+        });
+
+    }
+
 
 
 

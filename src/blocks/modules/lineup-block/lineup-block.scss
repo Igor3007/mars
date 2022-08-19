@@ -1,0 +1,116 @@
+.section-lineup-block {
+
+
+    @include section-padding;
+
+    background-color: $blue;
+    background-position: center bottom;
+    background-size: 300% auto;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+
+
+
+
+
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 100px;
+        padding-bottom: 180px;
+    }
+
+    @media screen and (min-width: $w760) {
+        background-size: 200% auto;
+    }
+
+    @media screen and (min-width: $w992) {
+        background-size: 150% auto;
+    }
+
+    @media screen and (min-width: $w1200) {
+        background-size: 100% auto;
+    }
+}
+
+
+.lineup-block {
+
+    &__title {
+        @include section-title;
+        color: #fff;
+        padding-bottom: 70px;
+
+        @media screen and (min-width: $w1200) {
+            padding-left: 100px;
+        }
+    }
+
+    &__item {
+        &:last-child {
+            & .card-lineup {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.card-lineup {
+
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: $w760) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $w1200) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__date {
+        & span {
+            display: inline-block;
+            background: #01366A;
+            border-radius: 2px;
+            padding: 10px 30px;
+            white-space: nowrap;
+        }
+
+        margin-bottom: 15px;
+
+        @media screen and (min-width: $w1200) {
+            width: 20%;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 170%;
+
+        margin-bottom: 15px;
+
+        @media screen and (min-width: $w1200) {
+            width: 30%;
+        }
+    }
+
+    &__desc {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #FFFFFF;
+
+        margin-bottom: 0;
+
+        @media screen and (min-width: $w1200) {
+            width: 40%;
+            padding-right: 100px;
+        }
+    }
+}

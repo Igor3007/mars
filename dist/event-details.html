@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mars</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="#{title}">
+    <meta name="keywords" content="#{title}">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="prefetch" href="/img/sprites/sprite.svg" as="image" crossorigin>
+    <style>@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-300.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-300.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-500.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-500.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-700.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-700.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-700.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-700.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-900.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-900.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+    </style>
+    <link rel="stylesheet" href="styles/main.css?v=1.0">
+  </head>
+  <body class="perf-no-animation">
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header-top">
+            <div class="header-top__logo"><a href="/"><span class="bgimage lazyload" data-bg="/img/common/logo.png"></span></a></div>
+            <div class="header-top__find">
+              <form action="search.html" method="POST">
+                <div class="header-find">
+                  <div class="header-find__input">
+                    <input type="text" placeholder="Поиск по сайту">
+                  </div>
+                  <div class="header-find__btn">
+                    <button type="submit">
+                      <svg width="25" height="25">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="header-top__phone"><a href="#">+7(999)000-00-00</a></div>
+            <div class="header-top__menu">
+              <div class="btn-burger" data-menu="btn"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="header-nav" data-menu="container">
+            <nav>
+              <ul>
+                <li><a href="about.html">Об ассоциации</a><span class="sub-arrow"></span>
+                  <ul>
+                    <li><a href="about.html">Об ассоциации</a></li>
+                    <li><a href="team.html">Сотрудники</a></li>
+                    <li><a href="normative-docs.html">Нормативные документы</a></li>
+                  </ul>
+                </li>
+                <li><a href="news.html">Новости</a>
+                </li>
+                <li><a href="schools.html">Наши школы</a>
+                </li>
+                <li><a href="gallery.html">Галерея</a>
+                </li>
+                <li><a href="traning.html">Повышение квалификации</a>
+                </li>
+                <li><a href="media.html">Медиатека (Библиотека)</a>
+                </li>
+                <li><a href="projects.html">Проекты и мероприятия</a>
+                </li>
+                <li><a href="contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+            <section class="section-fb-event-block">
+              <div class="container">
+                <div class="fb-event-block">
+                  <div class="fb-event-block__image">
+                    <picture>
+                      <source srcset="/img/photo-event.webp" type="image/webp"/><img src="/img/photo-event.jpg" loading="lazy" alt="image"/>
+                    </picture>
+                    <div class="fb-event-block__tags">
+                      <ul>
+                        <li><a class="color--blue" href="#">Москва</a></li>
+                        <li><a class="color--green" href="#">10 июня</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="fb-event-block__main"> 
+                    <div class="fb-event-block__title">Международная олимпиада для иностранных студентов "Русский язык в профессии"</div>
+                    <div class="fb-event-block__desc">Международная олимпиада для иностранных студентов «Русский язык в профессии» проводится 10.06.2022 г.  на базе Федерального государственного автономного образовательного учреждения высшего образования «Российский университет дружбы народов». К участию в мероприятии приглашаются иностранные учащиеся, проходящие подготовку по программам бакалавриата, специалитета и магистратуры.</div>
+                    <div class="fb-event-block__prop">
+                      <ul> 
+                        <li><span>Когда</span><span>10 июня</span></li>
+                        <li><span>Где</span><span>Дистанционно и очно в институте русского языка РУДН</span></li>
+                      </ul>
+                    </div>
+                    <div class="fb-event-block__signup">
+                      <div class="fb-event-block__btn">
+                        <button class="btn" data-modal="signup">Записаться</button>
+                      </div>
+                      <div class="fb-event-block__text">Регистрация обязательна, <br> количество мест ограничено</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-themes-event-block">
+              <div class="container">
+                <div class="themes-event-block">
+                  <div class="themes-event-block__title">Темы мероприятия</div>
+                  <div class="themes-event-block__list">
+                    <div class="themes-event-block__item">
+                      <div class="themes-event-block__item-number"><span>1</span></div>
+                      <div class="themes-event-block__item-title">Дистанционное тестирование на базе учебного заведения учащихся</div>
+                      <div class="themes-event-block__item-desc">На 1 этапе олимпиады зарегистрированным участникам предлагается пройти дистанционное тестирование: комбинированный тест из 40 вопросов – 20 вопросов close-тест (15 вопросов по тексту (350-400 слов, текст научно-популярного характера) (пропуски в тесте – лексика + грамматика), 5 вопросов по содержанию (на понимание текста) + 20 вопросов теста закрытого типа (задания на лексику, грамматику, синтаксические и грамматические конструкции на основе материала научного стиля речи по выбранной специальности).</div>
+                    </div>
+                    <div class="themes-event-block__item">
+                      <div class="themes-event-block__item-number"><span>2</span></div>
+                      <div class="themes-event-block__item-title">Очное участие конкурсантов, прошедших 1 этап</div>
+                      <div class="themes-event-block__item-desc">Данный этап включает в себя написание эссе, решение кейс-заданий (участие в дискуссии)</div>
+                    </div>
+                    <div class="themes-event-block__item">
+                      <div class="themes-event-block__item-number"><span>3</span></div>
+                      <div class="themes-event-block__item-title">Индивидуальное участие в деловой игре</div>
+                      <div class="themes-event-block__item-desc">Третий этап представляет собой индивидуальное участие в деловой игре "Я знаю!". В ходе игры участники должны представить спонтанное выступление на одну из предложенных в карточках тем.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-lineup-block" style="background-image: url(/img/last-news-pattern.svg)">
+              <div class="container">
+                <div class="lineup-block"> 
+                  <div class="lineup-block__title">Расписание</div>
+                  <div class="lineup-block__list">
+                    <div class="lineup-block__item">
+                            <div class="card-lineup">
+                              <div class="card-lineup__date"><span>с 10.06.2022  по 30.09.2022</span></div>
+                              <div class="card-lineup__title">Регистрация заявок от ВУЗа</div>
+                              <div class="card-lineup__desc">Вуз подает заявку на участие студентов. Оргкомитет отправляет учащимся, на указанные в заявке адреса электронной почты, ссылку для прохождения онлайн-тестирования.</div>
+                            </div>
+                    </div>
+                    <div class="lineup-block__item">
+                            <div class="card-lineup">
+                              <div class="card-lineup__date"><span>с 10.06.2022  по 30.09.2022</span></div>
+                              <div class="card-lineup__title">Регистрация заявок от ВУЗа</div>
+                              <div class="card-lineup__desc">Вуз подает заявку на участие студентов. Оргкомитет отправляет учащимся, на указанные в заявке адреса электронной почты, ссылку для прохождения онлайн-тестирования.</div>
+                            </div>
+                    </div>
+                    <div class="lineup-block__item">
+                            <div class="card-lineup">
+                              <div class="card-lineup__date"><span>с 10.06.2022  по 30.09.2022</span></div>
+                              <div class="card-lineup__title">Регистрация заявок от ВУЗа</div>
+                              <div class="card-lineup__desc">Вуз подает заявку на участие студентов. Оргкомитет отправляет учащимся, на указанные в заявке адреса электронной почты, ссылку для прохождения онлайн-тестирования.</div>
+                            </div>
+                    </div>
+                    <div class="lineup-block__item">
+                            <div class="card-lineup">
+                              <div class="card-lineup__date"><span>с 10.06.2022  по 30.09.2022</span></div>
+                              <div class="card-lineup__title">Регистрация заявок от ВУЗа</div>
+                              <div class="card-lineup__desc">Вуз подает заявку на участие студентов. Оргкомитет отправляет учащимся, на указанные в заявке адреса электронной почты, ссылку для прохождения онлайн-тестирования.</div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-speakers-block">
+              <div class="container">
+                <div class="speakers-block">
+                  <div class="speakers-block__title"> 
+                    <div class="speakers-block__title-text">Спикеры мероприятия </div>
+                    <div class="speakers-block__title-nav">
+                      <div class="slider-nav"> 
+                        <div class="slider-nav__prev" data-swiper-prev="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+                          </svg>
+                        </div>
+                        <div class="slider-nav__next" data-swiper-next="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="speakers-block__swiper">
+                    <div class="swiper-container" data-swiper="speaker">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr1.webp" type="image/webp"/><img src="/img/wr1.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Должикова Анжела Викторовна</div>
+                                  <div class="card-worker__post">Директор Института русского языка РУДН, кандидат наук</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr2.webp" type="image/webp"/><img src="/img/wr2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Ельникова Светлана Игоревна</div>
+                                  <div class="card-worker__post">Первый заместитель директора, кандидат педагогических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr2.webp" type="image/webp"/><img src="/img/wr2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Ельникова Светлана Игоревна</div>
+                                  <div class="card-worker__post">Первый заместитель директора, кандидат педагогических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr4.webp" type="image/webp"/><img src="/img/wr4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Куновски Марина Николаевна </div>
+                                  <div class="card-worker__post">Заместитель директора по международной деятельности, кандидат филологических наук</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr2.webp" type="image/webp"/><img src="/img/wr2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Ельникова Светлана Игоревна</div>
+                                  <div class="card-worker__post">Первый заместитель директора, кандидат педагогических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr4.webp" type="image/webp"/><img src="/img/wr4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Куновски Марина Николаевна </div>
+                                  <div class="card-worker__post">Заместитель директора по международной деятельности, кандидат филологических наук</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr4.webp" type="image/webp"/><img src="/img/wr4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Куновски Марина Николаевна </div>
+                                  <div class="card-worker__post">Заместитель директора по международной деятельности, кандидат филологических наук</div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-question-block">
+              <div class="container">
+                <div class="question-block">
+                  <div class="question-block__title">Остались вопросы по мероприятию?</div>
+                  <div class="question-block__btn">
+                    <button class="btn">Задать вопрос</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="footer__top">
+            <div class="footer__logo"><span class="bgimage lazyload" data-bg="/img/common/logo-light.png"></span>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer-contact">
+                <div class="footer-contact__title">Телефон:</div>
+                <div class="footer-contact__links"><a href="tel:+7(495)085-15-22">+7(495)085-15-22</a><a href="tel:+7(495)434-66-41">+7(495)434-66-41</a></div>
+              </div>
+              <div class="footer-contact">
+                <div class="footer-contact__title">Почта:</div>
+                <div class="footer-contact__links"><a href="mailto:ruslang@rudn.ru">ruslang@rudn.ru</a><a href="mailto:zayavka-ruslang@pfur.ru">zayavka-ruslang@pfur.ru</a></div>
+              </div>
+            </div>
+            <div class="footer__nav">
+              <ul>
+                <li><a href="about.html">Об ассоциации</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="schools.html">Наши школы</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="traning.html">Повышение квалификации</a></li>
+                <li><a href="media.html">Медиатека (Библиотека)</a></li>
+                <li><a href="projects.html">Проекты и мероприятия</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__main">
+            <div class="footer__address">
+              <div class="footer__address-title">Институт русского языка:</div>
+              <div class="footer__address-location">Москва, ул. Миклухо-Маклая, д. 10, к. 3</div>
+            </div>
+            <div class="footer__address">
+              <div class="footer__address-title">Российский государственный гуманитарный университет:</div>
+              <div class="footer__address-location">Москва, Миусская пл., 6</div>
+            </div>
+            <div class="footer__social">
+              <ul>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_vb"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__policy"><a href="#">Политика конфиденциальности</a></div>
+            <div class="footer__copyright">© 2022 Международная ассоциация русских школ</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-signup" style="display: none" id="modal-signup">
+        <div class="modal-signup__wrp">
+          <div class="modal-signup__title">Заявка на обучение в школе</div>
+          <div class="modal-signup__subtitle">Русская школа № 1 в Марбелье</div>
+          <div class="modal-signup__form">
+            <form action="#" method="POST">
+              <div class="form">
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Как вас зовут?">
+                  </div>
+                </div>
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Телефон для связи">
+                  </div>
+                  <div class="form__subitem">
+                    <input type="text" placeholder="E-mail">
+                  </div>
+                </div>
+                <div class="form__item form__item--button">
+                  <div class="form__subitem">
+                    <label class="checkbox">
+                      <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Даю согласие на обработку персональный данных в соответствии с политикой РУДН</span>
+                    </label>
+                  </div>
+                  <div class="form__subitem">
+                    <button class="btn">Отправить заявку</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/lib/swiper-bundle.min.js"> </script>
+    <script src="/js/vendor.js"> </script>
+    <script src="/js/common.js"> </script>
+  </body>
+</html>

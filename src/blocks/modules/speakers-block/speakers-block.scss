@@ -1,0 +1,125 @@
+.section-speakers-block {
+    @include section-padding;
+}
+
+.speakers-block {
+    &__title {
+
+        padding-bottom: 40px;
+
+        @media screen and (min-width: $w992) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 70px;
+        }
+
+        &-text {
+            @include section-title;
+        }
+    }
+
+    & .card-worker {
+        &__post {
+            margin-bottom: 0;
+        }
+    }
+
+    & .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    & .swiper-slide {
+        height: auto;
+    }
+}
+
+.slider-nav {
+
+
+    margin: -5px;
+    padding-top: 15px;
+    display: none;
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+    }
+
+    &__prev,
+    &__next {
+        width: 57px;
+        height: 57px;
+        background-color: $green;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 5px;
+
+        &.swiper-button-disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.section-question-block {
+    @include section-padding;
+}
+
+.question-block {
+    background: #EDF2F5;
+    border-radius: 2px;
+    padding: 30px 47px;
+    max-width: 1241px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: $w1200) {
+        padding: 85px 120px;
+    }
+
+
+
+
+
+    &__title {
+
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 700;
+        color: $blue;
+        line-height: 133%;
+
+        @media screen and (min-width: $w992) {
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        @media screen and (min-width: $w1200) {
+            font-size: 56px;
+        }
+    }
+
+    &__btn {
+
+        @media screen and (min-width: $w992) {
+            margin-left: auto;
+        }
+
+        & .btn {
+            margin: 0 auto;
+
+            @media screen and (min-width: $w992) {
+                min-width: 270px;
+            }
+        }
+    }
+}

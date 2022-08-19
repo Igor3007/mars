@@ -1,0 +1,36 @@
+extends ../layouts/index
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Mars"
+
+
+block content
+
+  include ../../blocks/components/breadcrumb/breadcrumb.pug
+  include ../../blocks/modules/page-media/page-media.pug
+
+  include ../../blocks/modules/fb-event-block/fb-event-block.pug
+  include ../../blocks/modules/lineup-block/lineup-block.pug
+  include ../../blocks/modules/speakers-block/speakers-block.pug
+  include ../../blocks/modules/themes-event-block/themes-event-block.pug
+  
+  +fb-event-block
+  +themes-event-block
+  +lineup-block
+  +speakers-block
+  +question-block
+
+
+
+
+
+   
+block scripts
+  script(src="/js/lib/swiper-bundle.min.js") 
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 
+
+
+ 

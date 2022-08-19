@@ -1,0 +1,24 @@
+mixin fb-event-block
+    section.section-fb-event-block
+        .container
+            .fb-event-block
+                .fb-event-block__image
+                    +picture('/img/photo-event')
+                    .fb-event-block__tags
+                        ul
+                            li: a.color--blue(href='#') Москва
+                            li: a.color--green(href='#') 10 июня
+                .fb-event-block__main 
+                    .fb-event-block__title Международная олимпиада для иностранных студентов "Русский язык в профессии"
+                    .fb-event-block__desc Международная олимпиада для иностранных студентов «Русский язык в профессии» проводится 10.06.2022 г.  на базе Федерального государственного автономного образовательного учреждения высшего образования «Российский университет дружбы народов». К участию в мероприятии приглашаются иностранные учащиеся, проходящие подготовку по программам бакалавриата, специалитета и магистратуры.
+                    .fb-event-block__prop
+                        ul 
+                            li
+                                span Когда
+                                span 10 июня
+                            li
+                                span Где
+                                span Дистанционно и очно в институте русского языка РУДН
+                    .fb-event-block__signup
+                        .fb-event-block__btn: button.btn(data-modal="signup") Записаться
+                        .fb-event-block__text Регистрация обязательна, <br> количество мест ограничено

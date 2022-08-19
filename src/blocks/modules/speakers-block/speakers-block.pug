@@ -1,0 +1,28 @@
+include ../../modules/page-team/page-team.pug
+
+mixin speakers-block
+    section.section-speakers-block
+        .container
+            .speakers-block
+                .speakers-block__title 
+                    .speakers-block__title-text Спикеры мероприятия 
+                    .speakers-block__title-nav
+                        .slider-nav 
+                            .slider-nav__prev(data-swiper-prev="speaker"): +icons('#ic_swiper-prev', 17)
+                            .slider-nav__next(data-swiper-next="speaker"): +icons('#ic_swiper-next', 17)
+
+                .speakers-block__swiper
+                    .swiper-container(data-swiper="speaker")
+                        .swiper-wrapper
+                            each item in worker   
+                                .swiper-slide: +card-worker(item)
+
+mixin question-block
+    section.section-question-block
+        .container
+            .question-block
+                .question-block__title Остались вопросы по мероприятию?
+                .question-block__btn
+                    button.btn Задать вопрос
+                            
+
