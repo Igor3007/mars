@@ -479,7 +479,7 @@
                   <div class="school-selection-block__wrp">
                     <div class="school-selection-block__title">Подберем для вас <br> лучшую школу</div>
                     <div class="school-selection-block__btn">
-                      <button class="btn">Подобрать школу</button>
+                      <button class="btn" data-modal="signup">Подобрать школу</button>
                     </div>
                   </div>
                 </div>
@@ -588,6 +588,41 @@
           <div class="footer__bottom">
             <div class="footer__policy"><a href="#">Политика конфиденциальности</a></div>
             <div class="footer__copyright">© 2022 Международная ассоциация русских школ</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-signup" style="display: none" id="modal-signup">
+        <div class="modal-signup__wrp">
+          <div class="modal-signup__title">Заявка на обучение в школе</div>
+          <div class="modal-signup__subtitle">Русская школа № 1 в Марбелье</div>
+          <div class="modal-signup__form">
+            <form action="#" method="POST">
+              <div class="form">
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Как вас зовут?">
+                  </div>
+                </div>
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Телефон для связи">
+                  </div>
+                  <div class="form__subitem">
+                    <input type="text" placeholder="E-mail">
+                  </div>
+                </div>
+                <div class="form__item form__item--button">
+                  <div class="form__subitem">
+                    <label class="checkbox">
+                      <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Даю согласие на обработку персональный данных в соответствии с политикой РУДН</span>
+                    </label>
+                  </div>
+                  <div class="form__subitem">
+                    <button class="btn">Отправить заявку</button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

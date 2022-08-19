@@ -293,3 +293,60 @@ footer {
 
 
 }
+
+.modal-signup {
+
+    &__wrp {
+        max-width: 645px;
+        padding: 30px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 133%;
+        color: $blue;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 133%;
+        color: $green;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+
+    &__form {
+        & .checkbox {
+            &__text {
+                /* grey 50 */
+                color: rgba(31, 31, 31, 0.5);
+
+            }
+        }
+
+        & .btn {
+            width: 100%;
+        }
+
+        & .form {
+            &__item {
+                &--button {
+                    padding-top: 30px;
+                    flex-direction: column-reverse;
+
+                    @media screen and (min-width: $w760) {
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}

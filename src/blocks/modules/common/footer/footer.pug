@@ -36,3 +36,18 @@ include ../main-menu/main-menu.pug
       .footer__copyright © 2022 Международная ассоциация русских школ
      
 
+.modal-signup(style="display: none" id="modal-signup")
+  .modal-signup__wrp
+    .modal-signup__title Заявка на обучение в школе
+    .modal-signup__subtitle Русская школа № 1 в Марбелье
+    .modal-signup__form
+      form(action='#' method='POST')
+        .form
+          .form__item: .form__subitem: input(type="text" placeholder="Как вас зовут?")
+          .form__item
+            .form__subitem: input(type="text" placeholder="Телефон для связи")
+            .form__subitem: input(type="text" placeholder="E-mail")
+          .form__item.form__item--button
+            .form__subitem
+              +checkbox('Даю согласие на обработку персональный данных в соответствии с политикой РУДН')
+            .form__subitem: button.btn Отправить заявку

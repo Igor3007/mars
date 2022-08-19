@@ -1,0 +1,92 @@
+-
+    var contacts = [
+        {
+            title: 'Штаб-квартиры:',
+            link: [
+                {text: 'Москва, ул. Миклухо-Маклая, д. 10, к. 3', href: '#'},
+                {text: 'Москва, Миусская пл., 6', href: '#'},
+            ]
+        },
+        {
+            title: 'Телефон:',
+            link: [
+                {text: '+7 (495) 085-15-22', href: 'tel:+7 (495) 085-15-22'},
+                {text: '+7 (495) 085-15-22', href: 'tel:+7 (495) 085-15-22'},
+            ]
+        },
+        {
+            title: 'Почта:',
+            link: [
+                {text: 'ruslang@rudn.ru', href: 'milto:ruslang@rudn.ru'},
+                {text: 'zayavka-ruslang@pfur.ru', href: 'milto:zayavka-ruslang@pfur.ru'},
+            ]
+        },
+    ]
+
+mixin page-contacts
+    .page-contacts
+        .page-contacts__list
+            each item in contacts
+                .page-contacts__item: +card-contacts(item)
+        .page-contacts__map
+            .contacts-map
+                .contacts-map__left
+                    ul 
+                        li
+                             a(href='#') Сербия
+                             ul.sub 
+                                li: a(href='#') Школа 1
+                                li: a(href='#') Школа 2
+                                li: a(href='#') Школа 3
+                        li
+                             a(href='#') Португалия
+                             ul.sub 
+                                li: a(href='#') Школа 1
+                                li: a(href='#') Школа 2
+                                li: a(href='#') Школа 3
+                        li
+                             a(href='#') Испания
+                             ul.sub 
+                                li: a(href='#') Школа 1
+                                li: a(href='#') Школа 2
+                                li: a(href='#') Школа 3
+                        li
+                             a(href='#') Польша
+                             ul.sub 
+                                li: a(href='#') Школа 1
+                                li: a(href='#') Школа 2
+                                li: a(href='#') Школа 3
+                        li
+                             a(href='#') Швеция
+                             ul.sub 
+                                li: a(href='#') Школа 1
+                                li: a(href='#') Школа 2
+                                li: a(href='#') Школа 3
+                        li
+                             a(href='#') Швейцария
+                             ul.sub 
+                                li: a(href='#') Школа 1
+                                li: a(href='#') Школа 2
+                                li: a(href='#') Школа 3
+                        li
+                             a(href='#') Франция
+                             ul.sub 
+                                li: a(href='#') Школа 1
+                                li: a(href='#') Школа 2
+                                li: a(href='#') Школа 3
+                        li
+                             a(href='#') Германия
+                             ul.sub 
+                                li: a(href='#') Школа 1
+                                li: a(href='#') Школа 2
+                                li: a(href='#') Школа 3
+                .contacts-map__ymap
+
+
+mixin card-contacts(data)
+    .card-contacts
+        .card-contacts__title= data.title
+        .card-contacts__link
+            each item in data.link
+                a(href=item.href)= item.text
+        

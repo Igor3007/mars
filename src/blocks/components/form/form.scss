@@ -15,15 +15,17 @@ input {
     & input[type="password"],
     & input[type="email"],
     & input[type="tel"] {
-        height: 52px;
+        height: 64px;
         font-size: 14px;
-        padding-left: rem(15);
-        padding-right: rem(15);
-        border: 1px solid #BCBCBC;
+        padding-left: rem(20);
+        padding-right: rem(20);
+        border: 1px solid #D8E1EA;
         box-sizing: border-box;
-        border-radius: 5px;
         width: auto;
         flex-grow: 1;
+        font-size: 16px;
+        background-color: #EDF2F5;
+        border-radius: 2px;
 
         &::placeholder {
             color: $main;
@@ -192,7 +194,7 @@ input {
         }
 
         @media screen and (min-width: $w760) {
-            padding: 12px 10px;
+            padding: 15px 10px;
             margin-bottom: 0;
         }
     }

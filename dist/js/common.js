@@ -200,6 +200,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     }
+    /* ==============================================
+    signup modal
+    ============================================== */
+
+    document.querySelectorAll('[data-modal="signup"]').forEach(item => {
+        item.addEventListener('click', function (e) {
+            Fancybox.show([{
+                src: document.querySelector('#modal-signup').innerHTML,
+                type: "html",
+            }]);
+        })
+    })
 
 
 

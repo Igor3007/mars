@@ -3591,15 +3591,17 @@ input {
 .form input[type="password"],
 .form input[type="email"],
 .form input[type="tel"] {
-  height: 52px;
+  height: 64px;
   font-size: 14px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border: 1px solid #BCBCBC;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #D8E1EA;
   box-sizing: border-box;
-  border-radius: 5px;
   width: auto;
   flex-grow: 1;
+  font-size: 16px;
+  background-color: #EDF2F5;
+  border-radius: 2px;
 }
 
 .form input[type="text"]::placeholder,
@@ -4299,7 +4301,7 @@ input {
   }
 
   .form__subitem {
-    padding: 12px 10px;
+    padding: 15px 10px;
     margin-bottom: 0;
   }
 
