@@ -7275,6 +7275,11 @@ footer a {
   padding-bottom: 50px;
 }
 
+.page-contacts__map {
+  margin-top: 40px;
+  background-color: #fff;
+}
+
 .card-contacts {
   display: flex;
 }
@@ -7302,12 +7307,98 @@ footer a {
 .card-contacts__list {
   max-width: 1080px;
   margin: 0 auto;
+}
+
+.contacts-map {
+  display: flex;
+}
+
+.contacts-map__left {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.contacts-map__left > ul {
+  padding: 14px;
+}
+
+.contacts-map__left > ul > li.open > a {
+  background: #EDF2F5;
+}
+
+.contacts-map__left > ul > li.open > a::after {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.contacts-map__left > ul > li.open .sub {
+  display: block;
+}
+
+.contacts-map__left > ul > li > a::after {
+  content: '';
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE5IDZsLTguNSA5TDIgNiIgc3Ryb2tlPSIjMUYxRjFGIiBzdHJva2Utb3BhY2l0eT0iLjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+);
+  width: 21px;
+  height: 21px;
+  display: block;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.contacts-map__left > ul > li > a:hover {
+  background: #EDF2F5;
+}
+
+.contacts-map__left > ul > li > a:hover::after {
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.contacts-map__left > ul > li a {
+  border-radius: 2px;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  display: block;
+  background-size: contain;
+}
+
+.contacts-map__left > ul > li > ul.sub {
+  display: none;
+  background-color: #eee;
+  margin-top: 5px;
+}
+
+.contacts-map__left > ul > li > ul.sub li {
+  font-size: 14px;
+}
+
+.contacts-map__left > ul > li > ul.sub a {
+  transition: 0.3s ease;
+}
+
+.contacts-map__left > ul > li > ul.sub a:hover {
+  transform: translateX(10px);
+}
+
+.contacts-map__ymap {
+  background-color: #eee;
+  flex-grow: 1;
 }
 
 .page-contacts__item {
   padding-bottom: 50px;
 }
 
+.page-contacts__map {
+  margin-top: 40px;
+  background-color: #fff;
+}
+
 .card-contacts {
   display: flex;
 }
@@ -7335,6 +7426,87 @@ footer a {
 .card-contacts__list {
   max-width: 1080px;
   margin: 0 auto;
+}
+
+.contacts-map {
+  display: flex;
+}
+
+.contacts-map__left {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.contacts-map__left > ul {
+  padding: 14px;
+}
+
+.contacts-map__left > ul > li.open > a {
+  background: #EDF2F5;
+}
+
+.contacts-map__left > ul > li.open > a::after {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.contacts-map__left > ul > li.open .sub {
+  display: block;
+}
+
+.contacts-map__left > ul > li > a::after {
+  content: '';
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE5IDZsLTguNSA5TDIgNiIgc3Ryb2tlPSIjMUYxRjFGIiBzdHJva2Utb3BhY2l0eT0iLjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+);
+  width: 21px;
+  height: 21px;
+  display: block;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.contacts-map__left > ul > li > a:hover {
+  background: #EDF2F5;
+}
+
+.contacts-map__left > ul > li > a:hover::after {
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.contacts-map__left > ul > li a {
+  border-radius: 2px;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  display: block;
+  background-size: contain;
+}
+
+.contacts-map__left > ul > li > ul.sub {
+  display: none;
+  background-color: #eee;
+  margin-top: 5px;
+}
+
+.contacts-map__left > ul > li > ul.sub li {
+  font-size: 14px;
+}
+
+.contacts-map__left > ul > li > ul.sub a {
+  transition: 0.3s ease;
+}
+
+.contacts-map__left > ul > li > ul.sub a:hover {
+  transform: translateX(10px);
+}
+
+.contacts-map__ymap {
+  background-color: #eee;
+  flex-grow: 1;
 }
 
 .section-fb-event-block {
@@ -11605,6 +11777,14 @@ footer a {
 
   .card-search-result {
     padding-bottom: 70px;
+  }
+
+  .contacts-map__left {
+    width: 395px;
+  }
+
+  .contacts-map__left {
+    width: 395px;
   }
 
   .fb-event-block {

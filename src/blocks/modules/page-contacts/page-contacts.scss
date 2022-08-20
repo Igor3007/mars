@@ -22,6 +22,11 @@
 
 
     }
+
+    &__map {
+        margin-top: 40px;
+        background-color: #fff;
+    }
 }
 
 .card-contacts {
@@ -62,5 +67,117 @@
     &__list {
         max-width: 1080px;
         margin: 0 auto;
+    }
+}
+
+.contacts-map {
+
+    display: flex;
+
+    &__left {
+        @media screen and (min-width: $w1200) {
+            width: 395px;
+        }
+
+        max-height: 600px;
+        overflow-y: auto;
+
+        &>ul {
+            padding: 14px;
+
+            &>li {
+
+                &.open {
+
+                    &>a {
+                        background: #EDF2F5;
+
+                        &::after {
+                            opacity: 1;
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    & .sub {
+                        display: block;
+                    }
+                }
+
+                &>a {
+
+
+                    &::after {
+                        content: '';
+                        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE5IDZsLTguNSA5TDIgNiIgc3Ryb2tlPSIjMUYxRjFGIiBzdHJva2Utb3BhY2l0eT0iLjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+);
+                        width: 21px;
+                        height: 21px;
+                        display: block;
+                        opacity: 0;
+                        cursor: pointer;
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                    }
+
+
+
+
+                    &:hover {
+
+                        background: #EDF2F5;
+
+                        &::after {
+                            opacity: 1;
+                            transition: 0.3s ease;
+                        }
+                    }
+                }
+
+                & a {
+                    border-radius: 2px;
+                    padding: 15px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    position: relative;
+                    display: block;
+                    background-size: contain;
+                }
+
+
+
+
+
+
+
+                &>ul.sub {
+
+                    display: none;
+                    background-color: #eee;
+                    margin-top: 5px;
+
+                    & li {
+                        font-size: 14px;
+                    }
+
+                    & a {
+
+                        transition: 0.3s ease;
+
+                        &:hover {
+                            transform: translateX(10px);
+                        }
+                    }
+
+
+
+                }
+            }
+
+        }
+    }
+
+    &__ymap {
+        background-color: #eee;
+        flex-grow: 1;
     }
 }

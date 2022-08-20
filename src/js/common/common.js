@@ -1,6 +1,31 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
     /* ==============================================
+    loadScript
+    ==============================================*/
+
+    window.loadScript = function (url, callback) {
+        var script = document.createElement("script");
+
+        if (script.readyState) { // IE
+            script.onreadystatechange = function () {
+                if (script.readyState == "loaded" || script.readyState == "complete") {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {
+            script.onload = function () {
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+
+    /* ==============================================
      mobile menu
      ============================================== */
 
@@ -342,6 +367,225 @@ document.addEventListener("DOMContentLoaded", function (event) {
             item.addEventListener('click', function () {
                 this.parentNode.classList.toggle('open')
             })
+        })
+
+    }
+
+
+    /* ==================================
+    map
+    ==================================*/
+
+    function YMaps(option) {
+
+        this.map = null;
+        this.MyBalloonLayout = null;
+        this.MyBalloonContentLayout = null;
+        this.MyIconContentLayout = null;
+        this.isInit = false;
+
+        this.mapsParams = {
+            container: 'mapcontainer',
+            params: {
+                center: [55.714225, 37.848540],
+                zoom: 14,
+                controls: ['zoomControl', 'fullscreenControl']
+            },
+            ballonMobileMode: false,
+            autoscale: false,
+            icons: {
+                'default': '/img/common/mapmarker.png',
+                'active': '/img/common/mapmarker-active.png',
+            },
+            points: []
+        }
+
+        this.init = function (onInitCallback) {
+
+            if (!this.isInit) {
+
+                this.isInit = !this.isInit
+                var _this = this
+                console.info('init Ymaps')
+
+                ymaps.ready(function () {
+
+                    // Создание экземпляра карты и его привязка к созданному контейнеру.
+                    _this.map = new ymaps.Map('' + _this.mapsParams.container + '', _this.mapsParams.params, {
+                        suppressMapOpenBlock: true,
+                    });
+
+                    // Создание макета балуна на основе Twitter Bootstrap.
+                    _this.MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+                        '<div class="sh-balloon"></div>'
+                    );
+
+                    // Создание вложенного макета содержимого балуна.
+                    _this.MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                        '<div class="bln-scroll-offset" >$[properties.balloonContent]</div>'
+                    );
+
+                    _this.MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                        '<div class="pin-content" >$[properties.iconContent]</div>'
+                    );
+
+                    _this.map.behaviors.disable('scrollZoom')
+
+                    onInitCallback(_this.isInit);
+                })
+            }
+
+
+        }
+
+        this.resizeContainer = function () {
+            var _this = this;
+            setTimeout(function () {
+                _this.map.container.fitToViewport();
+                //autoscale
+                if (_this.mapsParams.autoscale) {
+                    _this.autoScale()
+                }
+            }, 500)
+        }
+
+        this.autoScale = function () {
+            var _this = this;
+            _this.map.setBounds(_this.map.geoObjects.getBounds(), {
+                checkZoomRange: true,
+                zoomMargin: 100
+            });
+        }
+
+        this.addPlacemark = function (arrayPoints) {
+
+
+            var _this = this;
+            var sizeIcons = [28, 28];
+            var placemarkOffset = [-14, -26];
+            var offsetIcons = [16, 15];
+            this.mapsParams.points = arrayPoints;
+            this.map.geoObjects.removeAll();
+
+            if (window.innerWidth < 769) {
+                sizeIcons = [30, 45];
+                offsetIcons = [8, 9];
+                placemarkOffset = [-15, -45];
+            }
+
+            try {
+
+                var PlacemarkArr = [];
+
+                for (let i = 0; i < _this.mapsParams.points.length; i++) {
+
+                    // Создание метки  
+                    PlacemarkArr[i] = new ymaps.Placemark(_this.mapsParams.points[i].coordinates.split(','), {
+                        balloonContent: '',
+                        iconContent: '<span class="icons-marker" style="background-image: url(' + _this.mapsParams.points[i].markerImage + ')" ></span>',
+                        //hintContent: 'hint',
+                    }, {
+                        balloonShadow: false,
+                        balloonLayout: _this.MyBalloonLayout,
+                        balloonContentLayout: _this.MyBalloonContentLayout,
+                        balloonPanelLayout: _this.MyBalloonLayout,
+                        balloonPanelMaxMapArea: false,
+                        // Не скрываем иконку при открытом балуне.
+                        hideIconOnBalloonOpen: false,
+                        // И дополнительно смещаем балун, для открытия над иконкой.
+                        balloonOffset: [-15, 6],
+
+
+                        // balloonContentLayout: LayoutActivatePoint,
+                        iconLayout: 'default#imageWithContent',
+                        iconImageHref: _this.mapsParams.icons.default,
+                        iconImageSize: sizeIcons,
+                        iconImageOffset: placemarkOffset,
+                        pane: 'balloon',
+                        iconContentOffset: offsetIcons,
+                        iconContentLayout: _this.MyIconContentLayout,
+                        draggable: false
+                    });
+
+                    PlacemarkArr[i].events.add('balloonopen', function (e) {
+
+                        PlacemarkArr[i].properties.set('balloonContent', _this.mapsParams.points[i].balloonContent);
+                        e.get('target').options.set({
+                            iconImageHref: _this.mapsParams.icons.active,
+                            iconImageSize: [56, 56],
+                            iconImageOffset: [-28, -56],
+                        });
+
+                        // app.renderMapPopupClick(_this.mapsParams.points[i].code, false)
+
+                    });
+
+                    PlacemarkArr[i].events.add('balloonclose', function (e) {
+                        e.get('target').options.set({
+                            iconImageHref: _this.mapsParams.icons.default,
+                            iconImageSize: sizeIcons,
+                            iconImageOffset: placemarkOffset,
+                        });
+
+                        // app.closeMapPopup()
+                    });
+
+                    _this.map.geoObjects.add(PlacemarkArr[i]);
+
+                } // endfor
+
+
+            } catch (err) {
+                console.error('error: YM addPlacemark ', err)
+            }
+        }
+
+    }
+
+    if (document.querySelectorAll('.contacts-map__left li')) {
+
+        const country = document.querySelectorAll('.contacts-map__left li')
+        const allCountry = document.querySelectorAll('.contacts-map__left [data-coordinates]')
+
+
+        country.forEach(function (item, index) {
+
+
+            item.querySelector('a').addEventListener('click', e => {
+                e.preventDefault()
+                e.target.closest('li').classList.toggle('open')
+
+
+
+            })
+        })
+
+        //load ymaps api
+
+        window.loadScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU', function () {
+
+
+            const YM = new YMaps();
+
+            YM.mapsParams.params.center = [50.45548484049313, 14.722319145243398]
+
+            YM.init(function () {
+
+                let arrPoint = []
+
+                allCountry.forEach(item => {
+                    arrPoint.push({
+                        coordinates: item.dataset.coordinates
+                    })
+                })
+
+                YM.addPlacemark(arrPoint)
+                YM.autoScale()
+            })
+
+
+
+
         })
 
     }
