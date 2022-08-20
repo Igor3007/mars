@@ -1,10 +1,10 @@
 .faq-item {
 
     box-sizing: border-box;
-    margin-bottom: rem(20);
+
     cursor: pointer;
 
-    background: #F5F5F5;
+
     border-radius: rem(10);
 
     &.open {
@@ -14,10 +14,10 @@
 
         & .faq-item__answer {
             max-height: rem(1000);
-            padding: 0 rem(25) rem(25);
+            padding: 0 rem(0) rem(25);
 
             @media screen and (min-width: $w760) {
-                padding: 0 rem(37) rem(25);
+                padding: 0 rem(0) rem(25);
             }
 
         }
@@ -26,11 +26,12 @@
     &__question {
         display: flex;
         align-items: center;
-        padding: rem(20) rem(25);
+        padding: rem(30) rem(0);
+
 
 
         @media screen and (min-width: $w760) {
-            padding: rem(25) rem(37);
+            padding: rem(25) rem(0);
         }
     }
 
@@ -39,17 +40,19 @@
         max-height: 0;
         overflow: hidden;
         transition: 0.3s ease;
-        color: #555;
+        color: $gray;
         font-size: 16px;
-        line-height: 125%;
-        padding: 0 rem(25);
+        line-height: 150%;
+        padding: 0 rem(0);
+        border-bottom: 1px solid #1F1F1F;
 
         @media screen and (min-width: $w760) {
-            padding: 0 rem(37);
+            padding: 0 rem(0);
         }
 
         @media screen and (min-width: $w1440) {
-            font-size: 18px;
+            font-size: 16px;
+            line-height: 150%;
         }
 
 
@@ -58,9 +61,9 @@
 
     &__title {
         flex-grow: 1;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 120%;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
         color: #1B1A1C;
 
     }

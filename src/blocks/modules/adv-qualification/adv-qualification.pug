@@ -1,0 +1,46 @@
+-
+    var aboutPartners = [
+        {
+            number: '1',
+            title: 'Обучение проводят лучшие специалисты',
+            desc: 'в области РКИ с мировым именем и многолетним успешным опытом работы'
+        },
+        {
+            number: '2',
+            title: 'Углубленная программа обучения',
+            desc: 'с применением современных информационных и дистанционных технологий обучения'
+        },
+        {
+            number: '3',
+            title: 'Обучение в очно-заочном формате',
+            desc: 'в удобное для слушателя время'
+        },
+        {
+            number: '4',
+            title: 'Постоянная поддержка кураторов и преподавателей',
+            desc: 'в процессе обучения '
+        },
+        {
+            number: '5',
+            title: 'Сертификат',
+            desc: 'одного из лучших вузов России'
+        },
+    ]
+
+mixin adv-qualification
+    section.section-adv-qualification
+        .container
+            .adv-qualification 
+                .adv-qualification__title Преимущества <br> обучения в РУДН
+                .adv-qualification__slider
+                    .swiper-container(data-swiper="partners")
+                        .swiper-wrapper
+                            each item in aboutPartners
+                                .swiper-slide: +card-adv-qualification(item)
+
+mixin card-adv-qualification(data)
+    .card-adv-qualification
+        .card-adv-qualification__number: span= data.number
+        .card-adv-qualification__title= data.title
+        .card-adv-qualification__desc= data.desc  
+

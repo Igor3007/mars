@@ -1,0 +1,110 @@
+.section-cost-qualification {
+    @include section-padding;
+}
+
+.cost-qualification {
+
+    max-width: 1245px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+    }
+
+    &__left {
+        padding: 30px;
+        background-color: $blue;
+        color: #fff;
+
+        @media screen and (min-width: $w992) {
+            display: flex;
+            flex-direction: column;
+            width: 395px;
+            min-width: 395px;
+            padding: 50px;
+        }
+    }
+
+    &__top {
+        font-size: 30px;
+        line-height: 133%;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    &__bottom {
+        @media screen and (min-width: $w992) {
+            margin-top: auto;
+        }
+    }
+
+    &__title {
+        @include section-title;
+
+        @media screen and (min-width: $w992) {
+            padding-left: 40px;
+        }
+
+        @media screen and (min-width: $w1200) {
+            padding-bottom: 60px;
+        }
+    }
+
+    &__right {
+        margin-top: 50px;
+
+        @media screen and (min-width: $w992) {
+            flex-grow: 1;
+        }
+
+    }
+
+    &__box {
+        padding: 30px;
+        background: #EDF2F5;
+        border-radius: 2px;
+        min-height: 193px;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $w1200) {
+            width: 50%;
+        }
+
+        &:nth-child(even) {
+            background: #E4E9EC;
+            background-size: 100% auto;
+            background-position: left bottom;
+        }
+
+        &:nth-child(odd) {
+            background-image: none !important;
+        }
+
+        &-cost {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 133%;
+            color: #E8444D;
+            margin-top: auto;
+
+
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 170%;
+            color: #1F1F1F;
+            margin-bottom: 30px;
+
+        }
+    }
+
+    &__price {
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

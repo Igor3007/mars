@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mars</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="#{title}">
+    <meta name="keywords" content="#{title}">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="prefetch" href="/img/sprites/sprite.svg" as="image" crossorigin>
+    <style>@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-300.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-300.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-500.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-500.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-700.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-700.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-700.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-700.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-900.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-900.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+    </style>
+    <link rel="stylesheet" href="styles/main.css?v=1.0">
+  </head>
+  <body class="perf-no-animation">
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header-top">
+            <div class="header-top__logo"><a href="/"><span class="bgimage lazyload" data-bg="/img/common/logo.png"></span></a></div>
+            <div class="header-top__find">
+              <form action="search.html" method="POST">
+                <div class="header-find">
+                  <div class="header-find__input">
+                    <input type="text" placeholder="Поиск по сайту">
+                  </div>
+                  <div class="header-find__btn">
+                    <button type="submit">
+                      <svg width="25" height="25">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="header-top__phone"><a href="#">+7(999)000-00-00</a></div>
+            <div class="header-top__menu">
+              <div class="btn-burger" data-menu="btn"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="header-nav" data-menu="container">
+            <nav>
+              <ul>
+                <li><a href="about.html">Об ассоциации</a><span class="sub-arrow"></span>
+                  <ul>
+                    <li><a href="about.html">Об ассоциации</a></li>
+                    <li><a href="team.html">Сотрудники</a></li>
+                    <li><a href="normative-docs.html">Нормативные документы</a></li>
+                  </ul>
+                </li>
+                <li><a href="news.html">Новости</a>
+                </li>
+                <li><a href="schools.html">Наши школы</a>
+                </li>
+                <li><a href="gallery.html">Галерея</a>
+                </li>
+                <li><a href="traning.html">Повышение квалификации</a>
+                </li>
+                <li><a href="media.html">Медиатека (Библиотека)</a>
+                </li>
+                <li><a href="projects.html">Проекты и мероприятия</a>
+                </li>
+                <li><a href="contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>  
+            <section class="section-fb-qualification">   
+              <div class="container">
+                <div class="fb-qualification">
+                  <div class="fb-qualification__left">
+                    <div class="fb-qualification__image">
+                      <picture>
+                        <source srcset="/img/photo-qualification.webp" type="image/webp"/><img src="/img/photo-qualification.jpg" loading="lazy" alt="image"/>
+                      </picture>
+                    </div>
+                    <div class="fb-qualification__details">
+                      <div class="fb-qualification__start">
+                        <div class="fb-qualification__text">Ближайший старт группы</div>
+                        <div class="fb-qualification__date">15 августа</div>
+                      </div>
+                      <div class="fb-qualification__finish">
+                        <div class="fb-qualification__text">Прием документов</div>
+                        <div class="fb-qualification__date">до 28 июня</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fb-qualification__right" style="background-image: url(/img/photo-qualification.jpg)">
+                    <div class="fb-qualification__wrp">         
+                      <div class="fb-qualification__title">
+                        <h1> Русский язык для иностранных студентов-медиков: интенсивный корректировочный курс</h1>
+                      </div>
+                      <div class="fb-qualification__desc">Курс предназначен для иностранных граждан, имеющих/получающих среднее профессиональное или высшее медицинское образование, желающих пройти интенсивное обучение по русскому языку с целью корректировки, развития и совершенствования навыков и умений общения в учебной и профессиональной сферах.</div>
+                      <div class="fb-qualification__btn">
+                        <button class="btn">Записаться</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-digit-qualification"> 
+              <div class="container">
+                <div class="digit-qualification">
+                  <div class="digit-qualification__list">
+                    <div class="digit-qualification__item">
+                            <div class="digit-card digit-card--blue">
+                              <div class="digit-card__angle">
+                                <svg width="17" height="17">
+                                  <use xlink:href="/img/sprites/sprite.svg#ic_goal-angle"></use>
+                                </svg>
+                              </div>
+                              <div class="digit-card__number">54</div>
+                              <div class="digit-card__desc">ак. часа</div>
+                            </div>
+                    </div>
+                    <div class="digit-qualification__item">
+                            <div class="digit-card digit-card--green">
+                              <div class="digit-card__angle">
+                                <svg width="17" height="17">
+                                  <use xlink:href="/img/sprites/sprite.svg#ic_goal-angle"></use>
+                                </svg>
+                              </div>
+                              <div class="digit-card__number">3</div>
+                              <div class="digit-card__desc">недели</div>
+                            </div>
+                    </div>
+                    <div class="digit-qualification__item">
+                            <div class="digit-card digit-card--blue">
+                              <div class="digit-card__angle">
+                                <svg width="17" height="17">
+                                  <use xlink:href="/img/sprites/sprite.svg#ic_goal-angle"></use>
+                                </svg>
+                              </div>
+                              <div class="digit-card__number"></div>
+                              <div class="digit-card__desc">Дистанционное обучение</div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-why-qualification">  
+              <div class="container">
+                <div class="why-qualification">
+                  <div class="why-qualification__image">
+                    <picture>
+                      <source srcset="/img/photo-why.webp" type="image/webp"/><img src="/img/photo-why.jpg" loading="lazy" alt="image"/>
+                    </picture>
+                  </div>
+                  <div class="why-qualification__right">
+                    <div class="why-qualification__title">Вам нужна эта программа</div>
+                    <div class="why-qualification__subtitle">Если вы желаете:</div>
+                    <div class="why-qualification__list">
+                      <ul>
+                        <li>Развивать и совершенствовать лексические и грамматические навыки, необходимые для успешного учебного и профессионального медицинского общения на русском языке;</li>
+                        <li>Читать, воспринимать на слух и проводить смысловой анализ профессионально значимых медицинских текстов, вести медицинскую документацию на русском языке;</li>
+                        <li>Вести расспрос больного на русском языке;</li>
+                        <li>Грамотно, эффективно участвовать в профессиональном диалоге с русскими коллегами или партнерами;</li>
+                        <li>Осуществлять поиск информации на русском языке с использованием современных инфокоммуникационных ресурсов;</li>
+                        <li>Получить удостоверение о повышении квалификации в ведущем государственном университете с международным признанием.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-result-qualification">   
+              <div class="container">
+                <div class="result-qualification"> 
+                  <div class="result-qualification__title">В результате обучения сможете</div>
+                  <div class="result-qualification__list">
+                    <div class="result-qualification__item">
+                            <div class="card-result">
+                              <div class="card-result__number"><span>1</span></div>
+                              <div class="card-result__desc">Развить навыки и умения эффективной монологической профессиональной речи, диалогического, полилогического профессионального общения на русском языке</div>
+                            </div>
+                    </div>
+                    <div class="result-qualification__item">
+                            <div class="card-result">
+                              <div class="card-result__number"><span>2</span></div>
+                              <div class="card-result__desc">Развить умения межкультурного общения в учебной и профессиональной медицинской сферах</div>
+                            </div>
+                    </div>
+                    <div class="result-qualification__item">
+                            <div class="card-result">
+                              <div class="card-result__number"><span>3</span></div>
+                              <div class="card-result__desc">Получить удостоверение о повышении квалификации ведущего государственного университета с международным признанием</div>
+                            </div>
+                    </div>
+                    <div class="result-qualification__item">
+                            <div class="card-result">
+                              <div class="card-result__number"><span>4</span></div>
+                              <div class="card-result__desc">Усовершенствовать умения академического и профессионального письма</div>
+                            </div>
+                    </div>
+                    <div class="result-qualification__item">
+                            <div class="card-result">
+                              <div class="card-result__number"><span>5</span></div>
+                              <div class="card-result__desc">Развить умения информационно-поисковой деятельности на русском языке, направленной на совершенствование профессионально-коммуникативных деятельности в области медицины, биомедицины, фармации, стоматологии</div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-program-qualification">
+              <div class="pattern-float" style="background-image: url('/img/pattern-float.svg')"></div>
+              <div class="container">
+                <div class="program-qualification"> 
+                  <div class="program-qualification__title">
+                    <div class="program-qualification__title-text">Программа обучения</div>
+                    <div class="program-qualification__title-prop"><span>54 ак.ч. / 3 недели </span></div>
+                  </div>
+                  <div class="program-qualification__faq">
+                          <div class="faq">
+                            <div class="faq__item">
+                              <div class="faq-item open">
+                                <div class="faq-item__question">
+                                  <div class="faq-item__title">Лексика и грамматика медицинского дискурса</div>
+                                  <div class="faq-item__arrow">
+                                    <svg width="18" height="18">
+                                      <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="faq-item__answer">
+                                  <p>1. Развить умения информационно-поисковой деятельности на русском языке, направленной на совершенствование профессионально-коммуникативных деятельности в области медицины, биомедицины, фармации, стоматологии</p>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__question">
+                                  <div class="faq-item__title">Учебно-научное медицинское общение</div>
+                                  <div class="faq-item__arrow">
+                                    <svg width="18" height="18">
+                                      <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="faq-item__answer">
+                                  <p>2. Развить умения информационно-поисковой деятельности на русском языке, направленной на совершенствование профессионально-коммуникативных деятельности в области медицины, биомедицины, фармации, стоматологии</p>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__question">
+                                  <div class="faq-item__title">Профессиональная медицинская коммуникация</div>
+                                  <div class="faq-item__arrow">
+                                    <svg width="18" height="18">
+                                      <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="faq-item__answer">
+                                  <p>3. Развить умения информационно-поисковой деятельности на русском языке, направленной на совершенствование профессионально-коммуникативных деятельности в области медицины, биомедицины, фармации, стоматологии</p>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__question">
+                                  <div class="faq-item__title">Итоговая аттестация</div>
+                                  <div class="faq-item__arrow">
+                                    <svg width="18" height="18">
+                                      <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="faq-item__answer">
+                                  <p>4. Развить умения информационно-поисковой деятельности на русском языке, направленной на совершенствование профессионально-коммуникативных деятельности в области медицины, биомедицины, фармации, стоматологии</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-expert-qualification">
+              <div class="container">
+                <div class="expert-qualification">
+                  <div class="expert-qualification__title"> 
+                    <div class="expert-qualification__title-text">Учитесь у экспертов</div>
+                    <div class="expert-qualification__title-nav">
+                      <div class="slider-nav"> 
+                        <div class="slider-nav__prev" data-swiper-prev="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+                          </svg>
+                        </div>
+                        <div class="slider-nav__next" data-swiper-next="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="expert-qualification__swiper">
+                    <div class="swiper-container" data-swiper="speaker">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr1.webp" type="image/webp"/><img src="/img/wr1.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Должикова Анжела Викторовна</div>
+                                  <div class="card-worker__post">Директор Института русского языка РУДН, кандидат наук</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr2.webp" type="image/webp"/><img src="/img/wr2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Ельникова Светлана Игоревна</div>
+                                  <div class="card-worker__post">Первый заместитель директора, кандидат педагогических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr2.webp" type="image/webp"/><img src="/img/wr2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Ельникова Светлана Игоревна</div>
+                                  <div class="card-worker__post">Первый заместитель директора, кандидат педагогических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr4.webp" type="image/webp"/><img src="/img/wr4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Куновски Марина Николаевна </div>
+                                  <div class="card-worker__post">Заместитель директора по международной деятельности, кандидат филологических наук</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr2.webp" type="image/webp"/><img src="/img/wr2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Ельникова Светлана Игоревна</div>
+                                  <div class="card-worker__post">Первый заместитель директора, кандидат педагогических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr4.webp" type="image/webp"/><img src="/img/wr4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Куновски Марина Николаевна </div>
+                                  <div class="card-worker__post">Заместитель директора по международной деятельности, кандидат филологических наук</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr4.webp" type="image/webp"/><img src="/img/wr4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Куновски Марина Николаевна </div>
+                                  <div class="card-worker__post">Заместитель директора по международной деятельности, кандидат филологических наук</div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-adv-qualification">
+              <div class="container">
+                <div class="adv-qualification"> 
+                  <div class="adv-qualification__title">Преимущества <br> обучения в РУДН</div>
+                  <div class="adv-qualification__slider">
+                    <div class="swiper-container" data-swiper="partners">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="card-adv-qualification">
+                                  <div class="card-adv-qualification__number"><span>1</span></div>
+                                  <div class="card-adv-qualification__title">Обучение проводят лучшие специалисты</div>
+                                  <div class="card-adv-qualification__desc">в области РКИ с мировым именем и многолетним успешным опытом работы</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-adv-qualification">
+                                  <div class="card-adv-qualification__number"><span>2</span></div>
+                                  <div class="card-adv-qualification__title">Углубленная программа обучения</div>
+                                  <div class="card-adv-qualification__desc">с применением современных информационных и дистанционных технологий обучения</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-adv-qualification">
+                                  <div class="card-adv-qualification__number"><span>3</span></div>
+                                  <div class="card-adv-qualification__title">Обучение в очно-заочном формате</div>
+                                  <div class="card-adv-qualification__desc">в удобное для слушателя время</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-adv-qualification">
+                                  <div class="card-adv-qualification__number"><span>4</span></div>
+                                  <div class="card-adv-qualification__title">Постоянная поддержка кураторов и преподавателей</div>
+                                  <div class="card-adv-qualification__desc">в процессе обучения </div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-adv-qualification">
+                                  <div class="card-adv-qualification__number"><span>5</span></div>
+                                  <div class="card-adv-qualification__title">Сертификат</div>
+                                  <div class="card-adv-qualification__desc">одного из лучших вузов России</div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-process-qualification" style="background-image: url(/img/last-news-pattern.svg)">
+              <div class="container">
+                <div class="process-qualification">
+                  <div class="process-qualification__wrp">
+                    <div class="process-qualification__left">
+                      <div class="process-qualification__title">Как проходит обучение</div>
+                      <div class="process-qualification__subtitle">Программа реализуется в дистанционном формате под руководством преподавателей и тьюторов</div>
+                      <div class="process-qualification__desc">
+                        <p>Дополнительная общеобразовательная программа «Русский язык для иностранных студентов медиков: интенсивный корректировочный курс» является программой модульного типа, в которой каждый модуль самодостаточен и направлен на решение определенных задач обучения.</p>
+                        <p>Модульная структура программы обеспечивает возможность обучения по индивидуальным образовательным траекториям, включающим 1, 2 либо 3 модуля, в зависимости от образовательных потребностей слушателей. Возможно пройти один из 3-х модулей отдельно.</p>
+                      </div>
+                    </div>
+                    <div class="process-qualification__right">
+                      <div class="process-qualification__list">
+                        <ul>
+                          <li>онлайн лекции</li>
+                          <li>мастер-классы в режиме вебинара и в записи</li>
+                          <li>методические мастерские</li>
+                          <li>презентации</li>
+                          <li>видеолекции в записи</li>
+                          <li>текстовые материалы для самостоятельного изучения</li>
+                          <li>программа реализуется с применением дистанционных технологий под руководством преподавателей и тьюторов и самостоятельно слушателями на основе тех знаний и компетенций, которые были получены на занятиях</li>
+                          <li>вы получите пакет учебно-методической документации и доступ к обучающим платформам 24/7</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-question-block section-question-block--expert">
+              <div class="container">
+                <div class="question-block">
+                  <div class="question-block__title">Учитесь у экспертов</div>
+                  <div class="question-block__btn">
+                    <button class="btn">Задать вопрос</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-cost-qualification"> 
+              <div class="container">
+                <div class="cost-qualification">
+                  <div class="cost-qualification__left">
+                    <div class="cost-qualification__top">Сэкономьте ещё <br> до 3 120 ₽</div>
+                    <div class="cost-qualification__bottom">Возможно оформление <br> налогового вычета</div>
+                  </div>
+                  <div class="cost-qualification__right">
+                    <div class="cost-qualification__title">Стоимость <br> обучения</div>
+                    <div class="cost-qualification__price">
+                      <div class="cost-qualification__box" style="background-image: url(/img/pattern-cost.svg)">
+                        <div class="cost-qualification__box-title">Дистанционное обучение (программа)</div>
+                        <div class="cost-qualification__box-cost">24 000 ₽</div>
+                      </div>
+                      <div class="cost-qualification__box" style="background-image: url(/img/pattern-cost.svg)">
+                        <div class="cost-qualification__box-title">Один модуль</div>
+                        <div class="cost-qualification__box-cost">8 000 ₽</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-faq-qualification">  
+              <div class="container">
+                <div class="faq-qualification">
+                  <div class="faq-qualification__title">Вопросы <br> и ответы</div>
+                  <div class="faq-qualification__faq">
+                          <div class="faq">
+                            <div class="faq__item">
+                              <div class="faq-item open">
+                                <div class="faq-item__question">
+                                  <div class="faq-item__title">Какие правила приема в РУДН? </div>
+                                  <div class="faq-item__arrow">
+                                    <svg width="18" height="18">
+                                      <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="faq-item__answer">
+                                  <p>Дополнительная общеобразовательная программа «Русский язык для иностранных студентов медиков: интенсивный корректировочный курс» является программой модульного типа, в которой каждый модуль самодостаточен и направлен на решение определенных задач обучения.</p>
+                                  <p>Модульная структура программы обеспечивает возможность обучения по индивидуальным образовательным траекториям, включающим 1, 2 либо 3 модуля, в зависимости от образовательных потребностей слушателей. Возможно пройти один из 3-х модулей отдельно.</p>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__question">
+                                  <div class="faq-item__title">Какие существуют варианты оплаты? </div>
+                                  <div class="faq-item__arrow">
+                                    <svg width="18" height="18">
+                                      <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="faq-item__answer">
+                                  <p>Дополнительная общеобразовательная программа «Русский язык для иностранных студентов медиков: интенсивный корректировочный курс» является программой модульного типа, в которой каждый модуль самодостаточен и направлен на решение определенных задач обучения.</p>
+                                  <p>Модульная структура программы обеспечивает возможность обучения по индивидуальным образовательным траекториям, включающим 1, 2 либо 3 модуля, в зависимости от образовательных потребностей слушателей. Возможно пройти один из 3-х модулей отдельно.</p>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__question">
+                                  <div class="faq-item__title">Как происходит дистанционное обучение? </div>
+                                  <div class="faq-item__arrow">
+                                    <svg width="18" height="18">
+                                      <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="faq-item__answer">
+                                  <p>Дополнительная общеобразовательная программа «Русский язык для иностранных студентов медиков: интенсивный корректировочный курс» является программой модульного типа, в которой каждый модуль самодостаточен и направлен на решение определенных задач обучения.</p>
+                                  <p>Модульная структура программы обеспечивает возможность обучения по индивидуальным образовательным траекториям, включающим 1, 2 либо 3 модуля, в зависимости от образовательных потребностей слушателей. Возможно пройти один из 3-х модулей отдельно.</p>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__question">
+                                  <div class="faq-item__title">Где территориально находится Институт? </div>
+                                  <div class="faq-item__arrow">
+                                    <svg width="18" height="18">
+                                      <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="faq-item__answer">
+                                  <p>Дополнительная общеобразовательная программа «Русский язык для иностранных студентов медиков: интенсивный корректировочный курс» является программой модульного типа, в которой каждый модуль самодостаточен и направлен на решение определенных задач обучения.</p>
+                                  <p>Модульная структура программы обеспечивает возможность обучения по индивидуальным образовательным траекториям, включающим 1, 2 либо 3 модуля, в зависимости от образовательных потребностей слушателей. Возможно пройти один из 3-х модулей отдельно.</p>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__question">
+                                  <div class="faq-item__title">Как можно с нами связаться для дополнительной информации? </div>
+                                  <div class="faq-item__arrow">
+                                    <svg width="18" height="18">
+                                      <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="faq-item__answer">
+                                  <p>Дополнительная общеобразовательная программа «Русский язык для иностранных студентов медиков: интенсивный корректировочный курс» является программой модульного типа, в которой каждый модуль самодостаточен и направлен на решение определенных задач обучения.</p>
+                                  <p>Модульная структура программы обеспечивает возможность обучения по индивидуальным образовательным траекториям, включающим 1, 2 либо 3 модуля, в зависимости от образовательных потребностей слушателей. Возможно пройти один из 3-х модулей отдельно.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-map-qualification">
+              <div class="map-qualification">
+                <div class="map-qualification__container">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.5187699309677!2d-4.8940065844524625!3d36.5174769912623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72d963b5873563%3A0x672c37b6059f879a!2z0KDRg9GB0YHQutCw0Y8g0YjQutC-0LvQsCBOIDEg0JzQsNGA0LHQtdC70YzRjyDQmNGB0L_QsNC90LjRjw!5e0!3m2!1sru!2sby!4v1660965670957!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="footer__top">
+            <div class="footer__logo"><span class="bgimage lazyload" data-bg="/img/common/logo-light.png"></span>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer-contact">
+                <div class="footer-contact__title">Телефон:</div>
+                <div class="footer-contact__links"><a href="tel:+7(495)085-15-22">+7(495)085-15-22</a><a href="tel:+7(495)434-66-41">+7(495)434-66-41</a></div>
+              </div>
+              <div class="footer-contact">
+                <div class="footer-contact__title">Почта:</div>
+                <div class="footer-contact__links"><a href="mailto:ruslang@rudn.ru">ruslang@rudn.ru</a><a href="mailto:zayavka-ruslang@pfur.ru">zayavka-ruslang@pfur.ru</a></div>
+              </div>
+            </div>
+            <div class="footer__nav">
+              <ul>
+                <li><a href="about.html">Об ассоциации</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="schools.html">Наши школы</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="traning.html">Повышение квалификации</a></li>
+                <li><a href="media.html">Медиатека (Библиотека)</a></li>
+                <li><a href="projects.html">Проекты и мероприятия</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__main">
+            <div class="footer__address">
+              <div class="footer__address-title">Институт русского языка:</div>
+              <div class="footer__address-location">Москва, ул. Миклухо-Маклая, д. 10, к. 3</div>
+            </div>
+            <div class="footer__address">
+              <div class="footer__address-title">Российский государственный гуманитарный университет:</div>
+              <div class="footer__address-location">Москва, Миусская пл., 6</div>
+            </div>
+            <div class="footer__social">
+              <ul>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_vb"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__policy"><a href="#">Политика конфиденциальности</a></div>
+            <div class="footer__copyright">© 2022 Международная ассоциация русских школ</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-signup" style="display: none" id="modal-signup">
+        <div class="modal-signup__wrp">
+          <div class="modal-signup__title">Заявка на обучение в школе</div>
+          <div class="modal-signup__subtitle">Русская школа № 1 в Марбелье</div>
+          <div class="modal-signup__form">
+            <form action="#" method="POST">
+              <div class="form">
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Как вас зовут?">
+                  </div>
+                </div>
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Телефон для связи">
+                  </div>
+                  <div class="form__subitem">
+                    <input type="text" placeholder="E-mail">
+                  </div>
+                </div>
+                <div class="form__item form__item--button">
+                  <div class="form__subitem">
+                    <label class="checkbox">
+                      <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Даю согласие на обработку персональный данных в соответствии с политикой РУДН</span>
+                    </label>
+                  </div>
+                  <div class="form__subitem">
+                    <button class="btn">Отправить заявку</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/lib/swiper-bundle.min.js"> </script>
+    <script src="/js/vendor.js"> </script>
+    <script src="/js/common.js"> </script>
+  </body>
+</html>

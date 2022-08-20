@@ -1,0 +1,71 @@
+.section-expert-qualification {
+    @include section-padding;
+}
+
+.expert-qualification {
+    &__title {
+
+        padding-bottom: 40px;
+
+        @media screen and (min-width: $w1200) {
+            max-width: 1030px;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: $w992) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 70px;
+        }
+
+        &-text {
+            @include section-title;
+        }
+    }
+
+    & .card-worker {
+        &__post {
+            margin-bottom: 0;
+        }
+    }
+
+    & .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    & .swiper-slide {
+        height: auto;
+    }
+}
+
+.slider-nav {
+
+
+    margin: -5px;
+    padding-top: 15px;
+    display: none;
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+    }
+
+    &__prev,
+    &__next {
+        width: 57px;
+        height: 57px;
+        background-color: $green;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 5px;
+
+        &.swiper-button-disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+    }
+}

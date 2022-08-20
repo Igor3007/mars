@@ -1,0 +1,21 @@
+ 
+include ../../modules/page-team/page-team.pug
+
+mixin expert-qualification
+    section.section-expert-qualification
+        .container
+            .expert-qualification
+                .expert-qualification__title 
+                    .expert-qualification__title-text Учитесь у экспертов
+                    .expert-qualification__title-nav
+                        .slider-nav 
+                            .slider-nav__prev(data-swiper-prev="speaker"): +icons('#ic_swiper-prev', 17)
+                            .slider-nav__next(data-swiper-next="speaker"): +icons('#ic_swiper-next', 17)
+
+                .expert-qualification__swiper
+                    .swiper-container(data-swiper="speaker")
+                        .swiper-wrapper
+                            each item in worker   
+                                .swiper-slide: +card-worker(item)
+ 
+                            

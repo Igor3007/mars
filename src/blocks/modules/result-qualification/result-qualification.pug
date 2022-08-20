@@ -1,0 +1,23 @@
+-
+    var qaresult = [
+        {number: '1', desc: 'Развить навыки и умения эффективной монологической профессиональной речи, диалогического, полилогического профессионального общения на русском языке'},
+        {number: '2', desc: 'Развить умения межкультурного общения в учебной и профессиональной медицинской сферах'},
+        {number: '3', desc: 'Получить удостоверение о повышении квалификации ведущего государственного университета с международным признанием'},
+        {number: '4', desc: 'Усовершенствовать умения академического и профессионального письма'},
+        {number: '5', desc: 'Развить умения информационно-поисковой деятельности на русском языке, направленной на совершенствование профессионально-коммуникативных деятельности в области медицины, биомедицины, фармации, стоматологии'},
+    ]
+
+mixin result-qualification
+    section.section-result-qualification    
+        .container
+            .result-qualification 
+                .result-qualification__title В результате обучения сможете
+                .result-qualification__list
+                    each item in qaresult
+                        .result-qualification__item: +card-result(item)
+
+mixin card-result(data)
+    .card-result
+        .card-result__number: span=data.number
+        .card-result__desc= data.desc
+

@@ -1,0 +1,23 @@
+.section-faq-qualification {
+    @include section-padding;
+}
+
+.faq-qualification {
+
+    @media screen and (min-width: $w1200) {
+        display: flex;
+    }
+
+    &__title {
+        @include section-title;
+
+        @media screen and (min-width: $w1200) {
+            width: 395px;
+            min-width: 395px;
+        }
+    }
+
+    &__faq {
+        flex-grow: 1;
+    }
+}

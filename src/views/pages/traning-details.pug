@@ -1,0 +1,51 @@
+extends ../layouts/index
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Mars"
+
+
+block content
+
+  include ../../blocks/components/breadcrumb/breadcrumb.pug
+  include ../../blocks/modules/page-media/page-media.pug
+
+  include ../../blocks/modules/fb-qualification/fb-qualification
+  include ../../blocks/modules/digit-qualification/digit-qualification
+  include ../../blocks/modules/adv-qualification/adv-qualification
+  include ../../blocks/modules/result-qualification/result-qualification
+  include ../../blocks/modules/program-qualification/program-qualification
+  include ../../blocks/modules/expert-qualification/expert-qualification
+  include ../../blocks/modules/why-qualification/why-qualification
+  include ../../blocks/modules/process-qualification/process-qualification
+  include ../../blocks/modules/cost-qualification/cost-qualification
+  include ../../blocks/modules/faq-qualification/faq-qualification
+  include ../../blocks/modules/map-qualification/map-qualification 
+
+  +fb-qualification
+  +digit-qualification
+  +why-qualification
+  +result-qualification
+  +program-qualification
+  +expert-qualification
+  +adv-qualification
+  +process-qualification
+  +question-block
+  +cost-qualification
+  +faq-qualification
+  +map-qualification
+
+
+
+
+
+
+   
+block scripts
+  script(src="/js/lib/swiper-bundle.min.js") 
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 
+
+
+ 

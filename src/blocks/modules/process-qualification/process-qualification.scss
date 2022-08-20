@@ -1,0 +1,169 @@
+.section-process-qualification {
+    background-color: $blue;
+    background-position: center bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    @include section-padding;
+
+
+
+    @media screen and (min-width: $w1200) {
+        padding-top: 100px;
+        padding-bottom: 180px;
+
+    }
+
+    @media screen and (min-width: $w1376) {
+        padding-top: 266px;
+    }
+}
+
+.process-qualification {
+
+    max-width: 1190px;
+    margin: 0 auto;
+    color: #fff;
+
+    &__wrp {
+        @media screen and (min-width: $w1024) {
+            display: flex;
+        }
+    }
+
+
+    &__title {
+        @include section-title;
+        color: #fff;
+        padding-bottom: 50px;
+
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 40px;
+
+        }
+
+        & a {
+            font-size: 16px;
+            display: block;
+            color: #fff;
+            padding-top: 20px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 170%;
+
+        @media screen and (min-width: $w1200) {
+            max-width: 480px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 150%;
+
+        @media screen and (min-width: $w1200) {
+            max-width: 480px;
+        }
+    }
+
+    &__right {
+        background: #01366A;
+        border-radius: 2px;
+        padding: 20px;
+        margin-top: 40px;
+
+        @media screen and (min-width: $w1024) {
+            width: 50%;
+            margin-top: 0;
+        }
+
+        @media screen and (min-width: $w1200) {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    }
+
+    &__list {
+        & ul {
+
+            padding: 20px 0;
+
+            @media screen and (min-width: $w760) {
+                padding-top: 20px;
+            }
+
+            @media screen and (min-width: $w1200) {
+                max-width: 500px;
+            }
+
+            & li {
+
+                position: relative;
+                padding-left: 20px;
+                padding-bottom: 15px;
+                font-size: 16px;
+                line-height: 150%;
+
+                @media screen and (min-width: $w760) {
+
+                    padding-left: 25px;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                &::before {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    &__left {
+        @media screen and (min-width: $w1024) {
+            width: 50%;
+            padding-right: 40px;
+
+        }
+    }
+
+
+
+
+}
+
+.section-question-block {
+    &--expert {
+
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+
+        @media screen and (min-width: $w1200) {
+            margin-top: -150px;
+        }
+
+    }
+}

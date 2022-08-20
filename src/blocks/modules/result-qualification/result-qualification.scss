@@ -1,0 +1,112 @@
+.section-result-qualification {
+    @include section-padding;
+}
+
+.result-qualification {
+
+    max-width: 1030px;
+    margin: 0 auto;
+
+    &__title {
+        @include section-title;
+
+        padding-bottom: 40px;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 70px;
+        }
+    }
+
+    &__item {
+        &:nth-child(even) {
+            & .card-result {
+
+                @media screen and (min-width: $w760) {
+                    padding-left: 30px;
+                }
+
+                &__number {
+                    & span {
+                        background-color: $green;
+                    }
+                }
+
+
+            }
+        }
+
+        &:nth-child(odd) {
+            & .card-result {
+
+                @media screen and (min-width: $w760) {
+                    padding-right: 30px;
+                    border-right: 1px solid #ccc;
+                }
+
+
+
+
+            }
+        }
+
+        &:nth-last-child(1) {
+            & .card-result {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: $w760) {
+            width: 50%;
+        }
+    }
+
+    &__list {
+        @media screen and (min-width: $w760) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+
+}
+
+.card-result {
+
+    display: flex;
+    padding-bottom: 50px;
+    height: 100%;
+
+    @media screen and (min-width: $w760) {
+        padding-top: 50px;
+        border-bottom: 1px solid rgba(31, 31, 31, 0.1);
+
+    }
+
+    &__number {
+        & span {
+            background-color: #013C76;
+            width: 49px;
+            min-width: 49px;
+            height: 49px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 46px;
+        }
+    }
+
+    &__desc {
+        padding-left: 20px;
+        font-size: 16px;
+        line-height: 150%;
+
+        @media screen and (min-width: $w1200) {
+            max-width: 85%;
+            padding-left: 30px;
+        }
+    }
+}

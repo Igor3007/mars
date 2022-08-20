@@ -1,0 +1,38 @@
+ 
+
+-
+    var arr2 = [
+        {
+            number: '54',
+            desc: 'ак. часа',
+            m: '--blue'
+        },
+        {
+            number: '3',
+            desc: 'недели',
+            m: '--green'
+        },
+        {
+            number: '',
+            desc: 'Дистанционное обучение',
+            m: '--blue'
+        }, 
+    ]
+
+
+mixin digit-qualification
+    section.section-digit-qualification 
+        .container
+            .digit-qualification
+               
+                .digit-qualification__list
+                    each item in arr2
+                        .digit-qualification__item: +digit-card(item)
+                
+mixin digit-card(data)
+    .digit-card(class='digit-card'+data.m)
+        .digit-card__angle
+            +icons('#ic_goal-angle', 17)
+        .digit-card__number= data.number
+        .digit-card__desc= data.desc
+
