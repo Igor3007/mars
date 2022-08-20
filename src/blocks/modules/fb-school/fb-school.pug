@@ -1,0 +1,32 @@
+ 
+mixin fb-school
+    section.section-fb-school
+        .container
+            .fb-school
+                .fb-school__image
+                    .fb-school__picture
+                        +picture('/img/photo-school')
+                        .fb-school__tags
+                            ul
+                                li: a.color--blue(href='#') Испания
+                                li: a.color--green(href='#') Марбелья
+                    .fb-school__director
+                        .fb-school__director-photo: +picture('/img/image-director')
+                        .fb-school__director-main
+                            .fb-school__director-name Чистякова Ирина Анатольевна
+                            .fb-school__director-post Директор школы
+                        
+                .fb-school__main 
+                    .fb-school__title: h1 Русская школа № 1 в Марбелье
+                    .fb-school__subtitle Добро пожаловать в Русскую школу в Испании!
+                    .fb-school__desc
+                        p Русская школа № 1 в Марбелье — уникальное учебное заведение, в котором учащиеся получают качественное образование и развивают творческий потенциал.
+                        p Школа интегрирована в европейскую систему образования. Синтез российских программ обучения и образовательных программ британских/испанских колледжей позволяет составлять учебные планы, принимая во внимание знания, полученные учащимися в местных колледжах, и преподавать в полном объёме русский язык, литературу, географию и историю России за один день в неделю.
+                   
+                    .fb-school__signup
+                        .fb-school__btn: button.btn(data-modal="signup") Записаться
+                        .fb-school__text 
+                            a(href='tel:+34 662 55 65 38') +34 662 55 65 38
+                            a(href='mailto:spain@russkayashkola.ru') spain@russkayashkola.ru
+
+

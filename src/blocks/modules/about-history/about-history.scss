@@ -1,0 +1,110 @@
+ .section-about-history {
+     background-position: center 35%;
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+
+     padding: 50px 0;
+
+     @media screen and (max-width: $w992) {
+         background-image: none !important;
+     }
+
+     @media screen and (min-width: $w1200) {
+         padding-top: 100px;
+         padding-bottom: 140px;
+     }
+ }
+
+ .about-history {
+
+
+
+     &__title {
+
+         padding-bottom: 40px;
+
+         @media screen and (min-width: $w992) {
+             display: flex;
+             justify-content: space-between;
+             align-items: flex-start;
+             padding-bottom: 70px;
+         }
+
+         &-text {
+             @include section-title;
+         }
+     }
+
+     & .card-worker {
+         &__post {
+             margin-bottom: 0;
+         }
+     }
+
+     & .swiper-wrapper {
+         align-items: stretch;
+     }
+
+     & .swiper-slide {
+         height: auto;
+     }
+ }
+
+ .slider-nav {
+
+
+     margin: -5px;
+     padding-top: 15px;
+     display: none;
+
+     @media screen and (min-width: $w992) {
+         display: flex;
+     }
+
+     &__prev,
+     &__next {
+         width: 57px;
+         height: 57px;
+         background-color: $green;
+         border-radius: 50%;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         margin: 5px;
+
+         &.swiper-button-disabled {
+             opacity: 0.4;
+             cursor: not-allowed;
+         }
+     }
+ }
+
+
+
+
+ .card-history {
+
+     background: #FFFFFF;
+     border: 1px solid #EDF2F5;
+     border-radius: 4px;
+     padding: 25px;
+     height: 100%;
+
+     &__image {
+         margin-bottom: 30px;
+     }
+
+     &__year {
+         font-weight: 600;
+         font-size: 20px;
+         line-height: 120%;
+         margin-bottom: 20px;
+     }
+
+     &__desc {
+         font-size: 16px;
+         line-height: 150%;
+     }
+ }

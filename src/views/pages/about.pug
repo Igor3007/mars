@@ -1,0 +1,40 @@
+extends ../layouts/index
+
+
+block variables
+  include ../../data/data.pug
+  - const title = "Mars"
+
+
+block content
+
+  include ../../blocks/components/breadcrumb/breadcrumb.pug
+  include ../../blocks/modules/fb-about/fb-about.pug
+  include ../../blocks/modules/about-partners/about-partners.pug
+  include ../../blocks/modules/about-advanteges/about-advanteges.pug
+  include ../../blocks/modules/we-digits-block/we-digits-block.pug
+  include ../../blocks/modules/about-image/about-image.pug
+  include ../../blocks/modules/about-fact/about-fact.pug
+  include ../../blocks/modules/about-directions/about-directions.pug
+  include ../../blocks/modules/about-history/about-history.pug
+  
+
+  +fb-about()
+  +about-partners()
+  +about-fact()
+  +we-digits-block()
+  +about-image()
+  +about-advanteges()
+  +about-directions()
+  +about-history()
+
+
+
+   
+block scripts
+  script(src="/js/lib/swiper-bundle.min.js") 
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 
+
+
+ 

@@ -4951,6 +4951,11 @@ footer a {
   padding: 55px 0;
 }
 
+.we-are-block {
+  max-width: 1245px;
+  margin: 0 auto;
+}
+
 .we-are-block__title {
   font-weight: 700;
   font-size: 56px;
@@ -7592,6 +7597,1072 @@ footer a {
   line-height: 150%;
 }
 
+.section-fb-about {
+  padding: 55px 0;
+}
+
+.fb-about__title h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+}
+
+.fb-about__desc {
+  font-size: 16px;
+  line-height: 150%;
+  color: #1F1F1F;
+}
+
+.fb-about__desc p {
+  padding-bottom: 10px;
+}
+
+.fb-about__image {
+  margin-left: -25%;
+  margin-right: -35%;
+}
+
+.fb-about__image img {
+  width: 100%;
+}
+
+.fb-about__image picture {
+  width: 100%;
+  display: block;
+}
+
+.section-about-partners {
+  padding: 55px 0;
+}
+
+.about-partners__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: #1F1F1F;
+  padding-bottom: 30px;
+}
+
+.about-partners .swiper-wrapper {
+  align-items: stretch;
+}
+
+.about-partners .swiper-slide {
+  height: auto;
+}
+
+.about-partners .swiper-slide:nth-child(even) .card-about-partners__number span {
+  background-color: #55B282;
+}
+
+.card-about-partners {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F5;
+  padding: 28px;
+  margin-bottom: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-about-partners__number {
+  margin-bottom: 25px;
+}
+
+.card-about-partners__number span {
+  background-color: #013C76;
+  width: 49px;
+  min-width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 46px;
+}
+
+.card-about-partners__desc {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.section-about-advanteges {
+  padding: 55px 0;
+}
+
+.about-advanteges__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: #1F1F1F;
+  padding-bottom: 30px;
+}
+
+.about-advanteges .swiper-wrapper {
+  align-items: stretch;
+}
+
+.about-advanteges .swiper-slide {
+  height: auto;
+}
+
+.about-advanteges .swiper-slide:nth-child(even) .card-about-advanteges__number span {
+  background-color: #55B282;
+}
+
+.card-about-advanteges {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F5;
+  padding: 28px;
+  margin-bottom: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-about-advanteges__number {
+  margin-bottom: 25px;
+}
+
+.card-about-advanteges__number span {
+  background-color: #013C76;
+  width: 49px;
+  min-width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 46px;
+}
+
+.card-about-advanteges__desc {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.section-about-image {
+  background-position: center 35%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+.about-image__image {
+  margin: 0 -20px;
+}
+
+.about-image__image picture {
+  display: block;
+  position: relative;
+  padding-top: 119%;
+}
+
+.about-image__image picture img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section-about-fact {
+  padding: 55px 0;
+}
+
+.about-fact {
+  max-width: 1245px;
+  margin: 0 auto;
+}
+
+.about-fact__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+}
+
+.about-fact__subtitle {
+  line-height: 157%;
+  text-transform: uppercase;
+}
+
+.about-fact__intro,
+.about-fact__first,
+.about-fact__two,
+.about-fact__three,
+.about-fact__four,
+.about-fact__five,
+.about-fact__six {
+  padding: 30px;
+  background-color: #EDF2F5;
+  min-height: 228px;
+}
+
+.about-fact__img {
+  display: none;
+}
+
+.about-fact__middle picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  height: 228px;
+}
+
+.about-fact__middle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center;
+}
+
+.about-fact__number {
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.about-fact__desc {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+}
+
+.about-fact__intro {
+  background-color: transparent;
+}
+
+.about-fact__first {
+  background-color: #55B282;
+  color: #fff;
+  background-position: 104% 110%;
+  background-repeat: no-repeat;
+}
+
+.about-fact__three {
+  background-color: #013C76;
+  color: #fff;
+}
+
+.about-fact__four {
+  background-color: #013C76;
+  color: #fff;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.about-fact__five {
+  background-color: #55B282;
+  color: #fff;
+  background-position: top 100%;
+  background-repeat: no-repeat;
+}
+
+.section-about-directions {
+  background-color: #013C76;
+  background-position: center bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  padding: 55px 0;
+}
+
+.about-directions {
+  max-width: 1245px;
+  margin: 0 auto;
+}
+
+.about-directions__images {
+  display: none;
+  position: relative;
+}
+
+.about-directions__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  z-index: 2;
+}
+
+.about-directions__img.active {
+  z-index: 10;
+  transform: rotate(3deg);
+}
+
+.about-directions__img picture {
+  display: block;
+  padding-top: 125%;
+  position: relative;
+}
+
+.about-directions__img picture img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-directions__img:first-child {
+  position: relative;
+  z-index: 3;
+}
+
+.about-directions__list {
+  flex-grow: 1;
+}
+
+.about-directions__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+.about-directions__title a {
+  font-size: 16px;
+  display: block;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.about-directions__title a:hover {
+  text-decoration: underline;
+}
+
+.about-directions__item {
+  color: #fff;
+  margin-bottom: 20px;
+  background: #01366A;
+  border-radius: 2px;
+  padding: 22px;
+}
+
+.about-directions__item:last-child {
+  border-bottom: none;
+}
+
+.about-directions__item:hover .hover-arrow svg {
+  transform: rotate(90deg);
+}
+
+.about-directions__number {
+  display: none;
+}
+
+.about-directions__number span {
+  font-size: 56px;
+  color: #fff;
+  background-color: #55B282;
+  padding: 20px 33px 32px 33px;
+  border-radius: 3px;
+  display: block;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.about-directions__name {
+  flex-grow: 1;
+}
+
+.about-directions__name a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.about-directions__name a:hover {
+  text-decoration: underline;
+}
+
+.about-directions__link {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+}
+
+.about-directions__link a {
+  margin-left: auto;
+  display: block;
+}
+
+.section-about-history {
+  background-position: center 35%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+.about-history__title {
+  padding-bottom: 40px;
+}
+
+.about-history__title-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+}
+
+.about-history .card-worker__post {
+  margin-bottom: 0;
+}
+
+.about-history .swiper-wrapper {
+  align-items: stretch;
+}
+
+.about-history .swiper-slide {
+  height: auto;
+}
+
+.slider-nav {
+  margin: -5px;
+  padding-top: 15px;
+  display: none;
+}
+
+.slider-nav__prev,
+.slider-nav__next {
+  width: 57px;
+  height: 57px;
+  background-color: #55B282;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.slider-nav__prev.swiper-button-disabled,
+.slider-nav__next.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.card-history {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F5;
+  border-radius: 4px;
+  padding: 25px;
+  height: 100%;
+}
+
+.card-history__image {
+  margin-bottom: 30px;
+}
+
+.card-history__year {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.card-history__desc {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.section-fb-school {
+  background: #EDF2F5;
+}
+
+.fb-school {
+  padding: 50px 0;
+}
+
+.fb-school__image {
+  margin-bottom: 40px;
+  position: relative;
+  align-self: flex-start;
+}
+
+.fb-school__tags {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: 10px;
+}
+
+.fb-school__tags ul {
+  margin: -5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fb-school__tags li {
+  padding: 5px;
+}
+
+.fb-school__tags li a {
+  display: inline-flex;
+  background-color: #ccc;
+  height: 32px;
+  border-radius: 2px;
+  padding: 0 1.5em;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.fb-school__tags li a.color--blue {
+  background-color: #013C76;
+  color: #fff;
+}
+
+.fb-school__tags li a.color--green {
+  background-color: #55B282;
+  color: #fff;
+}
+
+.fb-school__picture {
+  position: relative;
+}
+
+.fb-school__picture > picture {
+  display: block;
+  padding-top: 100%;
+  position: relative;
+}
+
+.fb-school__picture > picture img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fb-school__title h1 {
+  font-size: 40px;
+  line-height: 133%;
+  color: #013C76;
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+
+.fb-school__desc {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 150%;
+}
+
+.fb-school__btn {
+  padding-bottom: 20px;
+}
+
+.fb-school__btn .btn {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.fb-school__text {
+  text-align: center;
+}
+
+.fb-school__text a {
+  display: block;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+
+.fb-school__text a:last-child {
+  padding-bottom: 0;
+}
+
+.fb-school__director {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+
+.fb-school__director-main {
+  padding-left: 20px;
+}
+
+.fb-school__director-photo {
+  width: 117px;
+}
+
+.fb-school__director-photo picture {
+  display: block;
+  padding-top: 120%;
+  position: relative;
+}
+
+.fb-school__director-photo picture img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.fb-school__director-name {
+  font-size: 16px;
+  line-height: 150%;
+  color: #1F1F1F;
+  padding-bottom: 12px;
+  font-weight: 600;
+}
+
+.fb-school__director-post {
+  font-size: 16px;
+  color: #1F1F1F;
+}
+
+.fb-school__subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 35px;
+  line-height: 133%;
+  max-width: 365px;
+}
+
+.section-school-program {
+  background-size: cover;
+  padding: 100px 0;
+  position: relative;
+  color: #fff;
+}
+
+.section-school-program::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+  content: '';
+}
+
+.section-school-program .container {
+  position: relative;
+  z-index: 3;
+}
+
+.school-program {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.school-program__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+  padding-bottom: 40px;
+  color: #fff;
+}
+
+.card-program {
+  padding: 30px;
+  padding-left: 0;
+  border-radius: 4px;
+  background-size: 100% auto;
+  background-position: left top;
+}
+
+.card-program__age {
+  padding-bottom: 20px;
+}
+
+.card-program__title {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.card-program__desc {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.section-school-optional {
+  padding: 55px 0;
+}
+
+.school-optional {
+  max-width: 1031px;
+  margin: 0 auto;
+}
+
+.school-optional__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.school-optional__item {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F5;
+  border-radius: 4px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.school-optional__item:nth-child(even) .school-optional__item-number span {
+  background-color: #013C76;
+}
+
+.school-optional__item-number {
+  display: none;
+}
+
+.school-optional__item-number span {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100px;
+  color: #FFFFFF;
+  display: flex;
+  width: 110px;
+  height: 110px;
+  justify-content: center;
+  background-color: #55B282;
+  border-radius: 4px;
+}
+
+.school-optional__item-name {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  line-height: 170%;
+}
+
+.school-optional__item-desc {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.section-school-conditions {
+  background-position: center 35%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+.school-conditions__title {
+  padding-bottom: 40px;
+}
+
+.school-conditions__title-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+}
+
+.school-conditions__title-nav {
+  display: none;
+}
+
+.school-conditions .card-worker__post {
+  margin-bottom: 0;
+}
+
+.school-conditions .swiper-wrapper {
+  align-items: stretch;
+}
+
+.school-conditions .swiper-slide {
+  height: auto;
+}
+
+.slider-nav {
+  margin: -5px;
+  padding-top: 15px;
+  display: none;
+}
+
+.slider-nav__prev,
+.slider-nav__next {
+  width: 57px;
+  height: 57px;
+  background-color: #55B282;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.slider-nav__prev.swiper-button-disabled,
+.slider-nav__next.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.card-conditions {
+  background: #FFFFFF;
+  border: 1px solid #EDF2F5;
+  border-radius: 4px;
+  padding: 25px;
+  height: 100%;
+}
+
+.card-conditions__image {
+  margin-bottom: 30px;
+}
+
+.card-conditions__year {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.card-conditions__desc {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.school-gallery__list {
+  max-width: 1388px;
+  margin: 0 auto;
+  display: flex;
+  overflow: auto;
+}
+
+.school-gallery__item {
+  width: 100%;
+  width: 312px;
+  min-width: 312px;
+}
+
+.school-gallery__item picture {
+  display: block;
+  padding-top: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+.school-gallery__item picture:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.school-gallery__item picture img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.section-school-gallery {
+  padding: 100px 0;
+}
+
+.section-school-teacher {
+  padding: 55px 0;
+}
+
+.school-teacher__title {
+  padding-bottom: 40px;
+}
+
+.school-teacher__title-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+}
+
+.school-teacher .card-worker__post {
+  margin-bottom: 0;
+}
+
+.school-teacher .swiper-wrapper {
+  align-items: stretch;
+}
+
+.school-teacher .swiper-slide {
+  height: auto;
+}
+
+.slider-nav {
+  margin: -5px;
+  padding-top: 15px;
+  display: none;
+}
+
+.slider-nav__prev,
+.slider-nav__next {
+  width: 57px;
+  height: 57px;
+  background-color: #55B282;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.slider-nav__prev.swiper-button-disabled,
+.slider-nav__next.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.section-question-block {
+  padding: 55px 0;
+}
+
+.question-block {
+  background: #EDF2F5;
+  border-radius: 2px;
+  padding: 30px 47px;
+  max-width: 1241px;
+  margin: 0 auto;
+}
+
+.question-block__title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #013C76;
+  line-height: 133%;
+}
+
+.question-block__btn .btn {
+  margin: 0 auto;
+}
+
+.school-in-map__container {
+  height: 400px;
+  position: relative;
+}
+
+.school-in-map__container iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.section-school-selection-block {
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+}
+
+.school-selection-block {
+  background-color: #EDF2F5;
+}
+
+.school-selection-block__wrp {
+  padding: 30px;
+}
+
+.school-selection-block__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.school-selection-block__btn .btn {
+  margin: 0 auto;
+}
+
+.school-contacts__item {
+  padding-bottom: 50px;
+}
+
+.card-contacts {
+  display: flex;
+}
+
+.card-contacts__title {
+  font-size: 16px;
+  padding-bottom: 20px;
+  width: 100px;
+  min-width: 100px;
+  line-height: 150%;
+}
+
+.card-contacts__link a {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 15px;
+  line-height: 150%;
+}
+
+.card-contacts__link a:last-child {
+  margin-bottom: 0;
+}
+
+.card-contacts__list {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.section-school-contacts {
+  padding: 70px 0;
+}
+
+.school-selection-block__title--shool {
+  font-size: 24px !important;
+}
+
 @media screen and (min-width: 375.98px) {
   .we-are-block__title {
     font-size: 75px;
@@ -7615,6 +8686,14 @@ footer a {
   .fb-event-card {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .about-image__image {
+    width: 100%;
+  }
+
+  .about-image__image picture {
+    padding-top: 48.3%;
   }
 }
 
@@ -7688,6 +8767,46 @@ footer a {
   }
 
   .section-themes-event-block {
+    padding: 70px 0;
+  }
+
+  .section-fb-about {
+    padding: 70px 0;
+  }
+
+  .fb-about__image {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-about-partners {
+    padding: 70px 0;
+  }
+
+  .section-about-advanteges {
+    padding: 70px 0;
+  }
+
+  .section-about-fact {
+    padding: 70px 0;
+  }
+
+  .section-about-directions {
+    padding: 70px 0;
+  }
+
+  .section-school-optional {
+    padding: 70px 0;
+  }
+
+  .section-school-teacher {
+    padding: 70px 0;
+  }
+
+  .section-question-block {
     padding: 70px 0;
   }
 }
@@ -8067,6 +9186,96 @@ footer a {
   .themes-event-block__title {
     font-size: 56px;
   }
+
+  .fb-about__title h1 {
+    font-size: 56px;
+  }
+
+  .about-fact {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-fact__title {
+    font-size: 56px;
+  }
+
+  .about-fact__middle {
+    display: none;
+  }
+
+  .about-fact__intro {
+    width: 100%;
+  }
+
+  .about-fact__first,
+  .about-fact__two,
+  .about-fact__three,
+  .about-fact__four,
+  .about-fact__five,
+  .about-fact__six {
+    width: 50%;
+  }
+
+  .about-directions__title {
+    font-size: 56px;
+  }
+
+  .about-history__title-text {
+    font-size: 56px;
+  }
+
+  .school-program__title {
+    font-size: 56px;
+  }
+
+  .school-program__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .school-program__item {
+    padding: 15px;
+    width: 50%;
+  }
+
+  .school-program__item:first-child .card-program {
+    background-color: #55B282;
+    background-image: url("/img/pattern-programm.svg");
+    background-repeat: no-repeat;
+  }
+
+  .card-program {
+    padding-left: 30px;
+    padding: 45px 30px;
+  }
+
+  .school-optional__title {
+    font-size: 56px;
+  }
+
+  .school-conditions__title-text {
+    font-size: 56px;
+  }
+
+  .school-teacher__title-text {
+    font-size: 56px;
+  }
+
+  .school-selection-block__title {
+    font-size: 56px;
+  }
+
+  .school-contacts__item {
+    padding: 15px;
+  }
+
+  .school-contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -8364,6 +9573,127 @@ footer a {
   .question-block__btn .btn {
     min-width: 270px;
   }
+
+  .fb-about {
+    display: flex;
+    align-items: center;
+  }
+
+  .fb-about__image {
+    width: 40%;
+  }
+
+  .fb-about__left {
+    width: 60%;
+  }
+
+  .about-fact__first,
+  .about-fact__two,
+  .about-fact__three,
+  .about-fact__four,
+  .about-fact__five,
+  .about-fact__six {
+    width: 33.33%;
+  }
+
+  .about-directions__item {
+    display: flex;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 50px;
+    padding-bottom: 18px;
+    margin-bottom: 30px;
+  }
+
+  .about-directions__number {
+    display: block;
+  }
+
+  .about-directions__name {
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-directions__link {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .about-history__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 70px;
+  }
+
+  .slider-nav {
+    display: flex;
+  }
+
+  .school-conditions__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 70px;
+  }
+
+  .slider-nav {
+    display: flex;
+  }
+
+  .school-gallery__list {
+    flex-wrap: wrap;
+  }
+
+  .school-gallery__item {
+    width: 33.33%;
+    min-width: 33.33%;
+  }
+
+  .school-teacher__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 70px;
+  }
+
+  .slider-nav {
+    display: flex;
+  }
+
+  .question-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .question-block__title {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .question-block__btn {
+    margin-left: auto;
+  }
+
+  .question-block__btn .btn {
+    min-width: 270px;
+  }
+
+  .school-contacts__item {
+    width: 33.33%;
+  }
+
+  .card-contacts {
+    flex-direction: column;
+  }
+
+  .card-contacts__title {
+    width: auto;
+    padding-bottom: 30px;
+  }
 }
 
 @media all and (min-width: 1024px) {
@@ -8438,6 +9768,54 @@ footer a {
   .fb-event-block__main {
     width: 50%;
     padding-left: 30px;
+  }
+
+  .fb-school {
+    display: flex;
+  }
+
+  .fb-school__image {
+    width: 50%;
+    max-width: 606px;
+    margin-bottom: 0;
+  }
+
+  .fb-school__title h1 {
+    font-size: 56px;
+  }
+
+  .fb-school__desc {
+    letter-spacing: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 14px;
+  }
+
+  .fb-school__main {
+    width: 50%;
+    padding-left: 30px;
+  }
+
+  .school-optional__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .school-optional__item-number {
+    display: block;
+    width: 130px;
+  }
+
+  .school-optional__item-name {
+    width: calc(40% - 130px);
+    margin-bottom: 0;
+  }
+
+  .school-optional__item-desc {
+    width: 60%;
+    padding-left: 40px;
   }
 }
 
@@ -8692,10 +10070,6 @@ footer a {
 
   .section-we-are-block {
     padding-top: 130px;
-  }
-
-  .section-we-are-block .container {
-    max-width: 1305px;
   }
 
   .we-are-block__img {
@@ -9369,6 +10743,257 @@ footer a {
     width: 50%;
     padding-right: 100px;
   }
+
+  .fb-about__title {
+    padding-bottom: 30px;
+  }
+
+  .fb-about__breadcrumbs {
+    padding-bottom: 40px;
+  }
+
+  .fb-about__desc {
+    max-width: 434px;
+  }
+
+  .fb-about__image {
+    width: 50%;
+  }
+
+  .fb-about__left {
+    width: 50%;
+    padding-left: 100px;
+  }
+
+  .section-about-partners {
+    padding-top: 0;
+  }
+
+  .about-partners__title {
+    padding-bottom: 50px;
+    padding-left: 100px;
+  }
+
+  .about-advanteges__title {
+    padding-bottom: 50px;
+    padding-left: 100px;
+  }
+
+  .section-about-image {
+    padding-top: 50px;
+    padding-bottom: 140px;
+  }
+
+  .section-about-fact {
+    padding-top: 130px;
+  }
+
+  .about-fact__img {
+    display: block;
+    flex-basis: 287px;
+    flex-grow: 1;
+  }
+
+  .about-fact__img img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .about-fact__middle {
+    display: block;
+    flex-basis: 667px;
+    flex-grow: 2;
+  }
+
+  .about-fact__intro {
+    flex-basis: 550px;
+    flex-grow: 2;
+    padding-left: 0;
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .about-fact__first {
+    flex-basis: 287px;
+    flex-grow: 1;
+  }
+
+  .about-fact__two {
+    flex-basis: 365px;
+    flex-grow: 1;
+  }
+
+  .about-fact__three {
+    flex-basis: 287px;
+    flex-grow: 1;
+  }
+
+  .about-fact__four {
+    flex-basis: 287px;
+    flex-grow: 1;
+  }
+
+  .about-fact__five {
+    display: block;
+    flex-basis: 558px;
+    flex-grow: 2;
+    background-position: top right;
+  }
+
+  .about-fact__six {
+    display: block;
+    flex-basis: 395px;
+    flex-grow: 1;
+  }
+
+  .section-about-directions {
+    padding-top: 100px;
+    padding-bottom: 180px;
+  }
+
+  .about-directions__wrp {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-directions__images {
+    display: block;
+    max-width: 395px;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .about-directions__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 70px;
+    padding-left: 100px;
+  }
+
+  .section-about-history {
+    padding-top: 100px;
+    padding-bottom: 140px;
+  }
+
+  .fb-school {
+    padding: 87px 0;
+  }
+
+  .fb-school__tags {
+    padding: 20px;
+    bottom: auto;
+    top: 0;
+  }
+
+  .fb-school__tags ul {
+    margin: -10px;
+  }
+
+  .fb-school__tags li {
+    padding: 10px;
+  }
+
+  .fb-school__picture > picture {
+    padding-top: 100%;
+  }
+
+  .fb-school__title h1 {
+    max-width: 500px;
+  }
+
+  .fb-school__desc {
+    max-width: 500px;
+    min-width: 220px;
+    margin-bottom: 50px;
+    letter-spacing: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 16px;
+  }
+
+  .fb-school__btn {
+    padding-bottom: 0;
+  }
+
+  .fb-school__text {
+    text-align: left;
+    padding-left: 40px;
+  }
+
+  .fb-school__main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fb-school__signup {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  .fb-school__director {
+    margin-top: -27px;
+    margin-left: 37px;
+  }
+
+  .school-program__title {
+    padding-left: 100px;
+    padding-bottom: 70px;
+  }
+
+  .school-program__item {
+    width: 33.33%;
+  }
+
+  .school-optional__title {
+    margin-bottom: 70px;
+  }
+
+  .section-school-conditions {
+    padding-top: 100px;
+    padding-bottom: 140px;
+  }
+
+  .question-block {
+    padding: 85px 120px;
+  }
+
+  .question-block__title {
+    font-size: 56px;
+  }
+
+  .section-school-selection-block {
+    margin-top: -60px;
+  }
+
+  .school-selection-block__wrp {
+    display: flex;
+    align-items: center;
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 85px 30px;
+  }
+
+  .school-selection-block__title {
+    text-align: left;
+  }
+
+  .school-selection-block__btn {
+    margin-left: auto;
+  }
+
+  .school-selection-block__btn .btn {
+    min-width: 300px;
+  }
+
+  .school-selection-block__title--shool {
+    font-size: 40px !important;
+  }
 }
 
 @media screen and (min-width: 1375px) {
@@ -9394,6 +11019,23 @@ footer a {
   .gallery-details {
     max-width: 1240px;
     margin: 0 auto;
+  }
+
+  .section-about-advanteges {
+    margin-bottom: -166px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-fact__intro {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-about-directions {
+    padding-top: 266px;
   }
 }
 
@@ -9441,6 +11083,35 @@ footer a {
   .fb-event-block__signup {
     margin-top: 0;
   }
+
+  .fb-about__desc {
+    max-width: 90%;
+  }
+
+  .fb-about__left {
+    padding-left: 0;
+    padding-right: 100px;
+  }
+
+  .about-partners__title {
+    padding-left: 0;
+  }
+
+  .about-advanteges__title {
+    padding-left: 0;
+  }
+
+  .fb-school__title h1 {
+    max-width: 650px;
+  }
+
+  .fb-school__desc {
+    max-width: 650px;
+  }
+
+  .fb-school__signup {
+    margin-top: auto;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -9469,9 +11140,34 @@ footer a {
   .section-last-event-block {
     background-image: none !important;
   }
+
+  .section-about-image {
+    background-image: none !important;
+  }
+
+  .section-about-history {
+    background-image: none !important;
+  }
+
+  .section-school-conditions {
+    background-image: none !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .school-selection-block__title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .about-partners .swiper-container:not(.swiper-initialized) .swiper-wrapper {
+    flex-direction: column;
+  }
+
+  .about-advanteges .swiper-container:not(.swiper-initialized) .swiper-wrapper {
+    flex-direction: column;
+  }
+
   .school-selection-block__title {
     font-size: 24px;
     text-align: center;
@@ -9535,6 +11231,17 @@ footer a {
 
   .page-bg {
     background-image: none !important;
+  }
+
+  .about-fact__intro {
+    height: auto;
+    min-height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .about-fact__intro br {
+    display: none;
   }
 }
 

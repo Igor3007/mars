@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mars</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="#{title}">
+    <meta name="keywords" content="#{title}">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="prefetch" href="/img/sprites/sprite.svg" as="image" crossorigin>
+    <style>@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-300.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-300.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-500.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-500.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-700.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-700.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-700.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-700.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-900.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-900.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+    </style>
+    <link rel="stylesheet" href="styles/main.css?v=1.0">
+  </head>
+  <body class="perf-no-animation">
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header-top">
+            <div class="header-top__logo"><a href="/"><span class="bgimage lazyload" data-bg="/img/common/logo.png"></span></a></div>
+            <div class="header-top__find">
+              <form action="search.html" method="POST">
+                <div class="header-find">
+                  <div class="header-find__input">
+                    <input type="text" placeholder="Поиск по сайту">
+                  </div>
+                  <div class="header-find__btn">
+                    <button type="submit">
+                      <svg width="25" height="25">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="header-top__phone"><a href="#">+7(999)000-00-00</a></div>
+            <div class="header-top__menu">
+              <div class="btn-burger" data-menu="btn"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="header-nav" data-menu="container">
+            <nav>
+              <ul>
+                <li><a href="about.html">Об ассоциации</a><span class="sub-arrow"></span>
+                  <ul>
+                    <li><a href="about.html">Об ассоциации</a></li>
+                    <li><a href="team.html">Сотрудники</a></li>
+                    <li><a href="normative-docs.html">Нормативные документы</a></li>
+                  </ul>
+                </li>
+                <li><a href="news.html">Новости</a>
+                </li>
+                <li><a href="schools.html">Наши школы</a>
+                </li>
+                <li><a href="gallery.html">Галерея</a>
+                </li>
+                <li><a href="traning.html">Повышение квалификации</a>
+                </li>
+                <li><a href="media.html">Медиатека (Библиотека)</a>
+                </li>
+                <li><a href="projects.html">Проекты и мероприятия</a>
+                </li>
+                <li><a href="contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+            <section class="section-fb-about">
+              <div class="container">
+                <div class="fb-about"> 
+                  <div class="fb-about__left">
+                    <div class="fb-about__breadcrumbs">
+                            <div class="breadcrumb">
+                              <ul>
+                                <li><a href="/">Главная</a></li>
+                                <li><span>Об ассоциации</span></li>
+                              </ul>
+                            </div>
+                    </div>
+                    <div class="fb-about__title">
+                      <h1>Об ассоциации</h1>
+                    </div>
+                    <div class="fb-about__desc">
+                      <p>Институт русского языка РУДН (ИРЯ) создан решением Учёного совета Университета в апреле 2021 года.</p>
+                      <p>Институт является ведущей научно-методической школой РКИ в мире, объединившей профильные классические подразделения Российского университета дружбы народов.</p>
+                    </div>
+                  </div>
+                  <div class="fb-about__image">
+                    <picture>
+                      <source srcset="/img/fbbg.webp" type="image/webp"/><img src="/img/fbbg.jpg" alt="image"/>
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-about-partners">
+              <div class="container">
+                <div class="about-partners"> 
+                  <div class="about-partners__title">Наши ключевые партнёры:</div>
+                  <div class="about-partners__slider">
+                    <div class="swiper-container" data-swiper="partners">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="card-about-partners">
+                                  <div class="card-about-partners__number"><span>1</span></div>
+                                  <div class="card-about-partners__desc">Русский язык для всех категорий обучающихся: от школьников до аспирантов и профессиональных преподавателей</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-about-partners">
+                                  <div class="card-about-partners__number"><span>2</span></div>
+                                  <div class="card-about-partners__desc">Круглогодичная языковая и предметная подготовка иностранных абитуриентов</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-about-partners">
+                                  <div class="card-about-partners__number"><span>3</span></div>
+                                  <div class="card-about-partners__desc">Повышение квалификации и переподготовка по русскому языку во всём мире</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-about-partners">
+                                  <div class="card-about-partners__number"><span>4</span></div>
+                                  <div class="card-about-partners__desc">Ведущая научно-методическая школа в области лингводидактики, межкультурной коммуникации и культурологии</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-about-partners">
+                                  <div class="card-about-partners__number"><span>5</span></div>
+                                  <div class="card-about-partners__desc">Лингводидактическое тестирование по русскому языку на все уровни для детей и взрослых</div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-about-fact">
+              <div class="container">
+                <div class="about-fact">
+                  <div class="about-fact__intro">
+                    <div class="about-fact__title">А вы знаете, <br> что:</div>
+                  </div>
+                  <div class="about-fact__first" style="background-image: url('/img/01.svg')">
+                    <div class="about-fact__number">01.</div>
+                    <div class="about-fact__desc">На русском языке разговаривают 258 млн человек</div>
+                  </div>
+                  <div class="about-fact__two">
+                    <div class="about-fact__number">02.</div>
+                    <div class="about-fact__desc">Русский язык является рабочим в 15 крупнейших международных организациях (ООН, ЮНЕСКО и др.)</div>
+                  </div>
+                  <div class="about-fact__three">
+                    <div class="about-fact__number">03.</div>
+                    <div class="about-fact__desc">Русский язык занимает второе место по количеству сайтов в сети Интернет</div>
+                  </div>
+                  <div class="about-fact__middle">
+                    <picture>
+                      <source srcset="/img/we-are-photo-hand.webp" type="image/webp"/><img src="/img/we-are-photo-hand.jpg" loading="lazy" alt="image"/>
+                    </picture>
+                  </div>
+                  <div class="about-fact__four" style="background-image: url('/img/04.svg')">
+                    <div class="about-fact__number">04.</div>
+                    <div class="about-fact__desc">Русский язык занимает пятое место по числу научных публикаций в МБД Web of Science и Scopus</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-we-digits-block"> 
+              <div class="container">
+                <div class="we-digits-block">
+                  <div class="we-digits-block__title">Ассоциация <br> в цифрах</div>
+                  <div class="we-digits-block__list">
+                    <div class="we-digits-block__item">
+                            <div class="digit-card digit-card--blue">
+                              <div class="digit-card__angle">
+                                <svg width="17" height="17">
+                                  <use xlink:href="/img/sprites/sprite.svg#ic_goal-angle"></use>
+                                </svg>
+                              </div>
+                              <div class="digit-card__number">30 +</div>
+                              <div class="digit-card__desc">стран мира, в которых представлены члены ассоциации</div>
+                            </div>
+                    </div>
+                    <div class="we-digits-block__item">
+                            <div class="digit-card digit-card--green">
+                              <div class="digit-card__angle">
+                                <svg width="17" height="17">
+                                  <use xlink:href="/img/sprites/sprite.svg#ic_goal-angle"></use>
+                                </svg>
+                              </div>
+                              <div class="digit-card__number">500 +</div>
+                              <div class="digit-card__desc">педагогов и руководителей русских школ</div>
+                            </div>
+                    </div>
+                    <div class="we-digits-block__item">
+                            <div class="digit-card digit-card--blue">
+                              <div class="digit-card__angle">
+                                <svg width="17" height="17">
+                                  <use xlink:href="/img/sprites/sprite.svg#ic_goal-angle"></use>
+                                </svg>
+                              </div>
+                              <div class="digit-card__number">400 +</div>
+                              <div class="digit-card__desc">учебников и методических пособий в свободном доступе</div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-about-image" style="background-image: url(/img/common/bggoal.svg)">
+              <div class="container">
+                <div class="about-image">
+                  <div class="about-image__image">
+                    <picture>
+                      <source srcset="/img/about-photo.webp" type="image/webp"/><img src="/img/about-photo.jpg" loading="lazy" alt="image"/>
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-about-advanteges">
+              <div class="container">
+                <div class="about-advanteges"> 
+                  <div class="about-advanteges__title">Преимущества обучения</div>
+                  <div class="about-advanteges__slider">
+                    <div class="swiper-container" data-swiper="partners">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="card-about-advanteges">
+                                  <div class="card-about-advanteges__number"><span>1</span></div>
+                                  <div class="card-about-advanteges__desc">Русский язык для всех категорий обучающихся: от школьников до аспирантов и профессиональных преподавателей</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-about-advanteges">
+                                  <div class="card-about-advanteges__number"><span>2</span></div>
+                                  <div class="card-about-advanteges__desc">Круглогодичная языковая и предметная подготовка иностранных абитуриентов</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-about-advanteges">
+                                  <div class="card-about-advanteges__number"><span>3</span></div>
+                                  <div class="card-about-advanteges__desc">Повышение квалификации и переподготовка по русскому языку во всём мире</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-about-advanteges">
+                                  <div class="card-about-advanteges__number"><span>4</span></div>
+                                  <div class="card-about-advanteges__desc">Ведущая научно-методическая школа в области лингводидактики, межкультурной коммуникации и культурологии</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-about-advanteges">
+                                  <div class="card-about-advanteges__number"><span>5</span></div>
+                                  <div class="card-about-advanteges__desc">Лингводидактическое тестирование по русскому языку на все уровни для детей и взрослых</div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-about-directions" style="background-image: url(/img/last-news-pattern.svg)">
+              <div class="container">
+                <div class="about-directions">
+                  <div class="about-directions__title"><span> Стратегические направления <br> Института русского языка:</span></div>
+                  <div class="about-directions__wrp">
+                    <div class="about-directions__list">
+                      <div class="about-directions__item">
+                        <div class="about-directions__number"><span>01</span></div>
+                        <div class="about-directions__name"><a href="#">Сохранение лидирующих позиций РУДН в области продвижения русского языка и культурного наследия России в достоянии современной цивилизации:</a></div>
+                        <div class="about-directions__link"><a href="#"><span class="hover-arrow">
+                              <svg width="35" height="35">
+                                <use xlink:href="/img/sprites/sprite.svg#ic_hover-arrow"></use>
+                              </svg></span></a></div>
+                      </div>
+                      <div class="about-directions__item">
+                        <div class="about-directions__number"><span>02</span></div>
+                        <div class="about-directions__name"><a href="#">Создание высококонкурентных образовательных программ и продуктов, отражающих потребности трансформирующегося планетарного социума:</a></div>
+                        <div class="about-directions__link"><a href="#"><span class="hover-arrow">
+                              <svg width="35" height="35">
+                                <use xlink:href="/img/sprites/sprite.svg#ic_hover-arrow"></use>
+                              </svg></span></a></div>
+                      </div>
+                      <div class="about-directions__item">
+                        <div class="about-directions__number"><span>03</span></div>
+                        <div class="about-directions__name"><a href="#">Развитие классической научной и научно-методической школ, научных направлений, а также создание междисциплинарных направлений</a></div>
+                        <div class="about-directions__link"><a href="#"><span class="hover-arrow">
+                              <svg width="35" height="35">
+                                <use xlink:href="/img/sprites/sprite.svg#ic_hover-arrow"></use>
+                              </svg></span></a></div>
+                      </div>
+                      <div class="about-directions__item">
+                        <div class="about-directions__number"><span>04</span></div>
+                        <div class="about-directions__name"><a href="#">Создание инновационной академической интернациональной адаптирующей среды для вовлечения в российское образовательное пространство иностранных учащихся:</a></div>
+                        <div class="about-directions__link"><a href="#"><span class="hover-arrow">
+                              <svg width="35" height="35">
+                                <use xlink:href="/img/sprites/sprite.svg#ic_hover-arrow"></use>
+                              </svg></span></a></div>
+                      </div>
+                      <div class="about-directions__item">
+                        <div class="about-directions__number"><span>05</span></div>
+                        <div class="about-directions__name"><a href="#">Развитие кадрового потенциала ИРЯ</a></div>
+                        <div class="about-directions__link"><a href="#"><span class="hover-arrow">
+                              <svg width="35" height="35">
+                                <use xlink:href="/img/sprites/sprite.svg#ic_hover-arrow"></use>
+                              </svg></span></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-about-history" style="background-image: url(/img/common/bggoal.svg)">
+              <div class="container">
+                <div class="about-history">
+                  <div class="about-history__title"> 
+                    <div class="about-history__title-text">История института</div>
+                    <div class="about-history__title-nav">
+                      <div class="slider-nav"> 
+                        <div class="slider-nav__prev" data-swiper-prev="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+                          </svg>
+                        </div>
+                        <div class="slider-nav__next" data-swiper-next="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about-history__swiper">
+                    <div class="swiper-container" data-swiper="speaker">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="card-history">
+                                  <div class="card-history__image">
+                                    <picture>
+                                      <source srcset="/img/history/photo.webp" type="image/webp"/><img src="/img/history/photo.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-history__year">1960 год</div>
+                                  <div class="card-history__desc">1 октября начал работать Подготовительный факультет.</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-history">
+                                  <div class="card-history__image">
+                                    <picture>
+                                      <source srcset="/img/history/photo-1.webp" type="image/webp"/><img src="/img/history/photo-1.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-history__year">1967 год</div>
+                                  <div class="card-history__desc">Создан Факультет повышения квалификации преподавателей русского языка как иностранного (ФПКП РКИ) </div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-history">
+                                  <div class="card-history__image">
+                                    <picture>
+                                      <source srcset="/img/history/photo-2.webp" type="image/webp"/><img src="/img/history/photo-2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-history__year">1968 год</div>
+                                  <div class="card-history__desc">В феврале 1968 г. ФПКП РКИ принял первых слушателей – 48 преподавателей из Москвы, Баку, Ташкента, Ленинграда.</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-history">
+                                  <div class="card-history__image">
+                                    <picture>
+                                      <source srcset="/img/history/photo-3.webp" type="image/webp"/><img src="/img/history/photo-3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-history__year">1999 год</div>
+                                  <div class="card-history__desc">Подготовительный факультет переименован в факультет иностранных языков и общеобразовательных дисциплин (подготовительный).</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-history">
+                                  <div class="card-history__image">
+                                    <picture>
+                                      <source srcset="/img/history/photo-4.webp" type="image/webp"/><img src="/img/history/photo-4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-history__year">2000 год</div>
+                                  <div class="card-history__desc">В феврале 1968 г. ФПКП РКИ принял первых слушателей – 48 преподавателей из Москвы, Баку, Ташкента, Ленинграда.</div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="footer__top">
+            <div class="footer__logo"><span class="bgimage lazyload" data-bg="/img/common/logo-light.png"></span>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer-contact">
+                <div class="footer-contact__title">Телефон:</div>
+                <div class="footer-contact__links"><a href="tel:+7(495)085-15-22">+7(495)085-15-22</a><a href="tel:+7(495)434-66-41">+7(495)434-66-41</a></div>
+              </div>
+              <div class="footer-contact">
+                <div class="footer-contact__title">Почта:</div>
+                <div class="footer-contact__links"><a href="mailto:ruslang@rudn.ru">ruslang@rudn.ru</a><a href="mailto:zayavka-ruslang@pfur.ru">zayavka-ruslang@pfur.ru</a></div>
+              </div>
+            </div>
+            <div class="footer__nav">
+              <ul>
+                <li><a href="about.html">Об ассоциации</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="schools.html">Наши школы</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="traning.html">Повышение квалификации</a></li>
+                <li><a href="media.html">Медиатека (Библиотека)</a></li>
+                <li><a href="projects.html">Проекты и мероприятия</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__main">
+            <div class="footer__address">
+              <div class="footer__address-title">Институт русского языка:</div>
+              <div class="footer__address-location">Москва, ул. Миклухо-Маклая, д. 10, к. 3</div>
+            </div>
+            <div class="footer__address">
+              <div class="footer__address-title">Российский государственный гуманитарный университет:</div>
+              <div class="footer__address-location">Москва, Миусская пл., 6</div>
+            </div>
+            <div class="footer__social">
+              <ul>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_vb"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__policy"><a href="#">Политика конфиденциальности</a></div>
+            <div class="footer__copyright">© 2022 Международная ассоциация русских школ</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-signup" style="display: none" id="modal-signup">
+        <div class="modal-signup__wrp">
+          <div class="modal-signup__title">Заявка на обучение в школе</div>
+          <div class="modal-signup__subtitle">Русская школа № 1 в Марбелье</div>
+          <div class="modal-signup__form">
+            <form action="#" method="POST">
+              <div class="form">
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Как вас зовут?">
+                  </div>
+                </div>
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Телефон для связи">
+                  </div>
+                  <div class="form__subitem">
+                    <input type="text" placeholder="E-mail">
+                  </div>
+                </div>
+                <div class="form__item form__item--button">
+                  <div class="form__subitem">
+                    <label class="checkbox">
+                      <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Даю согласие на обработку персональный данных в соответствии с политикой РУДН</span>
+                    </label>
+                  </div>
+                  <div class="form__subitem">
+                    <button class="btn">Отправить заявку</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/lib/swiper-bundle.min.js"> </script>
+    <script src="/js/vendor.js"> </script>
+    <script src="/js/common.js"> </script>
+  </body>
+</html>

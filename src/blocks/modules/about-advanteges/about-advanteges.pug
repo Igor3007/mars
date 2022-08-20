@@ -1,0 +1,40 @@
+-
+    var aboutPartners = [
+        {
+            number: '1',
+            desc: 'Русский язык для всех категорий обучающихся: от школьников до аспирантов и профессиональных преподавателей'
+        },
+        {
+            number: '2',
+            desc: 'Круглогодичная языковая и предметная подготовка иностранных абитуриентов'
+        },
+        {
+            number: '3',
+            desc: 'Повышение квалификации и переподготовка по русскому языку во всём мире'
+        },
+        {
+            number: '4',
+            desc: 'Ведущая научно-методическая школа в области лингводидактики, межкультурной коммуникации и культурологии'
+        },
+        {
+            number: '5',
+            desc: 'Лингводидактическое тестирование по русскому языку на все уровни для детей и взрослых'
+        },
+    ]
+
+mixin about-advanteges
+    section.section-about-advanteges
+        .container
+            .about-advanteges 
+                .about-advanteges__title Преимущества обучения
+                .about-advanteges__slider
+                    .swiper-container(data-swiper="partners")
+                        .swiper-wrapper
+                            each item in aboutPartners
+                                .swiper-slide: +card-about-advanteges(item)
+
+mixin card-about-advanteges(data)
+    .card-about-advanteges
+        .card-about-advanteges__number: span= data.number
+        .card-about-advanteges__desc= data.desc  
+

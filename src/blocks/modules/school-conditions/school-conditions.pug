@@ -1,0 +1,58 @@
+-
+    var history = [
+        {
+            image: '/img/condition-1.svg',
+            year: 'Учебные классы',
+            desc:  'Каждый класс оснащён современной эргономичной мебелью, компьютером, проектором. В некоторых классах есть SMART-борды.'
+        },
+        {
+            image: '/img/condition-2.svg',
+            year: 'Библиотека',
+            desc:  'В библиотеке собраны классические и современные произведения на русском языке для любого возраста.'
+        },
+        {
+            image: '/img/condition-3.svg',
+            year: 'Учительская',
+            desc:  'В учительской для отдыха и работы преподавателей стоит красивая и удобная мебель, в наличии ноутбуки и телевизор. '
+        },
+        {
+            image: '/img/condition-4.svg',
+            year: 'Приемная',
+            desc:  'В приемной находится удобная и красивая мебель для посетителей и родителей, стойка администратора, большая панель телевизора на стене.'
+        },
+        
+        
+    ]
+
+
+mixin school-conditions
+    section.section-school-conditions(style="background-image: url(/img/common/bggoal.svg)")
+        .container
+            .school-conditions
+                .school-conditions__title 
+                    .school-conditions__title-text Условия в школе
+                    .school-conditions__title-nav
+                        .slider-nav 
+                            .slider-nav__prev(data-swiper-prev="speaker"): +icons('#ic_swiper-prev', 17)
+                            .slider-nav__next(data-swiper-next="speaker"): +icons('#ic_swiper-next', 17)
+
+                .school-conditions__swiper
+                    .swiper-container(data-swiper="speaker")
+                        .swiper-wrapper
+                            each item in history   
+                                .swiper-slide: +card-conditions(item)
+    
+    section.section-school-gallery
+        .school-gallery
+            .school-gallery__list
+                .school-gallery__item( data-fancybox="" data-src="/img/gall/IMG_2763.jpg"): +picture('/img/gall/IMG_2763')
+                .school-gallery__item( data-fancybox="" data-src="/img/gall/IMG_9203.jpg"): +picture('/img/gall/IMG_9203')
+                .school-gallery__item( data-fancybox="" data-src="/img/gall/IMG_9208.jpg"): +picture('/img/gall/IMG_9208')
+                
+mixin card-conditions(data)
+    .card-conditions
+        .card-conditions__image
+            picture
+                img(src=data.image)
+        .card-conditions__year= data.year
+        .card-conditions__desc= data.desc

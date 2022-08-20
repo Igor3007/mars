@@ -1,0 +1,93 @@
+.section-fb-about {
+    @include section-padding;
+}
+
+.fb-about {
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+
+        @media screen and (min-width: $w1200) {
+            padding-bottom: 30px;
+        }
+
+        & h1 {
+            @include section-title;
+        }
+    }
+
+    &__breadcrumbs {
+        @media screen and (min-width: $w1200) {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 150%;
+        color: #1F1F1F;
+
+        @media screen and (min-width: $w1200) {
+            max-width: 434px;
+        }
+
+        @media screen and (min-width: $w1440) {
+            max-width: 90%;
+        }
+
+        & p {
+            padding-bottom: 10px;
+        }
+    }
+
+    &__image {
+
+        margin-left: -25%;
+        margin-right: -35%;
+
+        & img {
+            width: 100%;
+        }
+
+        & picture {
+            width: 100%;
+            display: block;
+        }
+
+        @media screen and (min-width: $w576) {
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: $w992) {
+            width: 40%;
+        }
+
+        @media screen and (min-width: $w1200) {
+            width: 50%;
+        }
+    }
+
+    &__left {
+        @media screen and (min-width: $w1200) {
+            width: 50%;
+            padding-left: 100px;
+        }
+
+        @media screen and (min-width: $w1440) {
+            padding-left: 0;
+            padding-right: 100px;
+        }
+
+        @media screen and (min-width: $w992) {
+            width: 60%;
+        }
+    }
+}

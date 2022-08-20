@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mars</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="#{title}">
+    <meta name="keywords" content="#{title}">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/manrope/subset-Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="prefetch" href="/img/sprites/sprite.svg" as="image" crossorigin>
+    <style>@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-300.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-300.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-500.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-500.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-700.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-700.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-700.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-700.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url("/fonts/museo/subset-MuseoSansCyrl-900.woff2") format("woff2"), url("/fonts/museo/subset-MuseoSansCyrl-900.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+    </style>
+    <link rel="stylesheet" href="styles/main.css?v=1.0">
+  </head>
+  <body class="perf-no-animation">
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header-top">
+            <div class="header-top__logo"><a href="/"><span class="bgimage lazyload" data-bg="/img/common/logo.png"></span></a></div>
+            <div class="header-top__find">
+              <form action="search.html" method="POST">
+                <div class="header-find">
+                  <div class="header-find__input">
+                    <input type="text" placeholder="Поиск по сайту">
+                  </div>
+                  <div class="header-find__btn">
+                    <button type="submit">
+                      <svg width="25" height="25">
+                        <use xlink:href="/img/sprites/sprite.svg#ic_search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="header-top__phone"><a href="#">+7(999)000-00-00</a></div>
+            <div class="header-top__menu">
+              <div class="btn-burger" data-menu="btn"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="header-nav" data-menu="container">
+            <nav>
+              <ul>
+                <li><a href="about.html">Об ассоциации</a><span class="sub-arrow"></span>
+                  <ul>
+                    <li><a href="about.html">Об ассоциации</a></li>
+                    <li><a href="team.html">Сотрудники</a></li>
+                    <li><a href="normative-docs.html">Нормативные документы</a></li>
+                  </ul>
+                </li>
+                <li><a href="news.html">Новости</a>
+                </li>
+                <li><a href="schools.html">Наши школы</a>
+                </li>
+                <li><a href="gallery.html">Галерея</a>
+                </li>
+                <li><a href="traning.html">Повышение квалификации</a>
+                </li>
+                <li><a href="media.html">Медиатека (Библиотека)</a>
+                </li>
+                <li><a href="projects.html">Проекты и мероприятия</a>
+                </li>
+                <li><a href="contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main> 
+            <section class="section-fb-school">
+              <div class="container">
+                <div class="fb-school">
+                  <div class="fb-school__image">
+                    <div class="fb-school__picture">
+                      <picture>
+                        <source srcset="/img/photo-school.webp" type="image/webp"/><img src="/img/photo-school.jpg" loading="lazy" alt="image"/>
+                      </picture>
+                      <div class="fb-school__tags">
+                        <ul>
+                          <li><a class="color--blue" href="#">Испания</a></li>
+                          <li><a class="color--green" href="#">Марбелья</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="fb-school__director">
+                      <div class="fb-school__director-photo">
+                        <picture>
+                          <source srcset="/img/image-director.webp" type="image/webp"/><img src="/img/image-director.jpg" loading="lazy" alt="image"/>
+                        </picture>
+                      </div>
+                      <div class="fb-school__director-main">
+                        <div class="fb-school__director-name">Чистякова Ирина Анатольевна</div>
+                        <div class="fb-school__director-post">Директор школы</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fb-school__main"> 
+                    <div class="fb-school__title">
+                      <h1>Русская школа № 1 в Марбелье</h1>
+                    </div>
+                    <div class="fb-school__subtitle">Добро пожаловать в Русскую школу в Испании!</div>
+                    <div class="fb-school__desc">
+                      <p>Русская школа № 1 в Марбелье — уникальное учебное заведение, в котором учащиеся получают качественное образование и развивают творческий потенциал.</p>
+                      <p>Школа интегрирована в европейскую систему образования. Синтез российских программ обучения и образовательных программ британских/испанских колледжей позволяет составлять учебные планы, принимая во внимание знания, полученные учащимися в местных колледжах, и преподавать в полном объёме русский язык, литературу, географию и историю России за один день в неделю.</p>
+                    </div>
+                    <div class="fb-school__signup">
+                      <div class="fb-school__btn">
+                        <button class="btn" data-modal="signup">Записаться</button>
+                      </div>
+                      <div class="fb-school__text"> <a href="tel:+34 662 55 65 38">+34 662 55 65 38</a><a href="mailto:spain@russkayashkola.ru">spain@russkayashkola.ru</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-school-program" style="background-image: url(/img/bg-programm.jpg)">
+              <div class="container">
+                <div class="school-program">
+                  <div class="school-program__title">Программы</div>
+                  <div class="school-program__list">
+                    <div class="school-program__item">
+                            <div class="card-program">
+                              <div class="card-program__age">6-11 лет</div>
+                              <div class="card-program__title">Начальная школа </div>
+                              <div class="card-program__desc">Обучение по ФГОС. Обучение детей-билнгвов</div>
+                            </div>
+                    </div>
+                    <div class="school-program__item">
+                            <div class="card-program">
+                              <div class="card-program__age">12-18 лет</div>
+                              <div class="card-program__title">Средняя школа</div>
+                              <div class="card-program__desc">Европейская система образования</div>
+                            </div>
+                    </div>
+                    <div class="school-program__item">
+                            <div class="card-program">
+                              <div class="card-program__age">5-7 лет</div>
+                              <div class="card-program__title">Дошкольное обучение </div>
+                              <div class="card-program__desc"> Подготовительная к школе группа</div>
+                            </div>
+                    </div>
+                    <div class="school-program__item">
+                            <div class="card-program">
+                              <div class="card-program__age">7-16 лет</div>
+                              <div class="card-program__title">Для билингвов</div>
+                              <div class="card-program__desc"> Русский язык для детей и подростков</div>
+                            </div>
+                    </div>
+                    <div class="school-program__item">
+                            <div class="card-program">
+                              <div class="card-program__age">7-16 лет</div>
+                              <div class="card-program__title">Русский как иностранный</div>
+                              <div class="card-program__desc">РКИ для детей. РКИ для взрослых</div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-school-optional">
+              <div class="container">
+                <div class="school-optional">
+                  <div class="school-optional__title">Факультативные занятия</div>
+                  <div class="school-optional__list">
+                    <div class="school-optional__item">
+                      <div class="school-optional__item-number"><span>01</span></div>
+                      <div class="school-optional__item-name">Молодежный клуб "Эврика"</div>
+                      <div class="school-optional__item-desc">Знакомство с географией России и мира. Организация и участие в экскурсиях, походах, исследованиях, конференциях, конкурсах. </div>
+                    </div>
+                    <div class="school-optional__item">
+                      <div class="school-optional__item-number"><span>02</span></div>
+                      <div class="school-optional__item-name">Русская математическая школа</div>
+                      <div class="school-optional__item-desc">Для детей 1-4 классов. Для учащихся 5-8 классов.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-school-conditions" style="background-image: url(/img/common/bggoal.svg)">
+              <div class="container">
+                <div class="school-conditions">
+                  <div class="school-conditions__title"> 
+                    <div class="school-conditions__title-text">Условия в школе</div>
+                    <div class="school-conditions__title-nav">
+                      <div class="slider-nav"> 
+                        <div class="slider-nav__prev" data-swiper-prev="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+                          </svg>
+                        </div>
+                        <div class="slider-nav__next" data-swiper-next="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="school-conditions__swiper">
+                    <div class="swiper-container" data-swiper="speaker">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="card-conditions">
+                                  <div class="card-conditions__image">
+                                    <picture><img src="/img/condition-1.svg"></picture>
+                                  </div>
+                                  <div class="card-conditions__year">Учебные классы</div>
+                                  <div class="card-conditions__desc">Каждый класс оснащён современной эргономичной мебелью, компьютером, проектором. В некоторых классах есть SMART-борды.</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-conditions">
+                                  <div class="card-conditions__image">
+                                    <picture><img src="/img/condition-2.svg"></picture>
+                                  </div>
+                                  <div class="card-conditions__year">Библиотека</div>
+                                  <div class="card-conditions__desc">В библиотеке собраны классические и современные произведения на русском языке для любого возраста.</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-conditions">
+                                  <div class="card-conditions__image">
+                                    <picture><img src="/img/condition-3.svg"></picture>
+                                  </div>
+                                  <div class="card-conditions__year">Учительская</div>
+                                  <div class="card-conditions__desc">В учительской для отдыха и работы преподавателей стоит красивая и удобная мебель, в наличии ноутбуки и телевизор. </div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-conditions">
+                                  <div class="card-conditions__image">
+                                    <picture><img src="/img/condition-4.svg"></picture>
+                                  </div>
+                                  <div class="card-conditions__year">Приемная</div>
+                                  <div class="card-conditions__desc">В приемной находится удобная и красивая мебель для посетителей и родителей, стойка администратора, большая панель телевизора на стене.</div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-school-gallery">
+              <div class="school-gallery">
+                <div class="school-gallery__list">
+                  <div class="school-gallery__item" data-fancybox="" data-src="/img/gall/IMG_2763.jpg">
+                    <picture>
+                      <source srcset="/img/gall/IMG_2763.webp" type="image/webp"/><img src="/img/gall/IMG_2763.jpg" loading="lazy" alt="image"/>
+                    </picture>
+                  </div>
+                  <div class="school-gallery__item" data-fancybox="" data-src="/img/gall/IMG_9203.jpg">
+                    <picture>
+                      <source srcset="/img/gall/IMG_9203.webp" type="image/webp"/><img src="/img/gall/IMG_9203.jpg" loading="lazy" alt="image"/>
+                    </picture>
+                  </div>
+                  <div class="school-gallery__item" data-fancybox="" data-src="/img/gall/IMG_9208.jpg">
+                    <picture>
+                      <source srcset="/img/gall/IMG_9208.webp" type="image/webp"/><img src="/img/gall/IMG_9208.jpg" loading="lazy" alt="image"/>
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-school-teacher">
+              <div class="container">
+                <div class="school-teacher">
+                  <div class="school-teacher__title"> 
+                    <div class="school-teacher__title-text">Наши учителя</div>
+                    <div class="school-teacher__title-nav">
+                      <div class="slider-nav"> 
+                        <div class="slider-nav__prev" data-swiper-prev="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+                          </svg>
+                        </div>
+                        <div class="slider-nav__next" data-swiper-next="speaker">
+                          <svg width="17" height="17">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="school-teacher__swiper">
+                    <div class="swiper-container" data-swiper="speaker">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr1.webp" type="image/webp"/><img src="/img/wr1.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Должикова Анжела Викторовна</div>
+                                  <div class="card-worker__post">Директор Института русского языка РУДН, кандидат наук</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr2.webp" type="image/webp"/><img src="/img/wr2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Ельникова Светлана Игоревна</div>
+                                  <div class="card-worker__post">Первый заместитель директора, кандидат педагогических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr2.webp" type="image/webp"/><img src="/img/wr2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Ельникова Светлана Игоревна</div>
+                                  <div class="card-worker__post">Первый заместитель директора, кандидат педагогических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr4.webp" type="image/webp"/><img src="/img/wr4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Куновски Марина Николаевна </div>
+                                  <div class="card-worker__post">Заместитель директора по международной деятельности, кандидат филологических наук</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr2.webp" type="image/webp"/><img src="/img/wr2.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Ельникова Светлана Игоревна</div>
+                                  <div class="card-worker__post">Первый заместитель директора, кандидат педагогических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr4.webp" type="image/webp"/><img src="/img/wr4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Куновски Марина Николаевна </div>
+                                  <div class="card-worker__post">Заместитель директора по международной деятельности, кандидат филологических наук</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr3.webp" type="image/webp"/><img src="/img/wr3.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Алимова Лилия Баторгалиевна</div>
+                                  <div class="card-worker__post">Заместитель директора по учебной работе, доктор исторических наук, доцент</div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card-worker">
+                                  <div class="card-worker__image">
+                                    <picture>
+                                      <source srcset="/img/wr4.webp" type="image/webp"/><img src="/img/wr4.jpg" loading="lazy" alt="image"/>
+                                    </picture>
+                                  </div>
+                                  <div class="card-worker__name">Куновски Марина Николаевна </div>
+                                  <div class="card-worker__post">Заместитель директора по международной деятельности, кандидат филологических наук</div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-school-in-map">
+              <div class="school-in-map">
+                <div class="school-in-map__container">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.5187699309677!2d-4.8940065844524625!3d36.5174769912623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72d963b5873563%3A0x672c37b6059f879a!2z0KDRg9GB0YHQutCw0Y8g0YjQutC-0LvQsCBOIDEg0JzQsNGA0LHQtdC70YzRjyDQmNGB0L_QsNC90LjRjw!5e0!3m2!1sru!2sby!4v1660965670957!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </section>
+            <section class="section-school-selection-block">
+              <div class="container">
+                <div class="school-selection-block">
+                  <div class="school-selection-block__wrp">
+                    <div class="school-selection-block__title school-selection-block__title--shool">Приглашаем на обучение <br> в Русскую школу № 1</div>
+                    <div class="school-selection-block__btn">
+                      <button class="btn" data-modal="signup">Подобрать школу</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-school-contacts">
+              <div class="container">
+                <div class="school-contacts">
+                  <div class="school-contacts__list">
+                    <div class="school-contacts__item">
+                            <div class="card-contacts">
+                              <div class="card-contacts__title">Адрес:</div>
+                              <div class="card-contacts__link"><a href="#">Испания, г. Марбелья,</a><a href="#">ул. Кановас дель Кастильо, 72. Русская школа № 1</a>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="school-contacts__item">
+                            <div class="card-contacts">
+                              <div class="card-contacts__title">Телефон:</div>
+                              <div class="card-contacts__link"><a href="tel:+34 662 55 65 38">+34 662 55 65 38</a>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="school-contacts__item">
+                            <div class="card-contacts">
+                              <div class="card-contacts__title">Почта:</div>
+                              <div class="card-contacts__link"><a href="milto:spain@russkayashkola.ru">spain@russkayashkola.ru</a>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="footer__top">
+            <div class="footer__logo"><span class="bgimage lazyload" data-bg="/img/common/logo-light.png"></span>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer-contact">
+                <div class="footer-contact__title">Телефон:</div>
+                <div class="footer-contact__links"><a href="tel:+7(495)085-15-22">+7(495)085-15-22</a><a href="tel:+7(495)434-66-41">+7(495)434-66-41</a></div>
+              </div>
+              <div class="footer-contact">
+                <div class="footer-contact__title">Почта:</div>
+                <div class="footer-contact__links"><a href="mailto:ruslang@rudn.ru">ruslang@rudn.ru</a><a href="mailto:zayavka-ruslang@pfur.ru">zayavka-ruslang@pfur.ru</a></div>
+              </div>
+            </div>
+            <div class="footer__nav">
+              <ul>
+                <li><a href="about.html">Об ассоциации</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="schools.html">Наши школы</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="traning.html">Повышение квалификации</a></li>
+                <li><a href="media.html">Медиатека (Библиотека)</a></li>
+                <li><a href="projects.html">Проекты и мероприятия</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__main">
+            <div class="footer__address">
+              <div class="footer__address-title">Институт русского языка:</div>
+              <div class="footer__address-location">Москва, ул. Миклухо-Маклая, д. 10, к. 3</div>
+            </div>
+            <div class="footer__address">
+              <div class="footer__address-title">Российский государственный гуманитарный университет:</div>
+              <div class="footer__address-location">Москва, Миусская пл., 6</div>
+            </div>
+            <div class="footer__social">
+              <ul>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg width="20" height="20">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_vb"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__policy"><a href="#">Политика конфиденциальности</a></div>
+            <div class="footer__copyright">© 2022 Международная ассоциация русских школ</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-signup" style="display: none" id="modal-signup">
+        <div class="modal-signup__wrp">
+          <div class="modal-signup__title">Заявка на обучение в школе</div>
+          <div class="modal-signup__subtitle">Русская школа № 1 в Марбелье</div>
+          <div class="modal-signup__form">
+            <form action="#" method="POST">
+              <div class="form">
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Как вас зовут?">
+                  </div>
+                </div>
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Телефон для связи">
+                  </div>
+                  <div class="form__subitem">
+                    <input type="text" placeholder="E-mail">
+                  </div>
+                </div>
+                <div class="form__item form__item--button">
+                  <div class="form__subitem">
+                    <label class="checkbox">
+                      <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Даю согласие на обработку персональный данных в соответствии с политикой РУДН</span>
+                    </label>
+                  </div>
+                  <div class="form__subitem">
+                    <button class="btn">Отправить заявку</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/lib/swiper-bundle.min.js"> </script>
+    <script src="/js/vendor.js"> </script>
+    <script src="/js/common.js"> </script>
+  </body>
+</html>

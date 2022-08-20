@@ -1,0 +1,28 @@
+include ../../modules/page-team/page-team.pug
+
+mixin school-teacher
+    section.section-school-teacher
+        .container
+            .school-teacher
+                .school-teacher__title 
+                    .school-teacher__title-text Наши учителя
+                    .school-teacher__title-nav
+                        .slider-nav 
+                            .slider-nav__prev(data-swiper-prev="speaker"): +icons('#ic_swiper-prev', 17)
+                            .slider-nav__next(data-swiper-next="speaker"): +icons('#ic_swiper-next', 17)
+
+                .school-teacher__swiper
+                    .swiper-container(data-swiper="speaker")
+                        .swiper-wrapper
+                            each item in worker   
+                                .swiper-slide: +card-worker(item)
+
+mixin question-block
+    section.section-question-block
+        .container
+            .question-block
+                .question-block__title Остались вопросы по мероприятию?
+                .question-block__btn
+                    button.btn Задать вопрос
+                            
+

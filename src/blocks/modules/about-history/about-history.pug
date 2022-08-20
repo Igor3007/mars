@@ -1,0 +1,52 @@
+-
+    var history = [
+        {
+            image: '/img/history/photo',
+            year: '1960 год',
+            desc:  '1 октября начал работать Подготовительный факультет.'
+        },
+        {
+            image: '/img/history/photo-1',
+            year: '1967 год',
+            desc:  'Создан Факультет повышения квалификации преподавателей русского языка как иностранного (ФПКП РКИ) '
+        },
+        {
+            image: '/img/history/photo-2',
+            year: '1968 год',
+            desc:  'В феврале 1968 г. ФПКП РКИ принял первых слушателей – 48 преподавателей из Москвы, Баку, Ташкента, Ленинграда.'
+        },
+        {
+            image: '/img/history/photo-3',
+            year: '1999 год',
+            desc:  'Подготовительный факультет переименован в факультет иностранных языков и общеобразовательных дисциплин (подготовительный).'
+        },
+        {
+            image: '/img/history/photo-4',
+            year: '2000 год',
+            desc:  'В феврале 1968 г. ФПКП РКИ принял первых слушателей – 48 преподавателей из Москвы, Баку, Ташкента, Ленинграда.'
+        },
+    ]
+
+
+mixin about-history
+    section.section-about-history(style="background-image: url(/img/common/bggoal.svg)")
+        .container
+            .about-history
+                .about-history__title 
+                    .about-history__title-text История института
+                    .about-history__title-nav
+                        .slider-nav 
+                            .slider-nav__prev(data-swiper-prev="speaker"): +icons('#ic_swiper-prev', 17)
+                            .slider-nav__next(data-swiper-next="speaker"): +icons('#ic_swiper-next', 17)
+
+                .about-history__swiper
+                    .swiper-container(data-swiper="speaker")
+                        .swiper-wrapper
+                            each item in history   
+                                .swiper-slide: +card-history(item)
+
+mixin card-history(data)
+    .card-history
+        .card-history__image: +picture(data.image)
+        .card-history__year= data.year
+        .card-history__desc= data.desc

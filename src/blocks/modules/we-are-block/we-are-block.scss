@@ -7,12 +7,15 @@
 
     & .container {
         @media screen and (min-width: $w1200) {
-            max-width: 1305px;
+            // max-width: 1305px;
         }
     }
 }
 
 .we-are-block {
+
+    max-width: 1245px;
+    margin: 0 auto;
 
     @media screen and (min-width: $w760) {
         display: flex;

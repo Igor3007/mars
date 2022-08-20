@@ -1,0 +1,40 @@
+-
+    var aboutPartners = [
+        {
+            number: '1',
+            desc: 'Университет Виктории (Канада)'
+        },
+        {
+            number: '2',
+            desc: 'Университет прикладных технических и экономических наук (Берлин, Германия)'
+        },
+        {
+            number: '3',
+            desc: 'Московский государственный университет имени М.В. Ломоносова (МГУ)'
+        },
+        {
+            number: '4',
+            desc: 'Санкт-Петербургский политехнический университет Петра Великого'
+        },
+        {
+            number: '5',
+            desc: 'Институт языкознания РАН'
+        },
+    ]
+
+mixin about-partners
+    section.section-about-partners
+        .container
+            .about-partners 
+                .about-partners__title Наши ключевые партнёры:
+                .about-partners__slider
+                    .swiper-container(data-swiper="partners")
+                        .swiper-wrapper
+                            each item in aboutPartners
+                                .swiper-slide: +card-about-partners(item)
+
+mixin card-about-partners(data)
+    .card-about-partners
+        .card-about-partners__number: span= data.number
+        .card-about-partners__desc= data.desc  
+

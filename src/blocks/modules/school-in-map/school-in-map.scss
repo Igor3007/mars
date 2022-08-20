@@ -1,0 +1,12 @@
+.school-in-map {
+    &__container {
+        height: 400px;
+        position: relative;
+
+        & iframe {
+            @include layer(1);
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

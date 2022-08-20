@@ -1,0 +1,42 @@
+-
+    var lastNews = [
+        {
+            date: '01',
+            title: 'Сохранение лидирующих позиций РУДН в области продвижения русского языка и культурного наследия России в достоянии современной цивилизации:',
+        },
+        {
+            date: '02',
+            title: 'Создание высококонкурентных образовательных программ и продуктов, отражающих потребности трансформирующегося планетарного социума:',
+        },
+        {
+            date: '03',
+            title: 'Развитие классической научной и научно-методической школ, научных направлений, а также создание междисциплинарных направлений',
+        },
+        {
+            date: '04',
+            title: 'Создание инновационной академической интернациональной адаптирующей среды для вовлечения в российское образовательное пространство иностранных учащихся:',
+        },
+        {
+            date: '05',
+            title: 'Развитие кадрового потенциала ИРЯ',
+        },
+        
+        
+    ]
+
+mixin about-directions
+    section.section-about-directions(style="background-image: url(/img/last-news-pattern.svg)")
+        .container
+            .about-directions
+                .about-directions__title
+                    span  Стратегические направления <br> Института русского языка:
+                     
+                .about-directions__wrp
+                     
+                    .about-directions__list
+                        each item in lastNews
+                            .about-directions__item
+                                .about-directions__number: span= item.date
+                                .about-directions__name: a(href='#')= item.title
+                                .about-directions__link
+                                    a(href='#'): span.hover-arrow: +icons('#ic_hover-arrow', 35)

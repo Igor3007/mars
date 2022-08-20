@@ -1,0 +1,44 @@
+-
+    var program = [
+        {
+            age: '6-11 лет',
+            title: 'Начальная школа ',
+            desc: 'Обучение по ФГОС. Обучение детей-билнгвов',
+        },
+        {
+            age: '12-18 лет',
+            title: 'Средняя школа',
+            desc: 'Европейская система образования',
+        },
+        {
+            age: '5-7 лет',
+            title: 'Дошкольное обучение ',
+            desc: ' Подготовительная к школе группа',
+        },
+        {
+            age: '7-16 лет',
+            title: 'Для билингвов',
+            desc: ' Русский язык для детей и подростков',
+        },
+        {
+            age: '7-16 лет',
+            title: 'Русский как иностранный',
+            desc: 'РКИ для детей. РКИ для взрослых',
+        },
+    ]
+
+
+mixin school-program
+    section.section-school-program(style="background-image: url(/img/bg-programm.jpg)")
+        .container
+            .school-program
+                .school-program__title Программы
+                .school-program__list
+                    each item in program
+                        .school-program__item: +card-program(item)
+
+mixin card-program(data)
+    .card-program(style="")
+        .card-program__age= data.age
+        .card-program__title= data.title
+        .card-program__desc= data.desc

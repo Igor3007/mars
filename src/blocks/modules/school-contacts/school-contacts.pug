@@ -1,0 +1,55 @@
+-
+    var contacts = [
+        {
+            title: 'Адрес:',
+            link: [
+                {text: 'Испания, г. Марбелья,', href: '#'},
+                {text: 'ул. Кановас дель Кастильо, 72. Русская школа № 1', href: '#'},
+            ]
+        },
+        {
+            title: 'Телефон:',
+            link: [
+                {text: '+34 662 55 65 38', href: 'tel:+34 662 55 65 38'},
+                 
+            ]
+        },
+        {
+            title: 'Почта:',
+            link: [
+                {text: 'spain@russkayashkola.ru', href: 'milto:spain@russkayashkola.ru'},
+                
+            ]
+        },
+    ]
+
+mixin school-contacts
+    
+
+    section.section-school-selection-block
+        .container
+            .school-selection-block
+                .school-selection-block__wrp
+                    .school-selection-block__title.school-selection-block__title--shool Приглашаем на обучение <br> в Русскую школу № 1
+                    .school-selection-block__btn
+                        button.btn(data-modal="signup") Подобрать школу
+
+    section.section-school-contacts
+        .container
+            .school-contacts
+                .school-contacts__list
+                    each item in contacts
+                        .school-contacts__item: +card-contacts(item)
+
+ 
+    
+         
+            
+
+mixin card-contacts(data)
+    .card-contacts
+        .card-contacts__title= data.title
+        .card-contacts__link
+            each item in data.link
+                a(href=item.href)= item.text
+        

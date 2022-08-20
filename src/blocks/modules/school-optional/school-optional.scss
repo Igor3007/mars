@@ -1,0 +1,87 @@
+.section-school-optional {
+    @include section-padding;
+}
+
+.school-optional {
+
+    max-width: 1031px;
+    margin: 0 auto;
+
+    &__title {
+        @include section-title;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $w1200) {
+            margin-bottom: 70px;
+        }
+
+    }
+
+    &__item {
+        background: #FFFFFF;
+        border: 1px solid #EDF2F5;
+        border-radius: 4px;
+        padding: 30px;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $w1024) {
+            display: flex;
+            align-items: center;
+        }
+
+        &:nth-child(even) {
+            & .school-optional__item-number span {
+                background-color: $blue;
+            }
+        }
+
+        &-number {
+            display: none;
+
+            & span {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 100px;
+                color: #FFFFFF;
+
+                display: flex;
+                width: 110px;
+                height: 110px;
+
+                justify-content: center;
+                background-color: $green;
+                border-radius: 4px;
+
+            }
+
+            @media screen and (min-width: $w1024) {
+                display: block;
+                width: 130px;
+            }
+        }
+
+        &-name {
+            font-size: 20px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            line-height: 170%;
+
+            @media screen and (min-width: $w1024) {
+                width: calc(40% - 130px);
+                margin-bottom: 0;
+            }
+        }
+
+        &-desc {
+            font-size: 16px;
+            line-height: 150%;
+
+            @media screen and (min-width: $w1024) {
+                width: 60%;
+                padding-left: 40px;
+            }
+        }
+
+    }
+
+}

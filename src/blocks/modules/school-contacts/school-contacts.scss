@@ -1,0 +1,142 @@
+.section-school-selection-block {
+
+
+    position: relative;
+    z-index: 2;
+    margin-top: -30px;
+
+    @media screen and (min-width: $w1200) {
+        margin-top: -60px;
+    }
+}
+
+.school-selection-block {
+    background-color: $blue-for-card;
+
+
+    &__wrp {
+
+        padding: 30px;
+
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            align-items: center;
+            max-width: 1030px;
+            margin: 0 auto;
+            padding: 85px 30px;
+        }
+    }
+
+
+    &__title {
+        @include section-title;
+
+        padding-bottom: 40px;
+        text-align: center;
+
+
+        @media screen and (max-width: $w760) {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        @media screen and (min-width: $w1200) {
+            text-align: left;
+        }
+
+    }
+
+    &__btn {
+
+        @media screen and (min-width: $w1200) {
+            margin-left: auto;
+        }
+
+        & .btn {
+            margin: 0 auto;
+
+            @media screen and (min-width: $w1200) {
+                min-width: 300px;
+            }
+        }
+    }
+}
+
+.school-contacts {
+
+
+    &__item {
+        padding-bottom: 50px;
+
+        @media screen and (min-width: $w760) {
+            padding: 15px;
+        }
+
+        @media screen and (min-width: $w992) {
+            width: 33.33%;
+        }
+    }
+
+    &__list {
+        @media screen and (min-width: $w760) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
+
+
+    }
+}
+
+.card-contacts {
+
+    display: flex;
+
+    @media screen and (min-width: $w992) {
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 16px;
+        padding-bottom: 20px;
+        width: 100px;
+        min-width: 100px;
+        line-height: 150%;
+
+        @media screen and (min-width: $w992) {
+            width: auto;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__link {
+        & a {
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 15px;
+            line-height: 150%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__list {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+}
+
+.section-school-contacts {
+    padding: 70px 0;
+}
+
+.school-selection-block__title--shool {
+    font-size: 24px !important;
+
+    @media screen and (min-width: $w1200) {
+        font-size: 40px !important;
+    }
+}

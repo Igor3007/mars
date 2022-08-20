@@ -1,0 +1,19 @@
+include ../../components/breadcrumb/breadcrumb.pug
+
+mixin fb-about
+    section.section-fb-about
+        .container
+            .fb-about  
+                .fb-about__left
+                    .fb-about__breadcrumbs
+                        +breadcrumb([
+                            'Главная',
+                            'Об ассоциации',
+                        ])
+                    .fb-about__title: h1 Об ассоциации
+                    .fb-about__desc
+                        p Институт русского языка РУДН (ИРЯ) создан решением Учёного совета Университета в апреле 2021 года.
+                        p Институт является ведущей научно-методической школой РКИ в мире, объединившей профильные классические подразделения Российского университета дружбы народов.
+                .fb-about__image: +picture-no-lazy('/img/fbbg')
+
+

@@ -267,8 +267,67 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
 
+    /* ========================================
+    swiper-partner
+    ========================================*/
 
 
+    if (document.querySelectorAll('[data-swiper="partners"]').length) {
+
+        if (document.body.clientWidth > 766) {
+            const swiper = new Swiper('[data-swiper="partners"]', {
+
+                slidesPerView: 1,
+                spaceBetween: 10,
+
+                // autoplay: {
+                //     delay: 5000,
+                // },
+
+
+
+
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20
+                    },
+
+                    576: {
+                        slidesPerView: 2.1,
+                        spaceBetween: 20,
+                    },
+
+
+
+                    992: {
+                        slidesPerView: 3.1,
+                        spaceBetween: 25,
+                    },
+
+                    1200: {
+                        slidesPerView: 4.1,
+                        spaceBetween: 28,
+                    }
+                }
+
+
+
+
+            });
+        }
+
+
+
+    }
+
+    /* ==================================
+    swiper nav hide
+    ==================================*/
+
+    if (document.querySelectorAll('.school-conditions .swiper-slide').length > 4) {
+        document.querySelector('.school-conditions__title-nav').style.display = 'block'
+    }
 
 
 });
