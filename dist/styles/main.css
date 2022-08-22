@@ -4509,7 +4509,7 @@ header {
   height: auto;
   padding: 0.7em 1.5em 0.8em 1.5em;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
 .header-nav nav ul > li > ul li:hover {
@@ -4522,8 +4522,9 @@ header {
 }
 
 .header-nav nav ul > li > ul li a {
-  text-align: left;
-  justify-content: flex-start;
+  text-align: center;
+  justify-content: center;
+  line-height: 140%;
 }
 
 .header-nav.open {
@@ -4836,6 +4837,13 @@ footer a {
   width: 100%;
 }
 
+.page-404__code {
+  font-size: 110px;
+  line-height: 150%;
+  font-weight: 700;
+  color: #013C76;
+}
+
 .page-404__image {
   width: 100%;
 }
@@ -4864,12 +4872,12 @@ footer a {
 }
 
 .page-404__title {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 111%;
-  color: #013C76;
-  padding-bottom: 25px;
   padding-bottom: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #013C76;
+  text-align: center;
+  line-height: 123%;
 }
 
 .page-404__desc {
@@ -4884,8 +4892,7 @@ footer a {
 }
 
 .page-404__btn .btn {
-  color: #000;
-  border-color: #000;
+  min-width: 220px;
 }
 
 .section-first-block {
@@ -10073,8 +10080,8 @@ footer a {
     flex-direction: row;
   }
 
-  .page-404__title {
-    font-size: 56px;
+  .page-404__code {
+    font-size: 150px;
   }
 
   .first-block__title h1 {
@@ -10536,6 +10543,15 @@ footer a {
 
   .header-nav nav ul > li > a {
     font-size: 13px;
+  }
+
+  .header-nav nav ul > li > ul li {
+    text-align: left;
+  }
+
+  .header-nav nav ul > li > ul li a {
+    text-align: left;
+    justify-content: flex-start;
   }
 
   .first-block__title h1 {

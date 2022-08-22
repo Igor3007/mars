@@ -170,7 +170,11 @@ header {
                         height: auto;
                         padding: 0.7em 1.5em 0.8em 1.5em;
                         width: 100%;
-                        text-align: left;
+                        text-align: center;
+
+                        @media screen and (min-width: $w992) {
+                            text-align: left;
+                        }
 
                         &:hover {
                             background-color: $blue-for-card;
@@ -184,8 +188,17 @@ header {
 
                         & a {
 
-                            text-align: left;
-                            justify-content: flex-start;
+                            text-align: center;
+                            justify-content: center;
+                            line-height: 140%;
+
+
+
+                            @media screen and (min-width: $w992) {
+                                text-align: left;
+                                justify-content: flex-start;
+
+                            }
                         }
                     }
 
