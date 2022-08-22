@@ -543,7 +543,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     }
 
-    if (document.querySelectorAll('.contacts-map__left li')) {
+    if (document.querySelectorAll('.contacts-map__left li').length) {
 
         const country = document.querySelectorAll('.contacts-map__left li')
         const allCountry = document.querySelectorAll('.contacts-map__left [data-coordinates]')
