@@ -1,9 +1,12 @@
 .section-about-fact {
+
     @include section-padding;
 
     @media screen and (min-width: $w1200) {
         padding-top: 130px;
     }
+
+
 
     & .container {
         @media screen and (min-width: $w1200) {
@@ -16,6 +19,8 @@
 
     max-width: 1245px;
     margin: 0 auto;
+
+
 
     @media screen and (min-width: $w760) {
         display: flex;
@@ -67,13 +72,27 @@
 
     &__middle {
 
+
+
         @media screen and (min-width: $w760) {
-            display: none;
+            //display: none;
+
+            flex-basis: 480px;
+            flex-grow: 2;
+            order: 10;
+        }
+
+
+
+        @media screen and (min-width: $w1376) {
+            display: block;
+            flex-basis: 667px;
+            flex-grow: 2;
         }
 
         @media screen and (min-width: $w1200) {
             display: block;
-            flex-basis: 667px;
+            flex-basis: 480px;
             flex-grow: 2;
         }
 
@@ -105,6 +124,8 @@
         font-weight: 600;
     }
 
+
+
     &__intro {
         background-color: transparent;
 
@@ -120,13 +141,20 @@
         }
 
 
-        @media screen and (min-width: $w760) {
-            width: 100%;
 
+
+
+
+        @media screen and (min-width: $w1376) {
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 550px;
         }
 
         @media screen and (min-width: $w1200) {
-            flex-basis: 550px;
+            flex-basis: 480px;
             flex-grow: 2;
             padding-left: 0;
             padding-top: 0;
@@ -136,12 +164,11 @@
 
         }
 
-        @media screen and (min-width: $w1376) {
-            padding-left: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        @media screen and (min-width: $w760) {
+            width: 100%;
         }
+
+
     }
 
 
@@ -187,6 +214,7 @@
 
         background-position: top left;
         background-repeat: no-repeat;
+
 
         @media screen and (min-width: $w1200) {
             flex-basis: 287px;

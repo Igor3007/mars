@@ -3610,8 +3610,9 @@ a.link-primary {
   display: flex;
   align-items: center;
   list-style-type: none;
-  overflow-x: auto;
+  overflow-x: scroll;
   white-space: nowrap;
+  overflow-y: hidden;
 }
 
 .breadcrumb li a {
@@ -4396,7 +4397,7 @@ input {
 header {
   box-shadow: 0px 2px 20px rgba(151, 173, 187, 0.2);
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
 .header-top {
@@ -10340,7 +10341,9 @@ footer a {
   }
 
   .about-fact__middle {
-    display: none;
+    flex-basis: 480px;
+    flex-grow: 2;
+    order: 10;
   }
 
   .about-fact__intro {
@@ -10504,6 +10507,11 @@ footer a {
   .container {
     padding: 0 30px;
     max-width: 990px;
+  }
+
+  .breadcrumb ul {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
   }
 
   .pagination__page {
@@ -11472,12 +11480,12 @@ footer a {
 
   .we-are-block__middle {
     display: block;
-    flex-basis: 667px;
+    flex-basis: 480px;
     flex-grow: 2;
   }
 
   .we-are-block__intro {
-    flex-basis: 550px;
+    flex-basis: 480px;
     flex-grow: 2;
     padding-left: 100px;
     padding-top: 40px;
@@ -11507,14 +11515,14 @@ footer a {
 
   .we-are-block__five {
     display: block;
-    flex-basis: 558px;
+    flex-basis: 480px;
     flex-grow: 2;
     background-position: top right;
   }
 
   .we-are-block__six {
     display: block;
-    flex-basis: 395px;
+    flex-basis: 287px;
     flex-grow: 1;
   }
 
@@ -12200,12 +12208,12 @@ footer a {
 
   .about-fact__middle {
     display: block;
-    flex-basis: 667px;
+    flex-basis: 480px;
     flex-grow: 2;
   }
 
   .about-fact__intro {
-    flex-basis: 550px;
+    flex-basis: 480px;
     flex-grow: 2;
     padding-left: 0;
     padding-top: 0;
@@ -12505,6 +12513,32 @@ footer a {
     font-size: 24px;
   }
 
+  .we-are-block__middle {
+    display: block;
+    flex-basis: 667px;
+    flex-grow: 2;
+  }
+
+  .we-are-block__intro {
+    flex-basis: 550px;
+    flex-grow: 2;
+    padding-left: 100px;
+    padding-top: 40px;
+  }
+
+  .we-are-block__five {
+    display: block;
+    flex-basis: 558px;
+    flex-grow: 2;
+    background-position: top right;
+  }
+
+  .we-are-block__six {
+    display: block;
+    flex-basis: 395px;
+    flex-grow: 1;
+  }
+
   .gallery-details {
     max-width: 1240px;
     margin: 0 auto;
@@ -12516,11 +12550,18 @@ footer a {
     z-index: 2;
   }
 
+  .about-fact__middle {
+    display: block;
+    flex-basis: 667px;
+    flex-grow: 2;
+  }
+
   .about-fact__intro {
     padding-left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-basis: 550px;
   }
 
   .section-about-directions {
