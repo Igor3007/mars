@@ -601,7 +601,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                             phone: item.dataset.phone,
                             email: item.dataset.email,
                             site: item.dataset.site,
-                            site: item.dataset.tg,
+                            tg: item.dataset.tg,
                         }),
 
                         hint: item.innerText
