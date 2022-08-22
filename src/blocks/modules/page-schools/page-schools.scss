@@ -56,6 +56,12 @@
     border-radius: 2px;
     padding: 12px;
 
+    &:hover {
+        & .hover-arrow svg {
+            transform: rotate(90deg);
+        }
+    }
+
     @media screen and (min-width: $w760) {
         display: flex;
     }

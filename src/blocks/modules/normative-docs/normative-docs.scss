@@ -17,6 +17,35 @@
             color: $blue;
             text-decoration: underline;
         }
+
+        & input[type="text"] {
+            background-color: transparent;
+            padding: 0;
+            border: 0;
+            min-width: 200px;
+            transition: 0.3s ease;
+            border-bottom: 1px solid transparent;
+            height: 30px;
+
+            &:focus {
+                min-width: 320px;
+                border-bottom: 1px solid #ccc;
+
+                &::placeholder {
+                    opacity: 0;
+                }
+
+            }
+
+            &::placeholder {
+                color: $blue;
+                font-weight: 600;
+                opacity: 1;
+                text-decoration: underline;
+            }
+
+
+        }
     }
 
 

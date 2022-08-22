@@ -15,7 +15,13 @@
 
     @media screen and (min-width: $w1024) {
         flex-direction: row;
+
+
+
+
     }
+
+
 
     &__right {
 
@@ -41,7 +47,7 @@
             @include layer(1);
             content: '';
             background-color: $blue;
-            opacity: 0.8;
+            opacity: 0.9;
         }
     }
 

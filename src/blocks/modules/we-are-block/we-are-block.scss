@@ -45,7 +45,7 @@
     &__four,
     &__five,
     &__six {
-        padding: 30px;
+        padding: 30px 30px;
         background-color: $blue-for-card;
         min-height: 228px;
     }
@@ -108,6 +108,8 @@
     &__intro {
         background-color: transparent;
 
+
+
         @media screen and (min-width: $w760) {
             width: 100%;
 
@@ -128,12 +130,18 @@
         color: #fff;
 
 
+
+
         background-position: 104% 110%;
         background-repeat: no-repeat;
 
         @media screen and (min-width: $w1200) {
             flex-basis: 287px;
             flex-grow: 1;
+
+
+            padding: 30px 35px;
+
         }
     }
 
@@ -141,6 +149,10 @@
         @media screen and (min-width: $w1200) {
             flex-basis: 365px;
             flex-grow: 1;
+
+
+            padding: 30px 35px;
+
 
         }
     }
@@ -180,6 +192,10 @@
             flex-basis: 558px;
             flex-grow: 2;
             background-position: top right;
+        }
+
+        & .we-are-block__desc {
+            max-width: 300px;
         }
     }
 

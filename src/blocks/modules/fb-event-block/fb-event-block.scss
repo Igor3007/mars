@@ -158,6 +158,10 @@
             margin-top: auto;
         }
 
+        @media screen and (min-width: $w992) {
+            display: table;
+        }
+
         & ul {
 
             @media screen and (min-width: $w1024) {

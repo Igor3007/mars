@@ -23,6 +23,9 @@
 
         padding-bottom: 40px;
 
+        max-width: 1031px;
+        margin: 0 auto;
+
         @media screen and (min-width: $w992) {
             display: flex;
             justify-content: space-between;
@@ -155,7 +158,8 @@
                 @include layer(3);
                 width: 100%;
                 height: 100%;
-                transition: 0.3s ease
+                transition: 0.3s ease;
+                object-fit: cover;
             }
         }
     }
