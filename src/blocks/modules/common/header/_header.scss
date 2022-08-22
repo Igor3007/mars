@@ -237,10 +237,12 @@ header {
             padding-top: 30px;
 
             & .sub-arrow {
-                width: 10px;
-                height: 9px;
-                top: 22px;
+                width: 30px;
+                height: 30px;
+                top: 12px;
                 transition: 0.3s ease;
+                background-size: 10px auto;
+                cursor: pointer;
             }
 
             & ul {
