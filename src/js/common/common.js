@@ -467,11 +467,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.mapsParams.points = arrayPoints;
             this.map.geoObjects.removeAll();
 
-            if (window.innerWidth < 769) {
-                sizeIcons = [30, 45];
-                offsetIcons = [8, 9];
-                placemarkOffset = [-15, -45];
-            }
+            // if (window.innerWidth < 769) {
+            //     sizeIcons = [30, 45];
+            //     offsetIcons = [8, 9];
+            //     placemarkOffset = [-15, -45];
+            // }
 
             try {
 
@@ -481,19 +481,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                     // Создание метки  
                     PlacemarkArr[i] = new ymaps.Placemark(_this.mapsParams.points[i].coordinates.split(','), {
-                        balloonContent: '',
-                        iconContent: '<span class="icons-marker" style="background-image: url(' + _this.mapsParams.points[i].markerImage + ')" ></span>',
-                        //hintContent: 'hint',
+                        //balloonContentHeader: "Балун метки",
+                        balloonContentBody: _this.mapsParams.points[i].ballon,
+                        //balloonContentFooter: "Подвал",
+                        //iconContent: '<span class="icons-marker" style="background-image: url(' + _this.mapsParams.points[i].markerImage + ')" ></span>',
+                        hintContent: _this.mapsParams.points[i].hint,
                     }, {
                         balloonShadow: false,
-                        balloonLayout: _this.MyBalloonLayout,
-                        balloonContentLayout: _this.MyBalloonContentLayout,
-                        balloonPanelLayout: _this.MyBalloonLayout,
-                        balloonPanelMaxMapArea: false,
+
+                        // balloonPanelLayout: _this.MyBalloonLayout,
+                        balloonPanelMaxMapArea: 200000,
                         // Не скрываем иконку при открытом балуне.
                         hideIconOnBalloonOpen: false,
                         // И дополнительно смещаем балун, для открытия над иконкой.
-                        balloonOffset: [-15, 6],
+                        balloonOffset: [0, -55],
 
 
                         // balloonContentLayout: LayoutActivatePoint,
@@ -560,6 +561,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
             })
         })
 
+        //baloon template
+
+        function balloonTemplate(data) {
+            return `
+            <div class="balloon-template" >
+                <div class="balloon-template__title" >${data.title}</div>
+                <div class="balloon-template__phone" ><a href="tel:${data.phone}">${data.phone}</a></div>
+                <div class="balloon-template__email" ><a href="mailto:${data.email}">${data.email}</a></div>
+                <div class="balloon-template__link" >
+                    <ul>
+                        <li><a href="${data.site}" ><span class="ic-balloon-site" ></span></a></li>
+                        <li><a href="${data.tg}" ><span class="ic-balloon-tg" ></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            `
+        }
+
+
         //load ymaps api
 
         window.loadScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU', function () {
@@ -575,9 +595,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 allCountry.forEach(item => {
                     arrPoint.push({
-                        coordinates: item.dataset.coordinates
+                        coordinates: item.dataset.coordinates,
+                        ballon: balloonTemplate({
+                            title: item.innerText,
+                            phone: item.dataset.phone,
+                            email: item.dataset.email,
+                            site: item.dataset.site,
+                            site: item.dataset.tg,
+                        }),
+
+                        hint: item.innerText
                     })
                 })
+
+                //click
+
+                allCountry.forEach(item => {
+                    item.addEventListener('click', function (e) {
+
+                        YM.map.setCenter(item.dataset.coordinates.split(','), 12, {
+                            checkZoomRange: true
+                        });
+
+                    })
+                })
+
 
                 YM.addPlacemark(arrPoint)
                 YM.autoScale()
