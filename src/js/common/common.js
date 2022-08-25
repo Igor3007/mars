@@ -632,6 +632,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     }
 
+    /* ===========================================
+    swiper first-block
+    =========================================== */
+
+    if (document.querySelector('[data-swiper="first-block"]')) {
+        const swiper = new Swiper('[data-swiper="first-block"]', {
+
+            slidesPerView: 1,
+            spaceBetween: 50,
+
+            pagination: {
+                el: '[data-swiper-dots="first-block"]',
+                type: 'bullets',
+            },
+
+            navigation: {
+                nextEl: '[data-swiper-next="first-block"]',
+                prevEl: '[data-swiper-prev="first-block"]',
+            },
+
+        })
+
+    }
+
+
 
 
 });

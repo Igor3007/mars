@@ -3,10 +3,22 @@ mixin first-block
         .container
             .first-block 
                 .first-block__left
-                    .first-block__title: h1 Международная ассоциация русских школ
-                    .first-block__subtitle организованное профессиональное сообщество педагогических коллективов русских школ из разных стран Мира
-                    .first-block__image
-                        +picture-no-lazy('/img/fbbg')
+                    .swiper-container(data-swiper="first-block")
+                        .swiper-wrapper
+                            .swiper-slide
+                                .first-block__title: h1 Международная ассоциация русских школ
+                                .first-block__subtitle организованное профессиональное сообщество педагогических коллективов русских школ из разных стран Мира
+                                .first-block__image
+                                    +picture-no-lazy('/img/fbbg')
+                            .swiper-slide
+                                .first-block__title: span Wappalyzer  
+                                .first-block__subtitle Set to true to enable make scrollbar draggable that allows you to control slider position
+                                .first-block__image
+                                    +picture-no-lazy('/img/Alfabank_logo')
+                        //- .swiper-dots(data-swiper-dots="first-block")
+                        .slider-nav
+                            .slider-nav__prev(data-swiper-prev="first-block"): +icons('#ic_arr-back')
+                            .slider-nav__next(data-swiper-next="first-block"): +icons('#ic_arr-next')
                 .first-block__right
                     .fb-event-card
                         .fb-event-card__image: +picture('/img/photo')

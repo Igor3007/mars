@@ -134,14 +134,41 @@
               <div class="container">
                 <div class="first-block"> 
                   <div class="first-block__left">
-                    <div class="first-block__title">
-                      <h1>Международная ассоциация русских школ</h1>
-                    </div>
-                    <div class="first-block__subtitle">организованное профессиональное сообщество педагогических коллективов русских школ из разных стран Мира</div>
-                    <div class="first-block__image">
-                      <picture>
-                        <source srcset="/img/fbbg.webp" type="image/webp"/><img src="/img/fbbg.jpg" alt="image"/>
-                      </picture>
+                    <div class="swiper-container" data-swiper="first-block">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="first-block__title">
+                            <h1>Международная ассоциация русских школ</h1>
+                          </div>
+                          <div class="first-block__subtitle">организованное профессиональное сообщество педагогических коллективов русских школ из разных стран Мира</div>
+                          <div class="first-block__image">
+                            <picture>
+                              <source srcset="/img/fbbg.webp" type="image/webp"/><img src="/img/fbbg.jpg" alt="image"/>
+                            </picture>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="first-block__title"><span>Wappalyzer  </span></div>
+                          <div class="first-block__subtitle">Set to true to enable make scrollbar draggable that allows you to control slider position</div>
+                          <div class="first-block__image">
+                            <picture>
+                              <source srcset="/img/Alfabank_logo.webp" type="image/webp"/><img src="/img/Alfabank_logo.jpg" alt="image"/>
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slider-nav">
+                        <div class="slider-nav__prev" data-swiper-prev="first-block">
+                          <svg width="25" height="25">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_arr-back"></use>
+                          </svg>
+                        </div>
+                        <div class="slider-nav__next" data-swiper-next="first-block">
+                          <svg width="25" height="25">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_arr-next"></use>
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="first-block__right">
@@ -627,6 +654,7 @@
         </div>
       </div>
     </footer>
+    <script src="/js/lib/swiper-bundle.min.js"> </script>
     <script src="/js/vendor.js"> </script>
     <script src="/js/common.js"> </script>
   </body>

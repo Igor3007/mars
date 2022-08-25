@@ -37,36 +37,7 @@
     }
 }
 
-.slider-nav {
 
-
-    margin: -5px;
-    padding-top: 15px;
-    display: none;
-
-    @media screen and (min-width: $w992) {
-        display: flex;
-    }
-
-    &__prev,
-    &__next {
-        width: 57px;
-        height: 57px;
-        background-color: $green;
-        border-radius: 50%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        margin: 5px;
-
-        &.swiper-button-disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
-    }
-}
 
 .section-question-block {
     @include section-padding;

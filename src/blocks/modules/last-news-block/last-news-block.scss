@@ -147,6 +147,7 @@
     &__name {
 
         padding-bottom: 25px;
+        flex-grow: 1;
 
         @media screen and (min-width: $w992) {
             padding-left: 60px;

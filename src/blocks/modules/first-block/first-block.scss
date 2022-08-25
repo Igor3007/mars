@@ -19,6 +19,7 @@
     &__left {
 
         position: relative;
+        overflow: hidden;
 
         @media screen and (min-width: $w1200) {
             width: 72%;
@@ -33,6 +34,97 @@
 
         @media screen and (min-width: $w1440) {
             padding-left: 0;
+        }
+
+        & .swiper-container {
+
+            & .swiper-wrapper {}
+
+            &:not(.swiper-initialized) {
+                & .swiper-slide {
+                    display: none;
+
+                    &:first-child {
+                        display: block;
+                    }
+                }
+            }
+
+            & .swiper-dots {
+                padding-top: 5px;
+            }
+
+            & .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+
+                background-color: $green;
+                opacity: 1;
+
+                &-active {
+                    background-color: #fff;
+                }
+            }
+
+            & .swiper-slide {
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &-active {
+                    opacity: 1;
+                }
+            }
+
+            & .slider-nav {
+
+                padding-top: 30px;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 30px;
+
+                @media screen and (min-width: $w1440) {
+                    padding-top: 0;
+                }
+
+                @media screen and (min-width: $w992) {
+                    justify-content: flex-start;
+
+                }
+
+                @media screen and (min-width: $w576) {
+                    padding-bottom: 0;
+                }
+
+                & svg {
+                    filter: invert(1) brightness(2);
+                }
+
+                &__next {
+                    & svg {
+                        margin-left: 3px;
+                    }
+                }
+
+                &__prev {
+                    & svg {
+                        margin-right: 2px;
+                    }
+                }
+
+                &__next,
+                &__prev {
+                    width: 45px;
+                    height: 45px;
+
+
+                    & svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
         }
     }
 
@@ -58,9 +150,11 @@
             padding-bottom: 40px;
         }
 
+        & span,
         & h1 {
             font-size: 40px;
             line-height: 110%;
+            font-weight: 700;
 
             @media screen and (min-width: $w992) {
                 font-size: 57px;
@@ -116,6 +210,31 @@
     }
 }
 
+.swiper-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 30px;
+    right: 30px;
+
+    &__next,
+    &__prev {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    & svg {
+        filter: invert(1) brightness(2);
+    }
+
+}
+
 .fb-event-card {
 
     background-color: $green;
@@ -157,7 +276,7 @@
         @media screen and (min-width: $w1200) {
 
             & picture {
-                padding-top: 80%;
+                padding-top: 85%;
                 position: relative;
                 display: block;
 
