@@ -647,6 +647,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 type: 'bullets',
             },
 
+            autoplay: {
+                delay: 4000
+            },
+
             navigation: {
                 nextEl: '[data-swiper-next="first-block"]',
                 prevEl: '[data-swiper-prev="first-block"]',
@@ -656,6 +660,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     }
 
+    /* =================================================
+    spoiler for page about
+    =================================================*/
+
+    if (document.querySelectorAll('.about-directions__header').length) {
+        document.querySelectorAll('.about-directions__header').forEach(item => {
+            item.addEventListener('click', e => {
+                e.target.closest('.about-directions__item').classList.toggle('open')
+            })
+        })
+    }
 
 
 

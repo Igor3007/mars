@@ -113,9 +113,31 @@
     }
 
     &__item {
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $w992) {
+            margin-bottom: 30px;
+        }
+
+        &.open {
+            & .about-directions {
+                &__spoiler {
+                    max-height: 600px;
+                    padding: 20px 40px;
+                    margin-top: 10px;
+                }
+            }
+
+            & .hover-arrow svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__header {
         color: #fff;
 
-        margin-bottom: 20px;
+
         background: #01366A;
         border-radius: 2px;
 
@@ -129,7 +151,6 @@
             padding-left: 18px;
             padding-right: 50px;
             padding-bottom: 18px;
-            margin-bottom: 30px;
         }
 
 
@@ -139,11 +160,7 @@
 
         }
 
-        &:hover {
-            & .hover-arrow svg {
-                transform: rotate(90deg);
-            }
-        }
+
     }
 
     &__number {
@@ -178,11 +195,15 @@
             align-items: center;
         }
 
+
+
+        & span,
         & a {
             color: #fff;
             font-size: 16px;
             font-weight: 600;
             line-height: 150%;
+            cursor: pointer;
 
             &:hover {
                 text-decoration: underline;
@@ -202,9 +223,69 @@
             padding-top: 0;
         }
 
+        & span,
         & a {
             margin-left: auto;
             display: block;
+            cursor: pointer;
+
+            & svg {
+                @media screen and (max-width: $w760) {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    &__spoiler {
+        background-color: #fff;
+        border-radius: 3px;
+
+
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 40px;
+        margin: 0;
+
+        transition: max-height, padding 0.4s ease;
+
+        & ul {
+
+            padding: 20px 0;
+
+            @media screen and (min-width: $w760) {
+                padding-top: 20px;
+            }
+
+            & li {
+
+                position: relative;
+                padding-left: 20px;
+                padding-bottom: 15px;
+                line-height: 155%;
+
+                @media screen and (min-width: $w760) {
+                    font-size: 16px;
+                    padding-left: 25px;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                &::before {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 6px;
+                    border-radius: 50%;
+                    background-color: $green;
+                }
+            }
         }
     }
 

@@ -36,7 +36,14 @@ mixin about-directions
                     .about-directions__list
                         each item in lastNews
                             .about-directions__item
-                                .about-directions__number: span= item.date
-                                .about-directions__name: a(href='#')= item.title
-                                .about-directions__link
-                                    a(href='#'): span.hover-arrow: +icons('#ic_hover-arrow', 35)
+                                .about-directions__header
+                                    .about-directions__number: span= item.date
+                                    .about-directions__name: span= item.title
+                                    .about-directions__link
+                                        span.hover-arrow: +icons('#ic_hover-arrow', 35)
+                                .about-directions__spoiler
+                                    ul
+                                        li Развитие межвузовского сотрудничества на региональном, национальном и международном уровнях
+                                        li Укрепление экспертных позиций РУДН в России и международных организациях, связанных с продвижением русского языка и культуры России
+                                        li Поддержка (патронирование) деятельности русских школ за рубежом
+

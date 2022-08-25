@@ -8457,19 +8457,28 @@ footer a {
 }
 
 .about-directions__item {
-  color: #fff;
   margin-bottom: 20px;
+}
+
+.about-directions__item.open .about-directions__spoiler {
+  max-height: 600px;
+  padding: 20px 40px;
+  margin-top: 10px;
+}
+
+.about-directions__item.open .hover-arrow svg {
+  transform: rotate(90deg);
+}
+
+.about-directions__header {
+  color: #fff;
   background: #01366A;
   border-radius: 2px;
   padding: 22px;
 }
 
-.about-directions__item:last-child {
+.about-directions__header:last-child {
   border-bottom: none;
-}
-
-.about-directions__item:hover .hover-arrow svg {
-  transform: rotate(90deg);
 }
 
 .about-directions__number {
@@ -8491,13 +8500,16 @@ footer a {
   flex-grow: 1;
 }
 
+.about-directions__name span,
 .about-directions__name a {
   color: #fff;
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
+  cursor: pointer;
 }
 
+.about-directions__name span:hover,
 .about-directions__name a:hover {
   text-decoration: underline;
 }
@@ -8508,9 +8520,48 @@ footer a {
   padding-top: 30px;
 }
 
+.about-directions__link span,
 .about-directions__link a {
   margin-left: auto;
   display: block;
+  cursor: pointer;
+}
+
+.about-directions__spoiler {
+  background-color: #fff;
+  border-radius: 3px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 40px;
+  margin: 0;
+  transition: max-height, padding 0.4s ease;
+}
+
+.about-directions__spoiler ul {
+  padding: 20px 0;
+}
+
+.about-directions__spoiler ul li {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  line-height: 155%;
+}
+
+.about-directions__spoiler ul li:last-child {
+  padding-bottom: 0;
+}
+
+.about-directions__spoiler ul li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  border-radius: 50%;
+  background-color: #55B282;
 }
 
 .section-about-history {
@@ -10380,6 +10431,15 @@ footer a {
     font-size: 56px;
   }
 
+  .about-directions__spoiler ul {
+    padding-top: 20px;
+  }
+
+  .about-directions__spoiler ul li {
+    font-size: 16px;
+    padding-left: 25px;
+  }
+
   .about-history__title-text {
     font-size: 56px;
   }
@@ -10859,12 +10919,15 @@ footer a {
   }
 
   .about-directions__item {
+    margin-bottom: 30px;
+  }
+
+  .about-directions__header {
     display: flex;
     padding-top: 18px;
     padding-left: 18px;
     padding-right: 50px;
     padding-bottom: 18px;
-    margin-bottom: 30px;
   }
 
   .about-directions__number {
@@ -12734,6 +12797,12 @@ footer a {
 
   .about-advanteges .swiper-container:not(.swiper-initialized) .swiper-wrapper {
     flex-direction: column;
+  }
+
+  .about-directions__link span svg,
+  .about-directions__link a svg {
+    width: 25px;
+    height: 25px;
   }
 
   .school-selection-block__title {
