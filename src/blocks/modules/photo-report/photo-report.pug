@@ -1,0 +1,21 @@
+mixin photo-report
+    section.section-photo-report
+        .container
+            .photo-report
+                .photo-report__title
+                    .photo-report__title-text  Фотоотчет
+                    .photo-report__title-nav
+                        .slider-nav 
+                            .slider-nav__prev(data-swiper-prev="gallery-report"): +icons('#ic_swiper-prev', 17)
+                            .slider-nav__next(data-swiper-next="gallery-report"): +icons('#ic_swiper-next', 17)
+                .photo-report__slider
+                    .swiper-container(data-swiper="gallery-report")
+                        .swiper-wrapper
+                            .swiper-slide
+                                .photo-report__image(data-fancybox="" data-src="/img/rp-1.jpg"): +picture('/img/rp-1')
+                            .swiper-slide
+                                .photo-report__image(data-fancybox="" data-src="/img/rp-2.jpg"): +picture('/img/rp-2')
+                            .swiper-slide
+                                .photo-report__image(data-fancybox="" data-src="/img/rp-1.jpg"): +picture('/img/rp-1')
+                            .swiper-slide
+                                .photo-report__image(data-fancybox="" data-src="/img/rp-2.jpg"): +picture('/img/rp-2')

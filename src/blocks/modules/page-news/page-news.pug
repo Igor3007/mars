@@ -99,29 +99,30 @@ include ../../components/pagination/pagination.pug
 mixin page-news
     .page-news
         .page-news__aside
-            .page-aside__wrp
+            
                 .page-aside(data-filter-open="container")
-                    .page-aside__close 
-                        span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
-                    .page-aside__title Фильтр
-                    .page-aside__filter
-                        form(action='#' method='POST')
-                            .page-aside__select
-                                select(name="year")
-                                    option(value="1") Год выпуска новости
-                                    option(value="1") 2020
-                                    option(value="2") 2021
-                                    option(value="3") 2022
-                            .page-aside__select
-                                select(name="name")
-                                    option(value="1") Школа
-                                    option(value="1") №1
-                                    option(value="2") №2
-                                    option(value="3") №3
-                            .page-aside__apply
-                                button.btn Применить
-                
-        .page-aside-open(data-filter-open="btn") Фильтры
+                    .page-aside__wrp
+                        .page-aside__close 
+                            span(data-filter-open="close"): +icons('#ic_burger-menu-close', 28)
+                        .page-aside__title Фильтр
+                        .page-aside__filter
+                            form(action='#' method='POST')
+                                .page-aside__select
+                                    select(name="year")
+                                        option(value="1") Год выпуска новости
+                                        option(value="1") 2020
+                                        option(value="2") 2021
+                                        option(value="3") 2022
+                                .page-aside__select
+                                    select(name="name")
+                                        option(value="1") Школа
+                                        option(value="1") №1
+                                        option(value="2") №2
+                                        option(value="3") №3
+                                .page-aside__apply
+                                    button.btn Применить
+                    
+                .page-aside-open(data-filter-open="btn") Фильтры
 
         .page-news__content
             .page-news__list

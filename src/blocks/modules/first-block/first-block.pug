@@ -8,13 +8,23 @@ mixin first-block
                             .swiper-slide
                                 .first-block__title: h1 Международная ассоциация русских школ
                                 .first-block__subtitle организованное профессиональное сообщество педагогических коллективов русских школ из разных стран Мира
+                                
                                 .first-block__image
-                                    +picture-no-lazy('/img/fbbg')
+                                    picture
+                                        source(srcset='/img/fb-desctop.jpg' type="image/jpeg" media='(min-width: 1200px)')
+                                        source(srcset='/img/fbbg.png' type="image/jpeg" media='(min-width: 480px)')
+                                        img(src='/img/fbbg.png' loading='lazy' alt='Image')
+                                .first-block__btn: a(href='#'): button.btn Подробнее
                             .swiper-slide
-                                .first-block__title: span Wappalyzer  
+                                .first-block__title: span Ежегодное проведение просветительских мероприятий  
                                 .first-block__subtitle Set to true to enable make scrollbar draggable that allows you to control slider position
+                                
                                 .first-block__image
-                                    +picture-no-lazy('/img/Alfabank_logo')
+                                     picture
+                                        source(srcset='/img/1143521_1440_540.jpg' type="image/jpeg" media='(min-width: 1200px)')
+                                        source(srcset='/img/122121_1440_540.jpg' type="image/jpeg" media='(min-width: 480px)')
+                                        img(src='/img/122121_1440_540.jpg' loading='lazy' alt='Image')
+                                .first-block__btn: a(href='#'): button.btn Подробнее
                         //- .swiper-dots(data-swiper-dots="first-block")
                         .slider-nav
                             .slider-nav__prev(data-swiper-prev="first-block"): +icons('#ic_arr-back')

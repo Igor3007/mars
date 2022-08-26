@@ -42,6 +42,8 @@
 
             @media screen and (min-width: $w1200) {
                 width: 80px;
+                min-width: 80px;
+
             }
 
             & span {
@@ -56,6 +58,10 @@
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 46px;
+
+                @media screen and (min-width: $w1200) {
+                    margin-top: -5px;
+                }
             }
         }
 
@@ -66,7 +72,8 @@
             margin-bottom: 30px;
 
             @media screen and (min-width: $w1200) {
-                width: 40%;
+                flex-grow: 1;
+                flex-basis: 40%;
                 padding-right: 100px;
             }
         }
@@ -78,6 +85,7 @@
             @media screen and (min-width: $w1200) {
                 width: 50%;
                 padding-right: 100px;
+                margin-left: auto;
             }
         }
     }

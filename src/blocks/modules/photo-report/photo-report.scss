@@ -1,0 +1,51 @@
+.photo-report {
+    &__title {
+
+        padding-bottom: 40px;
+
+        @media screen and (min-width: $w1200) {
+            padding-left: 100px;
+        }
+
+        @media screen and (min-width: $w992) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 70px;
+        }
+
+        &-text {
+            @include section-title;
+        }
+    }
+
+    &__image {
+
+        cursor: pointer;
+        overflow: hidden;
+
+        &:hover {
+            & picture {
+                transform: scale(1.05);
+            }
+        }
+
+        & picture {
+            display: block;
+            padding-top: 65%;
+            overflow: hidden;
+            transition: 0.3s;
+
+
+
+            & img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

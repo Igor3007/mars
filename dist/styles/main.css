@@ -4912,6 +4912,10 @@ footer a {
   overflow: hidden;
 }
 
+.first-block__left .swiper-container {
+  height: 100%;
+}
+
 .first-block__left .swiper-container:not(.swiper-initialized) .swiper-slide {
   display: none;
 }
@@ -4940,6 +4944,7 @@ footer a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 0;
 }
 
 .first-block__left .swiper-container .swiper-slide-active {
@@ -4985,22 +4990,33 @@ footer a {
 
 .first-block__title span,
 .first-block__title h1 {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 110%;
   font-weight: 700;
+  display: block;
+}
+
+.first-block__btn {
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+}
+
+.first-block__btn button {
+  height: 50px;
+  min-width: 200px;
+  margin: 0 auto;
 }
 
 .first-block__subtitle {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 156%;
   position: relative;
   z-index: 1;
 }
 
 .first-block__image {
-  margin-top: -60px;
-  margin-left: -25%;
-  margin-right: -35%;
+  margin-top: 30px;
 }
 
 .swiper-nav {
@@ -9818,6 +9834,43 @@ footer a {
   height: 100%;
 }
 
+.photo-report__title {
+  padding-bottom: 40px;
+}
+
+.photo-report__title-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 111%;
+  color: #013C76;
+  padding-bottom: 25px;
+}
+
+.photo-report__image {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.photo-report__image:hover picture {
+  transform: scale(1.05);
+}
+
+.photo-report__image picture {
+  display: block;
+  padding-top: 65%;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.photo-report__image picture img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media screen and (min-width: 375.98px) {
   .we-are-block__title {
     font-size: 75px;
@@ -9871,7 +9924,7 @@ footer a {
   }
 
   .first-block__image {
-    margin-top: 0;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -10181,6 +10234,7 @@ footer a {
 
   .fb-event-card__main {
     padding: 20px;
+    flex-grow: 1;
   }
 
   .we-are-block {
@@ -10578,6 +10632,10 @@ footer a {
   .faq-qualification__title {
     font-size: 56px;
   }
+
+  .photo-report__title-text {
+    font-size: 56px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -10641,13 +10699,17 @@ footer a {
     justify-content: flex-start;
   }
 
+  .first-block__left .swiper-container .swiper-slide {
+    padding-left: 40px;
+  }
+
   .first-block__left .swiper-container .slider-nav {
     justify-content: flex-start;
   }
 
   .first-block__title span,
   .first-block__title h1 {
-    font-size: 57px;
+    font-size: 48px;
   }
 
   .we-are-block__first,
@@ -11063,6 +11125,13 @@ footer a {
   .cost-qualification__right {
     flex-grow: 1;
   }
+
+  .photo-report__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 70px;
+  }
 }
 
 @media all and (min-width: 1024px) {
@@ -11472,12 +11541,20 @@ footer a {
 
   .first-block__left {
     width: 72%;
-    padding-right: 40px;
+    padding-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 580px;
-    padding-left: 140px;
+    padding-left: 0;
+  }
+
+  .first-block__left .swiper-container .slider-nav {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    bottom: 25px;
+    left: 40px;
   }
 
   .first-block__right {
@@ -11487,12 +11564,16 @@ footer a {
 
   .first-block__title {
     max-width: 540px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
 
   .first-block__title span,
   .first-block__title h1 {
     text-align: left;
+  }
+
+  .first-block__btn button {
+    margin-left: 0;
   }
 
   .first-block__subtitle {
@@ -11504,12 +11585,28 @@ footer a {
   .first-block__image {
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+  }
+
+  .first-block__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+  }
+
+  .first-block__image picture {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   .fb-event-card {
     flex-direction: column;
+    height: 100%;
   }
 
   .fb-event-card__image picture {
@@ -12188,6 +12285,10 @@ footer a {
     padding-right: 100px;
   }
 
+  .speakers-block__title {
+    padding-left: 100px;
+  }
+
   .question-block {
     padding: 85px 120px;
   }
@@ -12209,16 +12310,23 @@ footer a {
 
   .themes-event-block__item-number {
     width: 80px;
+    min-width: 80px;
+  }
+
+  .themes-event-block__item-number span {
+    margin-top: -5px;
   }
 
   .themes-event-block__item-title {
-    width: 40%;
+    flex-grow: 1;
+    flex-basis: 40%;
     padding-right: 100px;
   }
 
   .themes-event-block__item-desc {
     width: 50%;
     padding-right: 100px;
+    margin-left: auto;
   }
 
   .fb-about__title {
@@ -12560,6 +12668,10 @@ footer a {
   .faq-qualification__title {
     width: 395px;
     min-width: 395px;
+  }
+
+  .photo-report__title {
+    padding-left: 100px;
   }
 }
 

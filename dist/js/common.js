@@ -641,6 +641,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             slidesPerView: 1,
             spaceBetween: 50,
+            //autoHeight: true,
 
             pagination: {
                 el: '[data-swiper-dots="first-block"]',
@@ -660,6 +661,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     }
 
+
     /* =================================================
     spoiler for page about
     =================================================*/
@@ -670,6 +672,47 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 e.target.closest('.about-directions__item').classList.toggle('open')
             })
         })
+    }
+
+    /* ===========================================
+    swiper gallery-report 
+    =========================================== */
+
+    if (document.querySelector('[data-swiper="gallery-report"]')) {
+        const swiper = new Swiper('[data-swiper="gallery-report"]', {
+
+            slidesPerView: "auto",
+            spaceBetween: 50,
+            //autoHeight: true,
+
+
+
+
+
+            navigation: {
+                nextEl: '[data-swiper-next="gallery-report"]',
+                prevEl: '[data-swiper-prev="gallery-report"]',
+            },
+
+
+            breakpoints: {
+                480: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10
+                },
+
+
+
+                992: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 30,
+                },
+
+
+            }
+
+        })
+
     }
 
 

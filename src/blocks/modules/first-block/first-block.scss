@@ -4,6 +4,7 @@
     color: #fff;
 
 
+
 }
 
 .first-block {
@@ -23,13 +24,13 @@
 
         @media screen and (min-width: $w1200) {
             width: 72%;
-            padding-right: 40px;
+            padding-left: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             min-height: 580px;
 
-            padding-left: 140px;
+            padding-left: 0;
         }
 
         @media screen and (min-width: $w1440) {
@@ -37,6 +38,8 @@
         }
 
         & .swiper-container {
+
+            height: 100%;
 
             & .swiper-wrapper {}
 
@@ -71,6 +74,11 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                padding-left: 0;
+
+                @media screen and (min-width: $w992) {
+                    padding-left: 40px;
+                }
 
                 &-active {
                     opacity: 1;
@@ -86,6 +94,15 @@
 
                 @media screen and (min-width: $w1440) {
                     padding-top: 0;
+                }
+
+                @media screen and (min-width: $w1200) {
+
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 5;
+                    bottom: 25px;
+                    left: 40px;
                 }
 
                 @media screen and (min-width: $w992) {
@@ -147,17 +164,18 @@
 
         @media screen and (min-width: $w1200) {
             max-width: 540px;
-            padding-bottom: 40px;
+            padding-bottom: 20px;
         }
 
         & span,
         & h1 {
-            font-size: 40px;
+            font-size: 30px;
             line-height: 110%;
             font-weight: 700;
+            display: block;
 
             @media screen and (min-width: $w992) {
-                font-size: 57px;
+                font-size: 48px;
             }
 
             @media screen and (min-width: $w760) {
@@ -170,8 +188,25 @@
         }
     }
 
+    &__btn {
+        position: relative;
+        z-index: 10;
+        margin-top: 20px;
+
+        & button {
+            height: 50px;
+
+            min-width: 200px;
+            margin: 0 auto;
+
+            @media screen and (min-width: $w1200) {
+                margin-left: 0;
+            }
+        }
+    }
+
     &__subtitle {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 156%;
         position: relative;
         z-index: 1;
@@ -189,12 +224,12 @@
     }
 
     &__image {
-        margin-top: -60px;
-        margin-left: -25%;
-        margin-right: -35%;
+
+
+        margin-top: 30px;
 
         @media screen and (min-width: $w576) {
-            margin-top: 0;
+            margin-top: 30px;
             margin-left: auto;
             margin-right: auto;
             display: flex;
@@ -204,9 +239,26 @@
         @media screen and (min-width: $w1200) {
             position: absolute;
             right: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin-top: 0;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center right;
+            }
+
+            & picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
         }
+
+
     }
 }
 
@@ -254,6 +306,7 @@
 
     @media screen and (min-width: $w1200) {
         flex-direction: column;
+        height: 100%;
     }
 
     &__image {
@@ -296,6 +349,7 @@
 
         @media screen and (min-width: $w760) {
             padding: 20px;
+            flex-grow: 1;
         }
     }
 
