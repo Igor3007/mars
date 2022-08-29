@@ -1,159 +1,37 @@
 .section-first-block {
-
-    background-color: $blue;
     color: #fff;
 
 
+    & .container {
+        @media screen and (min-width: $w1200) {
+            padding: 0;
+            max-width: 1385px;
+        }
+    }
 
 }
 
 .first-block {
-    padding-top: 40px;
 
+    margin-left: -20px;
+    margin-right: -20px;
+    overflow: hidden;
 
+    & .swiper-container {
+        height: 100%;
+    }
+
+    @media screen and (min-width: $w1440) {
+        padding-top: 40px;
+    }
+
+    @media screen and (min-width: $w760) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 
     @media screen and (min-width: $w1200) {
         display: flex;
-        padding-top: 0;
-    }
-
-    &__left {
-
-        position: relative;
-        overflow: hidden;
-
-        @media screen and (min-width: $w1200) {
-            width: 72%;
-            padding-left: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 580px;
-
-            padding-left: 0;
-        }
-
-        @media screen and (min-width: $w1440) {
-            padding-left: 0;
-        }
-
-        & .swiper-container {
-
-            height: 100%;
-
-            & .swiper-wrapper {}
-
-            &:not(.swiper-initialized) {
-                & .swiper-slide {
-                    display: none;
-
-                    &:first-child {
-                        display: block;
-                    }
-                }
-            }
-
-            & .swiper-dots {
-                padding-top: 5px;
-            }
-
-            & .swiper-pagination-bullet {
-                width: 12px;
-                height: 12px;
-
-                background-color: $green;
-                opacity: 1;
-
-                &-active {
-                    background-color: #fff;
-                }
-            }
-
-            & .swiper-slide {
-                opacity: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding-left: 0;
-
-                @media screen and (min-width: $w992) {
-                    padding-left: 40px;
-                }
-
-                &-active {
-                    opacity: 1;
-                }
-            }
-
-            & .slider-nav {
-
-                padding-top: 30px;
-                display: flex;
-                justify-content: center;
-                padding-bottom: 30px;
-
-                @media screen and (min-width: $w1440) {
-                    padding-top: 0;
-                }
-
-                @media screen and (min-width: $w1200) {
-
-                    position: absolute;
-                    bottom: 0;
-                    z-index: 5;
-                    bottom: 25px;
-                    left: 40px;
-                }
-
-                @media screen and (min-width: $w992) {
-                    justify-content: flex-start;
-
-                }
-
-                @media screen and (min-width: $w576) {
-                    padding-bottom: 0;
-                }
-
-                & svg {
-                    filter: invert(1) brightness(2);
-                }
-
-                &__next {
-                    & svg {
-                        margin-left: 3px;
-                    }
-                }
-
-                &__prev {
-                    & svg {
-                        margin-right: 2px;
-                    }
-                }
-
-                &__next,
-                &__prev {
-                    width: 45px;
-                    height: 45px;
-
-
-                    & svg {
-                        width: 16px;
-                        height: 16px;
-                    }
-                }
-            }
-        }
-    }
-
-    &__right {
-        @media screen and (min-width: $w576) {
-            padding-top: 30px;
-        }
-
-        @media screen and (min-width: $w1200) {
-            width: 28%;
-            padding-top: 0;
-        }
     }
 
     &__title {
@@ -193,14 +71,17 @@
         z-index: 10;
         margin-top: 20px;
 
+        @media screen and (min-width: $w1200) {
+            margin-top: 30px;
+        }
+
         & button {
             height: 50px;
-
             min-width: 200px;
-            margin: 0 auto;
+            margin-left: 0;
 
-            @media screen and (min-width: $w1200) {
-                margin-left: 0;
+            @media screen and (min-width: $w760) and (max-width: $w1200) {
+                margin: 0 auto;
             }
         }
     }
@@ -213,7 +94,7 @@
 
         @media screen and (min-width: $w760) {
             text-align: center;
-            padding-bottom: 35px;
+            padding-bottom: 5px;
         }
 
         @media screen and (min-width: $w1200) {
@@ -223,75 +104,145 @@
         }
     }
 
-    &__image {
+    &__left {
 
+        position: relative;
 
-        margin-top: 30px;
-
-        @media screen and (min-width: $w576) {
-            margin-top: 30px;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            justify-content: center;
+        @media screen and (min-width: $w1376) {
+            width: calc(100% - 390px);
+            overflow: hidden;
         }
 
         @media screen and (min-width: $w1200) {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            margin-top: 0;
+            width: calc(100% - 330px);
+            overflow: hidden;
+        }
+    }
 
-            & img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center right;
+    &__right {
+        @media screen and (min-width: $w1376) {
+            width: 390px;
+        }
+
+        @media screen and (min-width: $w1200) {
+            width: 330px;
+        }
+    }
+
+    &__slide {
+        position: relative;
+
+        height: 100%;
+
+    }
+
+    &__image {
+        position: relative;
+        z-index: 1;
+
+        & picture {
+            display: block;
+            padding-top: 225%;
+            position: relative;
+            background-color: #eee;
+
+            @media screen and (min-width: $w760) {
+                padding-top: 100%;
             }
 
-            & picture {
-                display: block;
-                width: 100%;
-                height: 100%;
+            @media screen and (min-width: $w1200) {
+                padding-top: 62%;
             }
         }
 
+        @media screen and (min-width: $w1200) {
+            height: 100%;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            @media screen and (min-width: $w1200) {
+                height: 100%;
+            }
+        }
+    }
+
+    &__content {
+        @include layer(2);
+        padding: 30px;
+
+        @media screen and (min-width: $w1200) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: $w576) {
+            padding: 40px;
+        }
+    }
+
+
+    & .slider-nav {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 10;
+        bottom: 35px;
+        left: 40px;
+
+
+        &__next,
+        &__prev {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        & svg {
+            filter: invert(1) brightness(2);
+
+            width: 20px;
+            height: 20px;
+        }
 
     }
+
 }
 
-.swiper-nav {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    left: 30px;
-    right: 30px;
 
-    &__next,
-    &__prev {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba($color: #000000, $alpha: 0.5);
-    }
+
+
+
+.hover-arrow {
 
     & svg {
-        filter: invert(1) brightness(2);
+        transition: 0.3s ease;
     }
 
+    &:hover {
+        & svg {
+            transform: rotate(90deg);
+        }
+    }
 }
+
 
 .fb-event-card {
 
     background-color: $green;
-    margin-left: -20px;
-    margin-right: -20px;
+
     padding: 20px;
 
     @media screen and (min-width: $w480) {
@@ -399,19 +350,6 @@
         & svg path {
             stroke: #fff;
             stroke-width: 2px;
-        }
-    }
-}
-
-.hover-arrow {
-
-    & svg {
-        transition: 0.3s ease;
-    }
-
-    &:hover {
-        & svg {
-            transform: rotate(90deg);
         }
     }
 }
